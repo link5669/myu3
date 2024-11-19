@@ -21,6 +21,7 @@ import tek from "../assets/ATAS-TEKHA Album Cover.png"
 import rots from "../assets/ROTS Album Cover.png"
 import sprout from "../assets/Sprout.png"
 import afterlife from "../assets/AFTL Album Cover.jpg";
+import broadway from "../assets/BWBL Album Cover.png"
 
 function Music() {
   return (
@@ -72,135 +73,20 @@ function Music() {
 
             <Col style={{ padding: "3%", paddingLeft: "8%" }}>
             <Album
-                id="afterlife"
-                img={afterlife}
+                id="broadway"
+                img={broadway}
                 file={[
-                  "https://www.dl.dropboxusercontent.com/scl/fi/dmrnwu4gskvpf655faor0/AFTL-Social-Media-Preview.m4a?rlkey=298y42zbcrfzyp6m8yd94o3ii&e=1&dl=0",
+                  "https://www.dl.dropboxusercontent.com/scl/fi/8smkz4cbxw9m0cp6yotql/BWBL-T01v1-S01-Like-It-s-A-Dream.wav?rlkey=bh1ibgzx5a7qznjh6w8nraz7b&dl=0",
                 ]}
-                title="Afterlife"
-                description="Short Film / Dark Comedy"
+                title="Broadway Blues"
+                description="Short Film / Musical"
                 info={[
                   {
-                    title: "Afterlife",
-                  },
-                ]}
-              />
-              
-              <Album
-                id="tekha"
-                img={tek}
-                file={[
-                  "https://www.dl.dropboxusercontent.com/scl/fi/br98cgv6sximop5zdp2ax/TEKHA-T01-Full-Character-Showcase.wav?rlkey=ui6u2947wycpqxzdzbx7909kx&dl=0",
-                ]}
-                title="Across The Astral Sea: Tekha"
-                description="TTRPG / Adventure Pop Punk"
-                info={[
-                  {
-                    title: "Across The Astral Sea: Tekha",
+                    title: "Broadway Blues",
                   },
                 ]}
               />
               <Album
-                id="dreamFactory"
-                img={dreamFactoryCover}
-                file={[
-                  "https://www.dl.dropboxusercontent.com/scl/fi/0lhty67m1z0iqkyhpkdif/TDF-Social-Media-Preview.mp3?rlkey=adqrmyod72roicfed57uxavqn&dl=0",
-                ]}
-                title="The Dream Factory"
-                description="Short Film / Orchestral"
-                info={[
-                  {
-                    title: "The Dream Factory",
-                  },
-                ]}
-              />
-              <Album
-                id="bard1"
-                img={bard1}
-                file={[require("../assets/NRS+DEMO+105+Pursuit.mp3")]}
-                title="A Bard’s Tale: Norse Vol. 1"
-                description="Library Music / Norse, Folk, Metal"
-                info={[
-                  {
-                    title: "A Bard’s Tale: Norse Vol. 1",
-                  },
-                ]}
-              />
-              
-              <Album
-                img={bard2}
-                title="A Bard’s Tale: The Plane of Elemental Chaos Vol. 1"
-                description="Library Music / Contemporary"
-              />
-
-
-
-            </Col>
-            <Col style={{ padding: "3%" }}>
-            <Album
-                id="rots"
-                img={rots}
-                file={[
-                  "https://www.dl.dropboxusercontent.com/scl/fi/uifjm1bauwvldiiuy76el/ROTS-DELTA-M01v2-Delta-Emblock-s-Theme.wav?rlkey=043vo2m4p7m7y3zu2vdnemhdw&e=1&dl=0",
-                ]}
-                title="Resurgence of the Storm"
-                description="MOBA / Sci-Fi Fantasy"
-                info={[
-                  {
-                    title: "Resurgence of the Storm",
-                  },
-                ]}
-              />
-              <Album
-                id="spell"
-                img={spell}
-                file={[
-                  require("../assets/ASTB Preview.mp3"),
-                ]}
-                title="A Spell To Break"
-                description="Short Film / Magical Fantasy"
-                info={[
-                  {
-                    title: "A Spell To Break",
-                  },
-                ]}
-              />
-              <Album
-                id="stalling"
-                img={stalling}
-                file={[require("../assets/STL+DEMO+M10+At+Shit_s+End.mp3")]}
-                title="Stalling"
-                description="Short Film / Musical Comedy"
-                info={[
-                  {
-                    title: "Stalling",
-                  },
-                ]}
-              />
-              
-              <Album
-                id="ptps"
-                img={ptps}
-                file={[
-                  "https://www.dl.dropboxusercontent.com/scl/fo/cwxd6z2d4uef8vl24m2x5/h/_Final%20Tracks%20%28Audio%29/PTPS%20ST01v1%20M01v4%20Main%20Menu.wav?rlkey=1lk894vipypruh8cqhfknijqx&dl=0",
-                ]}
-                title="Potion Pushas"
-                description="Video Game / Fantasy, Noir, Electronic"
-                info={[
-                  {
-                    title: "Potion Pushas",
-                  },
-                ]}
-              />
-              
-              <Album
-                img={missingTwin}
-                title="Missing Twin"
-                description="Feature Film / Drama, Thriller"
-              />
-            </Col>
-            <Col style={{ padding: "3%", paddingRight: "8%" }}>
-            <Album
                 id="sprout"
                 img={sprout}
                 file={[
@@ -252,10 +138,134 @@ function Music() {
                 title="Alistair"
                 description="Video Game / Horror, Electronic"
               />
-
+              
               
 
 
+
+            </Col>
+            <Col style={{ padding: "3%" }}>
+            <Album
+                id="afterlife"
+                img={afterlife}
+                file={[
+                  "https://www.dl.dropboxusercontent.com/scl/fi/dmrnwu4gskvpf655faor0/AFTL-Social-Media-Preview.m4a?rlkey=298y42zbcrfzyp6m8yd94o3ii&e=1&dl=0",
+                ]}
+                title="Afterlife"
+                description="Short Film / Dark Comedy"
+                info={[
+                  {
+                    title: "Afterlife",
+                  },
+                ]}
+              />
+              <Album
+                id="tekha"
+                img={tek}
+                file={[
+                  "https://www.dl.dropboxusercontent.com/scl/fi/br98cgv6sximop5zdp2ax/TEKHA-T01-Full-Character-Showcase.wav?rlkey=ui6u2947wycpqxzdzbx7909kx&dl=0",
+                ]}
+                title="Across The Astral Sea: Tekha"
+                description="TTRPG / Adventure Pop Punk"
+                info={[
+                  {
+                    title: "Across The Astral Sea: Tekha",
+                  },
+                ]}
+              />
+              <Album
+                id="dreamFactory"
+                img={dreamFactoryCover}
+                file={[
+                  "https://www.dl.dropboxusercontent.com/scl/fi/0lhty67m1z0iqkyhpkdif/TDF-Social-Media-Preview.mp3?rlkey=adqrmyod72roicfed57uxavqn&dl=0",
+                ]}
+                title="The Dream Factory"
+                description="Short Film / Orchestral"
+                info={[
+                  {
+                    title: "The Dream Factory",
+                  },
+                ]}
+              />
+              <Album
+                id="bard1"
+                img={bard1}
+                file={[require("../assets/NRS+DEMO+105+Pursuit.mp3")]}
+                title="A Bard’s Tale: Norse Vol. 1"
+                description="Library Music / Norse, Folk, Metal"
+                info={[
+                  {
+                    title: "A Bard’s Tale: Norse Vol. 1",
+                  },
+                ]}
+              />
+              <Album
+                img={bard2}
+                title="A Bard’s Tale: The Plane of Elemental Chaos Vol. 1"
+                description="Library Music / Contemporary"
+              />
+              
+            </Col>
+            <Col style={{ padding: "3%", paddingRight: "8%" }}>
+            <Album
+                id="rots"
+                img={rots}
+                file={[
+                  "https://www.dl.dropboxusercontent.com/scl/fi/uifjm1bauwvldiiuy76el/ROTS-DELTA-M01v2-Delta-Emblock-s-Theme.wav?rlkey=043vo2m4p7m7y3zu2vdnemhdw&e=1&dl=0",
+                ]}
+                title="Resurgence of the Storm"
+                description="MOBA / Sci-Fi Fantasy"
+                info={[
+                  {
+                    title: "Resurgence of the Storm",
+                  },
+                ]}
+              />
+            <Album
+                id="spell"
+                img={spell}
+                file={[
+                  require("../assets/ASTB Preview.mp3"),
+                ]}
+                title="A Spell To Break"
+                description="Short Film / Magical Fantasy"
+                info={[
+                  {
+                    title: "A Spell To Break",
+                  },
+                ]}
+              />
+              <Album
+                id="stalling"
+                img={stalling}
+                file={[require("../assets/STL+DEMO+M10+At+Shit_s+End.mp3")]}
+                title="Stalling"
+                description="Short Film / Musical Comedy"
+                info={[
+                  {
+                    title: "Stalling",
+                  },
+                ]}
+              />
+              <Album
+                id="ptps"
+                img={ptps}
+                file={[
+                  "https://www.dl.dropboxusercontent.com/scl/fo/cwxd6z2d4uef8vl24m2x5/h/_Final%20Tracks%20%28Audio%29/PTPS%20ST01v1%20M01v4%20Main%20Menu.wav?rlkey=1lk894vipypruh8cqhfknijqx&dl=0",
+                ]}
+                title="Potion Pushas"
+                description="Video Game / Fantasy, Noir, Electronic"
+                info={[
+                  {
+                    title: "Potion Pushas",
+                  },
+                ]}
+              />
+              <Album
+                img={missingTwin}
+                title="Missing Twin"
+                description="Feature Film / Drama, Thriller"
+              />
             </Col>
           </Row>
           <div style={{ paddingTop: "5%" }}></div>
