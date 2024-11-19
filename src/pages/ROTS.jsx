@@ -8,6 +8,7 @@ import "react-h5-audio-player/lib/styles.css";
 import { useEffect, useState } from "react";
 import NewAudioPlayer from "../components/AudioPlayer";
 import rots from "../assets/ROTS Album Cover.png"
+import TrackList from "../components/TrackList";
 
 function ROTS() {
     const [spotifyMouseOver, setSpotifyMouseOver] = useState(false);
@@ -25,41 +26,26 @@ function ROTS() {
         }
     ];
 
-    const audioTracks = [
-       track1
-    ];
-
     const [selectedTrack, setSelectedTrack] = useState({
-        title: "Delta Emblock's Theme",
+        title: trackInfo[0].title,
         track: track1,
         index: "1",
-        length: "2:32",
-    },);
+        length: "1:11",
+    });
 
     const handleClick = (track) => {
         setSelectedTrack(track);
     };
 
-    const [hoveredItem, setHoveredItem] = useState({
-        title: "Delta Emblock's Theme",
-        track: track1,
-        index: "1",
-        length: "2:32",
-    },);
+    const [hoveredIndex, setHoveredIndex] = useState(null);
 
     const handleHoverEnter = (item) => {
-        setHoveredItem(item);
+        setHoveredIndex(item);
     };
 
     const handleHoverLeave = () => {
-        setHoveredItem({ title: "", track: track1, index: "", length: "" });
+        setHoveredIndex(null)
     };
-
-    const [playingTrackIndex, setPlayingTrackIndex] = useState(0);
-
-    useEffect(() => {
-        setSelectedTrack(trackInfo[playingTrackIndex]);
-    }, [playingTrackIndex]);
 
     return (
         <>
@@ -101,43 +87,19 @@ function ROTS() {
                                         />
                                         <div style={{ paddingBottom: "5%" }}></div>
                                         <NewAudioPlayer
+                                            key={selectedTrack.title}
+                                            songs={[selectedTrack.track]}
                                             trackName={selectedTrack.title}
-                                            songs={audioTracks}
-                                            trackInfo={trackInfo}
-                                            playingTrackIndex={playingTrackIndex}
-                                            setPlayingTrackIndex={setPlayingTrackIndex}
                                         />
                                         <br />
-                                        {trackInfo.map((track, index) => {
-                                            return (
-                                                <p
-                                                    style={{
-                                                        color: "white",
-                                                        marginBottom: "0",
-                                                        padding: "4px",
-                                                        fontSize: "1rem",
-                                                        marginLeft: "1.1%",
-                                                        fontFamily: "Georgia",
-                                                        fontWeight:
-                                                            hoveredItem.index === track.index ? "bold" : "",
-                                                        backgroundColor:
-                                                            selectedTrack.index === track.index
-                                                                ? "#313131"
-                                                                : "black",
-                                                        borderRadius: "6px",
-                                                    }}
-                                                    key={index}
-                                                    onClick={() => handleClick(track)}
-                                                    onMouseEnter={() => handleHoverEnter(track)}
-                                                    onMouseLeave={handleHoverLeave}
-                                                >
-                                                    <span style={{ cursor: "default" }}>
-                                                        {track.index}. {track.title}{" "}
-                                                    </span>
-                                                    <span style={{ float: "right" }}>{track.length}</span>
-                                                </p>
-                                            );
-                                        })}
+                                        <TrackList
+                                            trackInfo={trackInfo}
+                                            selectedTrack={selectedTrack}
+                                            onTrackClick={handleClick}
+                                            hoveredItem={hoveredIndex}
+                                            onHoverEnter={handleHoverEnter}
+                                            onHoverLeave={handleHoverLeave}
+                                        />
                                         <div
                                             style={{
                                                 paddingInline: "15%",
@@ -386,7 +348,7 @@ function ROTS() {
                                                     Guitar:{" "}
                                                     <span style={{ color: "#B9BAB9" }}>Ananta Arora</span>{" "}
                                                 </li>
-                                                <br/>
+                                                <br />
                                                 <li>
                                                     <span style={{ color: "#B9BAB9" }}>Special thanks to zeroLamberg and MindHawk</span>{" "}
                                                 </li>

@@ -6,7 +6,7 @@ import MarcNavbar from "../components/Navbar";
 import MarcFooter from "../components/Footer";
 import alistair from "../assets/BXR+Album+Cover.jpg";
 import "react-h5-audio-player/lib/styles.css";
-import tochter from "../assets/shp/SHP-T01v1 M01v3 Tokhter's Visit.wav";
+import TrackList from "../components/TrackList";
 import { useEffect, useState } from "react";
 import NewAudioPlayer from "../components/AudioPlayer";
 import applemusic from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_wht_sm_073120.svg";
@@ -32,7 +32,7 @@ function Alistair() {
     let track13 = "https://www.dl.dropboxusercontent.com/scl/fo/0rv2cxqy3uv4uop56wskd/AH9B0F6kSMxZ9RuTV2dnh5I/BXR%20T13v1%20M15v2%20The%20Dark%20Forest.wav?rlkey=hgeopvoviysj1aie3xblt6qi8&dl=0"
     let track14 = "https://www.dl.dropboxusercontent.com/scl/fo/0rv2cxqy3uv4uop56wskd/AMBLb_g53HQ1pmmHd3AMTh8/BXR%20T14v1%20M16v1%20The%20Fog.wav?rlkey=hgeopvoviysj1aie3xblt6qi8&dl=0"
     let track15 = "https://www.dl.dropboxusercontent.com/scl/fo/0rv2cxqy3uv4uop56wskd/ALyvRTpUZSsDsWWPuRCKiio/BXR%20T15v1%20M00v2%20Suite.wav?rlkey=hgeopvoviysj1aie3xblt6qi8&dl=0"
-    
+
     const trackInfo = [
         {
             title: "Family",
@@ -126,39 +126,26 @@ function Alistair() {
         },
     ];
 
-    const audioTracks = [track1, track2, track3, track4, track5, track6, track7, track8, track9, track10, track11, track12, track13, track15, track15];
-
     const [selectedTrack, setSelectedTrack] = useState({
-        title: "Family",
+        title: trackInfo[0].title,
         track: track1,
         index: "1",
-        length: "2:04",
+        length: "1:11",
     });
 
     const handleClick = (track) => {
         setSelectedTrack(track);
     };
 
-    const [hoveredItem, setHoveredItem] = useState({
-        title: "Family",
-        track: track1,
-        index: "1",
-        length: "2:04",
-    });
+    const [hoveredIndex, setHoveredIndex] = useState(null);
 
     const handleHoverEnter = (item) => {
-        setHoveredItem(item);
+        setHoveredIndex(item);
     };
 
     const handleHoverLeave = () => {
-        setHoveredItem({ title: "", track: tochter, index: "", length: "" });
+        setHoveredIndex(null)
     };
-
-    const [playingTrackIndex, setPlayingTrackIndex] = useState(0);
-
-    useEffect(() => {
-        setSelectedTrack(trackInfo[playingTrackIndex]);
-    }, [playingTrackIndex]);
 
     return (
         <>
@@ -200,42 +187,19 @@ function Alistair() {
                                         />
                                         <div style={{ paddingBottom: "5%" }}></div>
                                         <NewAudioPlayer
+                                            key={selectedTrack.title}  
+                                            songs={[selectedTrack.track]} 
                                             trackName={selectedTrack.title}
-                                            songs={audioTracks}
-                                            trackInfo={trackInfo}
-                                            playingTrackIndex={playingTrackIndex}
-                                            setPlayingTrackIndex={setPlayingTrackIndex}
                                         />
                                         <br />
-                                        {trackInfo.map((track, index) => {
-                                            return (
-                                                <p
-                                                    style={{
-                                                        color: "white",
-                                                        marginBottom: "0",
-                                                        padding: "4px",
-                                                        fontSize: "1rem",
-                                                        marginLeft: "1.1%",
-                                                        fontFamily: "Georgia",
-                                                        fontWeight:
-                                                            hoveredItem.index === track.index ? "bold" : "",
-                                                        backgroundColor:
-                                                            selectedTrack.index === track.index
-                                                                ? "#313131"
-                                                                : "black",
-                                                        borderRadius: "6px",
-                                                    }}
-                                                    key={index}
-                                                    onClick={() => handleClick(track)}
-                                                    onMouseEnter={() => handleHoverEnter(track)}
-                                                    onMouseLeave={handleHoverLeave}
-                                                >
-                                                    <span style={{ cursor: 'default' }}>
-                                                        {track.index}. {track.title}{" "}</span>
-                                                    <span style={{ float: "right" }}>{track.length}</span>
-                                                </p>
-                                            );
-                                        })}
+                                        <TrackList
+                                            trackInfo={trackInfo}
+                                            selectedTrack={selectedTrack}
+                                            onTrackClick={handleClick}
+                                            hoveredItem={hoveredIndex}
+                                            onHoverEnter={handleHoverEnter}
+                                            onHoverLeave={handleHoverLeave}
+                                        />
                                         <div
                                             style={{
                                                 paddingInline: "15%",

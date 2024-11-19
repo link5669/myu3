@@ -53,7 +53,7 @@ const MultilinePlayer = () => {
       index: "7",
       length: "2:11",
     },
-    
+
     {
       title: "Resurgence of the Storm",
       track: "https://www.dl.dropboxusercontent.com/scl/fo/ixabmeia9gkmg65em8dp1/AOPP_vnQ16LMuYyDZSrK-0o/Audio%20Files/Select%20Tracks/8.%20Resurgence%20of%20the%20Storm%20%28MOBA%20%3A%20Sci-Fi%20Adventure%29.wav?rlkey=kl8udpl881ml2puw7rnwkkjr2&dl=0",
@@ -70,57 +70,34 @@ const MultilinePlayer = () => {
     },
   ];
 
-  const audioTracks = [
-    trackInfo[0].track,
-    trackInfo[1].track,
-    trackInfo[2].track,
-    trackInfo[3].track,
-    trackInfo[4].track,
-    trackInfo[5].track,
-    trackInfo[6].track,
-    trackInfo[7].track,
-    trackInfo[8].track,
-  ];
-
   const [selectedTrack, setSelectedTrack] = useState({
-    title: "A Bard’s Tale: Norse Vol. 1",
-    track: "https://www.dl.dropboxusercontent.com/scl/fo/ixabmeia9gkmg65em8dp1/ADb3WIIdIitPjp6Bi3PEi9Y/Audio%20Files/Select%20Tracks/1.%20A%20Bard%27s%20Tale%20%28Library%20Music%20%3A%20Viking%20Metal%2C%20Action%29.wav?rlkey=kl8udpl881ml2puw7rnwkkjr2&dl=0",
-    info: "Viking Metal / Action",
+    title: trackInfo[0].title,
+    track: trackInfo[0].track,
     index: "1",
-    length: "3:02",
+    length: "1:11",
   });
 
   const handleClick = (track) => {
     setSelectedTrack(track);
   };
 
-  const [hoveredItem, setHoveredItem] = useState({
-    title: "", track: "", index: "", length: ""
-  });
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleHoverEnter = (item) => {
-    setHoveredItem(item);
+    setHoveredIndex(item);
   };
 
   const handleHoverLeave = () => {
-    setHoveredItem({ title: "", track: "", index: "", length: "" });
+    setHoveredIndex(null)
   };
-
-  const [playingTrackIndex, setPlayingTrackIndex] = useState(0);
-
-  useEffect(() => {
-    setSelectedTrack(trackInfo[playingTrackIndex]);
-  }, [playingTrackIndex]);
 
   return (
     <div style={{ paddingBottom: "25px" }}>
       <div style={{ margin: "auto", width: "30%", paddingBottom: "30px" }}>
         <NewAudioPlayer
+          key={selectedTrack.title}
+          songs={[selectedTrack.track]}
           trackName={selectedTrack.title}
-          songs={audioTracks}
-          trackInfo={trackInfo}
-          playingTrackIndex={playingTrackIndex}
-          setPlayingTrackIndex={setPlayingTrackIndex}
         />
       </div>
       <Container>
@@ -138,7 +115,7 @@ const MultilinePlayer = () => {
                       marginLeft: "1.1%",
                       fontFamily: "Georgia",
                       fontWeight:
-                        hoveredItem.index === track.index ? "bold" : "",
+                        hoveredIndex === track.index ? "bold" : "",
                       backgroundColor:
                         selectedTrack.index === track.index
                           ? "#313131"
@@ -178,7 +155,7 @@ const MultilinePlayer = () => {
                       marginLeft: "1.1%",
                       fontFamily: "Georgia",
                       fontWeight:
-                        hoveredItem.index === track.index ? "bold" : "",
+                        hoveredIndex === track.index ? "bold" : "",
                       backgroundColor:
                         selectedTrack.index === track.index
                           ? "#313131"
@@ -219,7 +196,7 @@ const MultilinePlayer = () => {
                       marginLeft: "1.1%",
                       fontFamily: "Georgia",
                       fontWeight:
-                        hoveredItem.index === track.index ? "bold" : "",
+                        hoveredIndex === track.index ? "bold" : "",
                       backgroundColor:
                         selectedTrack.index === track.index
                           ? "#313131"

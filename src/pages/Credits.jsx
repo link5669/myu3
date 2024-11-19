@@ -118,10 +118,6 @@ function Credits() {
                 <br />
                 <ul style={{ paddingLeft: 0 }}>
                   <Credit
-                    title="Xiao Qiang"
-                    from="Feature Film | Audio Director & Composer"
-                  />
-                  <Credit
                     title="Missing Twin"
                     from="Lifetime Feature Film | Composer"
                   />
@@ -258,12 +254,12 @@ function Credits() {
                   />
                   <br />
                   <Credit
-                    title="A Bard’s Tale: Norse Vol. 1"
-                    from="Library Music | Composer"
+                    title="Tales of the Norse Vol. 1"
+                    from="Audio Library | Audio Director, Composer"
                   />
                   <Credit
-                    title="A Bard’s Tale: The Plane of Elemental Chaos Vol. 1"
-                    from="Library Music | Composer"
+                    title="Tales of Elemental Chaos Vol. 1"
+                    from="Audio Library | Audio Director, Composer"
                   />
                   <Credit
                     title="The High Citadel"

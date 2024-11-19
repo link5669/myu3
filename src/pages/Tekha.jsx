@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import NewAudioPlayer from "../components/AudioPlayer";
 import applemusic from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_wht_sm_073120.svg";
 import applemusiccolor from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_blk_sm_073120.svg";
+import TrackList from "../components/TrackList";
 
 function Tekha() {
   const [spotifyMouseOver, setSpotifyMouseOver] = useState(false);
@@ -35,41 +36,26 @@ function Tekha() {
     }
   ];
 
-  const audioTracks = [
-    track1,track2
-  ];
-
   const [selectedTrack, setSelectedTrack] = useState({
-    title: "Tekha",
+    title: trackInfo[0].title,
     track: track1,
     index: "1",
-    length: "2:49",
-  },);
+    length: "1:11",
+  });
 
   const handleClick = (track) => {
     setSelectedTrack(track);
   };
 
-  const [hoveredItem, setHoveredItem] = useState({
-    title: "Tekha",
-    track: track1,
-    index: "1",
-    length: "2:49",
-  },);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleHoverEnter = (item) => {
-    setHoveredItem(item);
+    setHoveredIndex(item);
   };
 
   const handleHoverLeave = () => {
-    setHoveredItem({ title: "", track: track1, index: "", length: "" });
+    setHoveredIndex(null)
   };
-
-  const [playingTrackIndex, setPlayingTrackIndex] = useState(0);
-
-  useEffect(() => {
-    setSelectedTrack(trackInfo[playingTrackIndex]);
-  }, [playingTrackIndex]);
 
   return (
     <>
@@ -111,43 +97,19 @@ function Tekha() {
                     />
                     <div style={{ paddingBottom: "5%" }}></div>
                     <NewAudioPlayer
+                      key={selectedTrack.title}
+                      songs={[selectedTrack.track]}
                       trackName={selectedTrack.title}
-                      songs={audioTracks}
-                      trackInfo={trackInfo}
-                      playingTrackIndex={playingTrackIndex}
-                      setPlayingTrackIndex={setPlayingTrackIndex}
                     />
                     <br />
-                    {trackInfo.map((track, index) => {
-                      return (
-                        <p
-                          style={{
-                            color: "white",
-                            marginBottom: "0",
-                            padding: "4px",
-                            fontSize: "1rem",
-                            marginLeft: "1.1%",
-                            fontFamily: "Georgia",
-                            fontWeight:
-                              hoveredItem.index === track.index ? "bold" : "",
-                            backgroundColor:
-                              selectedTrack.index === track.index
-                                ? "#313131"
-                                : "black",
-                            borderRadius: "6px",
-                          }}
-                          key={index}
-                          onClick={() => handleClick(track)}
-                          onMouseEnter={() => handleHoverEnter(track)}
-                          onMouseLeave={handleHoverLeave}
-                        >
-                          <span style={{ cursor: "default" }}>
-                            {track.index}. {track.title}{" "}
-                          </span>
-                          <span style={{ float: "right" }}>{track.length}</span>
-                        </p>
-                      );
-                    })}
+                    <TrackList
+                      trackInfo={trackInfo}
+                      selectedTrack={selectedTrack}
+                      onTrackClick={handleClick}
+                      hoveredItem={hoveredIndex}
+                      onHoverEnter={handleHoverEnter}
+                      onHoverLeave={handleHoverLeave}
+                    />
                     <div
                       style={{
                         paddingInline: "15%",
@@ -387,8 +349,8 @@ function Tekha() {
                       </ul>
                       <div style={{ paddingBottom: "5%" }}></div>
                       <p style={{ fontSize: "1.1rem", color: "#B9BAB9" }}>
-                        Original Character Created by <i><a style={{color: "#B9BAB9"}}href="https://x.com/moridotart">moridot</a></i> <br />
-                        Artwork by <i><a style={{color: "#B9BAB9"}} href="https://x.com/ronjou14">ronjou14</a>  </i>                      <br /><br />
+                        Original Character Created by <i><a style={{ color: "#B9BAB9" }} href="https://x.com/moridotart">moridot</a></i> <br />
+                        Artwork by <i><a style={{ color: "#B9BAB9" }} href="https://x.com/ronjou14">ronjou14</a>  </i>                      <br /><br />
                         Special thanks to Collin Vodicka and Kristalis Sotomayor
                       </p>
                     </div>

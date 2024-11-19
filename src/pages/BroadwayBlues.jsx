@@ -4,79 +4,63 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/esm/Col";
 import MarcNavbar from "../components/Navbar";
 import MarcFooter from "../components/Footer";
-import shp from "../assets/PTPS/PTPS Album Cover.png";
 import "react-h5-audio-player/lib/styles.css";
 import { useEffect, useState } from "react";
 import NewAudioPlayer from "../components/AudioPlayer";
 import applemusic from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_wht_sm_073120.svg";
 import applemusiccolor from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_blk_sm_073120.svg";
 import TrackList from "../components/TrackList";
+import { useCallback } from "react";
 
-function PTPS() {
+function BroadwayBlues() {
   const [spotifyMouseOver, setSpotifyMouseOver] = useState(false);
   const [appleMouseOver, setAppleMouseOver] = useState(false);
   const [youTubeMouseOver, setYouTubeMouseOver] = useState(false);
   const [soundcloudMouseOver, setSoundcloudMouseOver] = useState(false);
 
-  const track1 = "https://www.dl.dropboxusercontent.com/scl/fo/cwxd6z2d4uef8vl24m2x5/h/_Final%20Tracks%20%28Audio%29/PTPS%20ST01v1%20M01v4%20Main%20Menu.wav?rlkey=1lk894vipypruh8cqhfknijqx&dl=0"
-  const track2 = "https://www.dl.dropboxusercontent.com/scl/fo/cwxd6z2d4uef8vl24m2x5/h/_Final%20Tracks%20%28Audio%29/PTPS%20ST02v1%20M02v2%20City%20Town%20Level.wav?rlkey=1lk894vipypruh8cqhfknijqx&dl=0"
-  const track3 = "https://www.dl.dropboxusercontent.com/scl/fo/cwxd6z2d4uef8vl24m2x5/h/_Final%20Tracks%20%28Audio%29/PTPS%20ST03v1%20M03v2%20Factory%20Sewer%20Level.wav?rlkey=1lk894vipypruh8cqhfknijqx&dl=0"
-  const track4 = "https://www.dl.dropboxusercontent.com/scl/fo/cwxd6z2d4uef8vl24m2x5/h/_Final%20Tracks%20%28Audio%29/PTPS%20ST04v1%20M04v2%20Wizard%20HQ%20Level.wav?rlkey=1lk894vipypruh8cqhfknijqx&dl=0"
-  const track5 = "https://www.dl.dropboxusercontent.com/scl/fo/cwxd6z2d4uef8vl24m2x5/h/_Final%20Tracks%20%28Audio%29/PTPS%20ST05v1%20M05v2%20Hideout.wav?rlkey=1lk894vipypruh8cqhfknijqx&dl=0"
+  const track1 = "https://www.dl.dropboxusercontent.com/scl/fo/af00slpcm8a9zr4s9xr54/AAtYiqGdABR9v-0N_f4F0wI?e=2&preview=BWBL+T01v1+S01+Like+It%27s+A+Dream.wav&rlkey=nomu4ju8ukm4q824xvkkmyfez&dl=0"
 
   const trackInfo = [
     {
-      title: "Main Menu",
+      title: "Like It's a Dream",
       track: track1,
       index: "1",
-      length: "1:52",
-    },
-    {
-      title: "City Town Level",
-      track: track2,
-      index: "2",
-      length: "2:17",
-    },
-    {
-      title: "Factory Sewer Level",
-      track: track3,
-      index: "3",
-      length: "2:34",
-    },
-    {
-      title: "Wizard HQ Level",
-      track: track4,
-      index: "4",
-      length: "2:35",
-    },
-    {
-      title: "Hideout",
-      track: track5,
-      index: "5",
-      length: "2:05",
-    },
+      length: "1:41",
+    }
+  ];
+
+  const audioTracks = [
+    track1
   ];
 
   const [selectedTrack, setSelectedTrack] = useState({
     title: trackInfo[0].title,
-    track: track1,
+    track: trackInfo[0].track,
     index: "1",
-    length: "1:11",
+    length: trackInfo[0].length,
   });
 
-  const handleClick = (track) => {
-    setSelectedTrack(track);
-  };
+  const handleClick = useCallback((track) => {
+    if (track.title !== selectedTrack.title) {
+      setSelectedTrack(track);
+    }
+  }, [selectedTrack.title]);
 
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const handleHoverEnter = useCallback((index) => {
+    setHoveredItem(index);
+  }, []);
 
-  const handleHoverEnter = (item) => {
-    setHoveredIndex(item);
-  };
+  const handleHoverLeave = useCallback(() => {
+    setHoveredItem(null);
+  }, []);
 
-  const handleHoverLeave = () => {
-    setHoveredIndex(null)
-  };
+  const [hoveredItem, setHoveredItem] = useState(null);
+
+  const [playingTrackIndex, setPlayingTrackIndex] = useState(0);
+
+  useEffect(() => {
+    setSelectedTrack(trackInfo[playingTrackIndex]);
+  }, [playingTrackIndex]);
 
   return (
     <>
@@ -95,7 +79,7 @@ function PTPS() {
                   fontStyle: "]]]d",
                 }}
               >
-                Potion Pushas
+                Broadway Blues
               </h2>
               <p
                 style={{
@@ -106,7 +90,7 @@ function PTPS() {
                   paddingBottom: "1%",
                 }}
               >
-                <i>Video Game / Fantasy, Noir, Electronic</i>
+                <i>Short Film / Musical</i>
               </p>
               <Container>
                 <Row>
@@ -114,20 +98,23 @@ function PTPS() {
                     <img
                       style={{ width: "100%", borderRadius: "10px" }}
                       alt="album cover"
-                      src={shp}
+                      src="https://www.dropbox.com/scl/fi/x3yr2gxbm4crukn68mdvq/BWBL-Album-Cover.png?rlkey=qz8y5e96rq0wydtqz6urmlt09&e=1&dl=1"
                     />
                     <div style={{ paddingBottom: "5%" }}></div>
                     <NewAudioPlayer
-                      key={selectedTrack.title}
-                      songs={[selectedTrack.track]}
+                      key={selectedTrack.title} // Add key to force remount when track actually changes
                       trackName={selectedTrack.title}
+                      songs={[selectedTrack.track]}
+                      trackInfo={trackInfo}
+                      playingTrackIndex={playingTrackIndex}
+                      setPlayingTrackIndex={setPlayingTrackIndex}
                     />
                     <br />
                     <TrackList
                       trackInfo={trackInfo}
                       selectedTrack={selectedTrack}
                       onTrackClick={handleClick}
-                      hoveredItem={hoveredIndex}
+                      hoveredItem={hoveredItem}
                       onHoverEnter={handleHoverEnter}
                       onHoverLeave={handleHoverLeave}
                     />
@@ -144,7 +131,7 @@ function PTPS() {
                         target="_blank"
                         onMouseOver={() => setAppleMouseOver(true)}
                         onMouseOut={() => setAppleMouseOver(false)}
-                        href="https://music.apple.com/us/album/potion-pushas-original-soundtrack-ep/1720639972"
+                      // href="https://music.apple.com/us/album/beach-trip-original-soundtrack-single/1756664480"
                       >
                         {!appleMouseOver ? (
                           <img style={{ width: "24px" }} src={applemusic} />
@@ -159,7 +146,7 @@ function PTPS() {
                         target="_blank"
                         onMouseOver={() => setYouTubeMouseOver(true)}
                         onMouseOut={() => setYouTubeMouseOver(false)}
-                        href="https://www.youtube.com/watch?v=Pr0vJRD4IVg&list=PLWLXJaKFBj4KOp6taihy560geeDubDSo5"
+                        href="https://www.youtube.com/playlist?list=PLWLXJaKFBj4LjtyTBlC3C0kZ1PlFPdEk5"
                       >
                         {youTubeMouseOver ? (
                           <svg
@@ -188,7 +175,7 @@ function PTPS() {
                         target="_blank"
                         onMouseOver={() => setSoundcloudMouseOver(true)}
                         onMouseOut={() => setSoundcloudMouseOver(false)}
-                        href="https://soundcloud.com/marcyumusic/sets/potion-pushas-original-soundtrack"
+                        href="https://soundcloud.com/marcyumusic/like-its-a-dream-from-broadway-blues"
                       >
                         {soundcloudMouseOver ? (
                           <svg
@@ -275,7 +262,7 @@ function PTPS() {
                         target="_blank"
                         onMouseOver={() => setSpotifyMouseOver(true)}
                         onMouseOut={() => setSpotifyMouseOver(false)}
-                        href="https://open.spotify.com/album/3YY1uPNJIlVXBsYz2nuMLR?si=--9ts-pES86-w57yUsSwUg"
+                      // href="https://open.spotify.com/album/3ykOoPeztpg9JEMnlyEkZy?si=LiU9SIuuR8GQ2GB2PceIwQ"
                       >
                         {spotifyMouseOver ? (
                           <svg
@@ -319,55 +306,196 @@ function PTPS() {
                         </li>
                         <br />
                         <li>
-                          Flutes / World Flutes:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Gret Price</span>
+                          "Like It's A Dream"
                         </li>
                         <li>
-                          Tenor Saxophone:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Austin Leshock
-                          </span>
+                          Music by{" "}
+                          <span style={{ color: "#B9BAB9" }}>Marc Yu and Adam Blotner</span>
                         </li>
                         <li>
-                          Violin:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Miles Acquaviva
-                          </span>
+                          Lyrics by{" "}
+                          <span style={{ color: "#B9BAB9" }}>Adam Blotner</span>
                         </li>
                         <li>
-                          Electric Guitar:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Cheng-Wei Tseng
-                          </span>
+                          Orchestrated by{" "}
+                          <span style={{ color: "#B9BAB9" }}>Marc Yu</span>
+                        </li><li>
+                          Orchestrated by{" "}
+                          <span style={{ color: "#B9BAB9" }}>Marc Yu</span>
+                        </li>
+                        <br />
+                        <li>
+                          "Avery", voiced by{" "}
+                          <span style={{ color: "#B9BAB9" }}>Hannah Crouse</span>
+                        </li>
+                        <li>
+                          "Cyrus", voiced by{" "}
+                          <span style={{ color: "#B9BAB9" }}>Darius Harper</span>
+                        </li>
+                        <br />
+                        <li>
+                          Music Production Services:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Wavyrn</span>
+                        </li>
+                        <li>
+                          Score Mixing Engineer:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Max Jaime</span>
+                        </li>
+                        <br />
+                        <li>
+                          Musical Director:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Jack Richman</span>
+                        </li>
+                        <li>
+                          Lead Recording Engineer:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Dong Yao Liu</span>
+                        </li>
+                        <li>
+                          Orchestral Recording Engineer:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Dong Yao Liu</span>
+                        </li>
+                        <li>
+                          Vocal Recording Engineer:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Dong Yao Liu</span>
+                        </li>
+                        <li>
+                          Engineer Assistant:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Lily Kelso</span>
+                        </li>
+                        <li>
+                          Engineer Assistant:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Shihhao Cheng</span>
+                        </li>
+                        <li>
+                          Engineer Assistant:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Matey Hei</span>
+                        </li>
+                        <li>
+                          Engineer Assistant:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Jennifer Wang</span>
+                        </li>
+                        <li>
+                          Engineer Assistant:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Keith Du</span>
+                        </li>
+                        <li>
+                          Score Mixing Engineer:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Max Jaime</span>
+                        </li>
+                        <li>
+                          Score Mixing Engineer:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Austin Leshock</span>
+                        </li>
+                        <li>
+                          Mastering Engineer:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Austin Leshock</span>
+                        </li>
+                        <li>
+                          Audio Technical Assistant:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Angelica Ramos</span>
+                        </li>
+                        <br />
+                        <li>
+                          Flute:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Chris Freeman</span>
+                        </li>
+                        <li>
+                          Oboe:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Jesse Myers</span>
+                        </li>
+                        <li>
+                          Alto Sax:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Sultan Seilkhanov</span>
+                        </li>
+                        <li>
+                          Tenor Sax:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Andy Lin (Worpp)</span>
+                        </li>
+                        <li>
+                          Trumpet I:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Carlos Rivera</span>
+                        </li>
+                        <li>
+                          Trumpet II:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Jared Kaye</span>
+                        </li>
+                        <li>
+                          Violin I:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Luca Willoughby</span>
+                        </li>
+                        <li>
+                          Violin I:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Beatriz Martinez </span>
+                        </li>
+                        <li>
+                          Violin II:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Frederick Oliveira-Chevres</span>
+                        </li>
+                        <li>
+                          Viola:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Peter Tao</span>
+                        </li>
+                        <li>
+                          Viola:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Anwen Borgo</span>
+                        </li>
+                        <li>
+                          Cello:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Hailey Brasser</span>
+                        </li>
+                        <li>
+                          Piano:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Kit Hung</span>
                         </li>
                         <li>
                           Acoustic Guitar:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Keith Zeyu Du
-                          </span>
+                          <span style={{ color: "#B9BAB9" }}>Keith Du</span>
                         </li>
                         <li>
-                          Drum Set:{" "}
+                          Upright Bass:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Cate Yoder</span>
+                        </li>
+                        <li>
+                          Drumset:{" "}
                           <span style={{ color: "#B9BAB9" }}>Fan Cong</span>
                         </li>
+                        <li>
+                          Drumset:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Fan Cong</span>
+                        </li>
+                        <br />
+                        <li>
+                          Music Coordinator:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Marc Yu</span>
+                        </li>
+                        <li>
+                          Session Conductor:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Jack Richman</span>
+                        </li>
+                        <li>
+                          Music Copyist:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Angelica Ramos</span>
+                        </li>
+                        <li>
+                          Music Editor:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Max Jaime</span>
+                        </li>
+                        <li>
+                          Session Videographer:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Lang (Oscar) Qin</span>
+                        </li>
+                        <br />
+                        <li>
+                          Recorded at{" "}
+                          <span style={{ color: "#B9BAB9" }}>The Record Co.</span>
+                        </li>
+                        <br />
+                        <li>
+                          Created by {" "}
+                          <span style={{ color: "#B9BAB9" }}>Elsa Miller</span>
+                        </li>
                       </ul>
-                      <div style={{ paddingBottom: "5%" }}></div>
-                      <h3>SYNOPSIS</h3>
-                      <p style={{ fontSize: "1.1rem", color: "#B9BAB9" }}>
-                        Play as Snaggletooth, a young goblin who is struggling
-                        to make ends meet in the corrupt and dark city of
-                        Dawnshroud. Snaggletooth aims to propel himself into a
-                        better life by selling potions and completing favors for
-                        other members of the city. However, the Evil Ministry of
-                        Potions has a team of elite wizards patrolling the city
-                        and monopolizing the potions for themselves. Fight back
-                        against the system and try to carve out a life for
-                        yourself.
-                        <br />
-                        <br />
-                        Created by Holden Kittelberger, Tyler Cowles, Elias
-                        Swartz, Kuangyi Hu, and Isabella Bock
-                      </p>
+                      {/* <div style={{ paddingBottom: "5%" }}></div> */}
                     </div>
                   </Col>
                 </Row>
@@ -390,4 +518,4 @@ function PTPS() {
   );
 }
 
-export default PTPS;
+export default BroadwayBlues;

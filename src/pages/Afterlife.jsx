@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import NewAudioPlayer from "../components/AudioPlayer";
 import applemusic from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_wht_sm_073120.svg";
 import applemusiccolor from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_blk_sm_073120.svg";
+import TrackList from "../components/TrackList";
 
 function Afterlife() {
   const [spotifyMouseOver, setSpotifyMouseOver] = useState(false);
@@ -42,41 +43,26 @@ function Afterlife() {
     }
   ];
 
-  const audioTracks = [
-    track1, track2, track3
-  ];
-
   const [selectedTrack, setSelectedTrack] = useState({
-    title: "Afterlife Redux",
+    title: trackInfo[0].title,
     track: track1,
     index: "1",
     length: "1:11",
-  },);
+  });
 
   const handleClick = (track) => {
     setSelectedTrack(track);
   };
 
-  const [hoveredItem, setHoveredItem] = useState({
-    title: "Afterlife Redux",
-    track: track1,
-    index: "1",
-    length: "1:11",
-  },);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleHoverEnter = (item) => {
-    setHoveredItem(item);
+    setHoveredIndex(item);
   };
 
   const handleHoverLeave = () => {
-    setHoveredItem({ title: "", track: track1, index: "", length: "" });
+    setHoveredIndex(null)
   };
-
-  const [playingTrackIndex, setPlayingTrackIndex] = useState(0);
-
-  useEffect(() => {
-    setSelectedTrack(trackInfo[playingTrackIndex]);
-  }, [playingTrackIndex]);
 
   return (
     <>
@@ -118,43 +104,19 @@ function Afterlife() {
                     />
                     <div style={{ paddingBottom: "5%" }}></div>
                     <NewAudioPlayer
+                      key={selectedTrack.title}  // Force remount when track changes
+                      songs={[selectedTrack.track]} // Pass only the current track
                       trackName={selectedTrack.title}
-                      songs={audioTracks}
-                      trackInfo={trackInfo}
-                      playingTrackIndex={playingTrackIndex}
-                      setPlayingTrackIndex={setPlayingTrackIndex}
                     />
                     <br />
-                    {trackInfo.map((track, index) => {
-                      return (
-                        <p
-                          style={{
-                            color: "white",
-                            marginBottom: "0",
-                            padding: "4px",
-                            fontSize: "1rem",
-                            marginLeft: "1.1%",
-                            fontFamily: "Georgia",
-                            fontWeight:
-                              hoveredItem.index === track.index ? "bold" : "",
-                            backgroundColor:
-                              selectedTrack.index === track.index
-                                ? "#313131"
-                                : "black",
-                            borderRadius: "6px",
-                          }}
-                          key={index}
-                          onClick={() => handleClick(track)}
-                          onMouseEnter={() => handleHoverEnter(track)}
-                          onMouseLeave={handleHoverLeave}
-                        >
-                          <span style={{ cursor: "default" }}>
-                            {track.index}. {track.title}{" "}
-                          </span>
-                          <span style={{ float: "right" }}>{track.length}</span>
-                        </p>
-                      );
-                    })}
+                    <TrackList
+                      trackInfo={trackInfo}
+                      selectedTrack={selectedTrack}
+                      onTrackClick={handleClick}
+                      hoveredItem={hoveredIndex}
+                      onHoverEnter={handleHoverEnter}
+                      onHoverLeave={handleHoverLeave}
+                    />
                     <div
                       style={{
                         paddingInline: "15%",

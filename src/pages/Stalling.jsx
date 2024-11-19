@@ -12,6 +12,7 @@ import { useLocation } from "react-router";
 import NewAudioPlayer from "../components/AudioPlayer";
 import applemusic from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_wht_sm_073120.svg";
 import applemusiccolor from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_blk_sm_073120.svg";
+import TrackList from "../components/TrackList";
 
 function Stalling() {
   const [spotifyMouseOver, setSpotifyMouseOver] = useState(false);
@@ -45,44 +46,26 @@ function Stalling() {
     },
   ];
 
-  const audioTracks = [
-    require("../assets/stalling/T01v1 M03-04 Bel Defecanto.wav"),
-    require("../assets/stalling/T02v1 M05v3 Overflowing Toilet Woes.wav"),
-    require("../assets/stalling/T03v1 M06v3 Stall Jokes Aside....wav"),
-    require("../assets/stalling/T04v1 M10v4 At Shit's End.wav"),
-  ];
-
   const [selectedTrack, setSelectedTrack] = useState({
-    title: "Tokhter's Visit",
-    track: tochter,
+    title: trackInfo[0].title,
+    track: trackInfo[0].track,
     index: "1",
-    length: "0:44",
+    length: "1:11",
   });
 
   const handleClick = (track) => {
     setSelectedTrack(track);
   };
 
-  const [hoveredItem, setHoveredItem] = useState({
-    title: "Tokhter's Visit",
-    track: tochter,
-    index: "1",
-    length: "0:44",
-  });
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleHoverEnter = (item) => {
-    setHoveredItem(item);
+    setHoveredIndex(item);
   };
 
   const handleHoverLeave = () => {
-    setHoveredItem({ title: "", track: tochter, index: "", length: "" });
+    setHoveredIndex(null)
   };
-
-  const [playingTrackIndex, setPlayingTrackIndex] = useState(0);
-
-  useEffect(() => {
-    setSelectedTrack(trackInfo[playingTrackIndex]);
-  }, [playingTrackIndex]);
 
   return (
     <>
@@ -124,42 +107,19 @@ function Stalling() {
                     />
                     <div style={{ paddingBottom: "5%" }}></div>
                     <NewAudioPlayer
+                      key={selectedTrack.title}
+                      songs={[selectedTrack.track]}
                       trackName={selectedTrack.title}
-                      songs={audioTracks}
-                      trackInfo={trackInfo}
-                      playingTrackIndex={playingTrackIndex}
-                      setPlayingTrackIndex={setPlayingTrackIndex}
                     />
                     <br />
-                    {trackInfo.map((track, index) => {
-                      return (
-                        <p
-                          style={{
-                            color: "white",
-                            marginBottom: "0",
-                            padding: "4px",
-                            fontSize: "1rem",
-                            marginLeft: "1.1%",
-                            fontFamily: "Georgia",
-                            fontWeight:
-                              hoveredItem.index === track.index ? "bold" : "",
-                            backgroundColor:
-                              selectedTrack.index === track.index
-                                ? "#313131"
-                                : "black",
-                            borderRadius: "6px",
-                          }}
-                          key={index}
-                          onClick={() => handleClick(track)}
-                          onMouseEnter={() => handleHoverEnter(track)}
-                          onMouseLeave={handleHoverLeave}
-                        >
-                          <span style={{cursor: 'default'}}>
-                          {track.index}. {track.title}{" "}</span>
-                          <span style={{ float: "right" }}>{track.length}</span>
-                        </p>
-                      );
-                    })}
+                    <TrackList
+                      trackInfo={trackInfo}
+                      selectedTrack={selectedTrack}
+                      onTrackClick={handleClick}
+                      hoveredItem={hoveredIndex}
+                      onHoverEnter={handleHoverEnter}
+                      onHoverLeave={handleHoverLeave}
+                    />
                     <div
                       style={{
                         paddingInline: "15%",
