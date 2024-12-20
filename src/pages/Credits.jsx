@@ -15,7 +15,7 @@ import ridley from "../assets/Posters/Ridley Jones.jpg";
 import stalling from "../assets/Posters/Stalling.png";
 import interfac from "../assets/Posters/Through the Interface.jpg";
 import dreamFac from "../assets/The Dream Factory.png";
-import sprout from "../assets/Sprout.png"
+import sprout from "../assets/Sprout.png";
 
 function Credits() {
   return (
@@ -148,8 +148,28 @@ function Credits() {
                   />
                   <br />
                   <Credit
+                    title="Annie's Asylum"
+                    from="Short Film | Audio Supervisor, Composer"
+                  />
+                  <Credit
+                    title="Hoodwink"
+                    from="Short Film | Audio Supervisor, Composer"
+                  />
+                  <Credit
+                    title="Puddle"
+                    from="Short Film | Audio Supervisor, Composer"
+                  />
+                  <Credit
                     title="The Dream Factory"
                     from="Short Film | Audio Director, Composer"
+                  />
+                  <Credit
+                    title="Upstream"
+                    from="Short Film | Audio Supervisor, Composer"
+                  />
+                  <Credit
+                    title="Vermin"
+                    from="Short Film | Audio Supervisor, Composer"
                   />
                   <Credit
                     title="A Spell To Break"
@@ -158,11 +178,17 @@ function Credits() {
                   <Credit title="Afterlife" from="Short Film | Composer" />
                   <Credit title="Beach Trip!" from="Short Film | Composer" />
                   <Credit title="Broadway Blues" from="Short Film | Composer" />
+                  <Credit title="Chinatown Love" from="Short Film | Composer" />
                   <Credit title="Claws & Order" from="Short Film | Composer" />
                   <Credit title="Scamper" from="Short Film | Composer" />
+                  <Credit title="Serein" from="Short Film | Composer" />
+
                   <Credit title="Shpilkes" from="Short Film | Composer" />
                   <Credit title="Sprout" from="Short Film | Composer" />
                   <Credit title="Stalling" from="Short Film | Composer" />
+                  <Credit title="Paused" from="Short Film | Co-Composer" />
+                  <Credit title="Survivors" from="Short Film | Co-Composer" />
+
                   <Credit
                     title="Inheritance"
                     from="Short Film | Composer Assistant"
@@ -185,25 +211,13 @@ function Credits() {
                     from="TV Series | Composer Assistant"
                   />
                   <br />
-                  <Credit title="String" from="Video Game | Game Director" />
-                  <Credit title="Barrier" from="Video Game | Audio Director" />
-                  <Credit title="Cursed Arena" from="Video Game | Audio Director" />
-
-                  <Credit
-                    title="Jade Island Simulator"
-                    from="Video Game | Audio Director"
-                  />
-                  <Credit
-                    title="Jump Pals"
-                    from="Video Game | Audio Director"
-                  />
                   <Credit
                     title="Resurgence of the Storm"
                     from="Video Game | Audio Director, Principal Composer"
                   />
                   <Credit
-                    title="Space Shark"
-                    from="Video Game | Audio Director"
+                    title="Soul Harbor"
+                    from="Video Game | Audio Director, Principal Composer"
                   />
                   <Credit
                     title="Beat Tender"
@@ -211,7 +225,48 @@ function Credits() {
                   />
                   <Credit
                     title="Temporal Vendetta"
-                    from="Video Game | Audio Director, Composer"
+                    from="Video Game | Audio Supervisor, Composer"
+                  />
+                  <Credit
+                    title="Shuriken Saga"
+                    from="Video Game | Audio Supervisor, Composer"
+                  />
+                  <Credit
+                    title="Arena Crunch"
+                    from="Video Game | Audio Director"
+                  />
+                  <Credit title="Cosmic" from="Video Game | Audio Director" />
+                  <Credit
+                    title="Jade Island Simulator"
+                    from="Video Game | Audio Director"
+                  />
+                  <Credit
+                    title="Space Shark"
+                    from="Video Game | Audio Director"
+                  />
+                  <Credit
+                    title="Swaplings"
+                    from="Video Game | Audio Director"
+                  />
+                  <Credit
+                    title="Barrier"
+                    from="Video Game | Audio Supervisor"
+                  />
+                  <Credit
+                    title="Cursed Arena"
+                    from="Video Game | Audio Supervisor"
+                  />
+                  <Credit
+                    title="Mummy Unbound"
+                    from="Video Game | Audio Supervisor"
+                  />
+                  <Credit
+                    title="Oh Fugg!"
+                    from="Video Game | Audio Supervisor"
+                  />
+                  <Credit
+                    title="The Burrow"
+                    from="Video Game | Audio Supervisor"
                   />
                   <Credit title="Alistair" from="Video Game | Composer" />
                   <Credit title="Potion Pushas" from="Video Game | Composer" />
@@ -222,6 +277,10 @@ function Credits() {
                   <Credit
                     title="Mushroom Kid's Big Grass Sword"
                     from="Video Game | Music Coordinating Consultant"
+                  />
+                  <Credit
+                    title="Resurgence of the Storm"
+                    from="Video Game | Audio Director, Principal Composer"
                   />
                   <br />
                   <Credit
@@ -274,6 +333,10 @@ function Credits() {
                     from="Library Music | Composer Assistant"
                   />
                   <br />
+                  <Credit
+                    title="Gladwell"
+                    from="Podcast | Audio Director | Composer"
+                  />
                   <Credit
                     title="Across the Astral Sea: Tekha"
                     from="TTRPG Campaign | Composer"
@@ -350,7 +413,9 @@ function Credits() {
                     from="Davidson Institute"
                   />
                 </ul>
-                <h3 className="subheadCredits2"><b>Project Recognitions</b></h3>
+                <h3 className="subheadCredits2">
+                  <b>Project Recognitions</b>
+                </h3>
                 <Credit
                   title="Best Student Animation (2024) | Sprout"
                   from="Drawtastic Animation Festival"
@@ -363,15 +428,76 @@ function Credits() {
                   title="Audience Award (2023) | Ceiba Y Sus Raíces Taínas"
                   from=" Lusca Fantastic Film Fest"
                 />
-                <h3 className="subheadCredits2"><b>Official Selections & Screenings</b></h3>
-                <ul style={{paddingLeft: 0}}>
-                  <li style={{color:"white", fontFamily: "Georgia", fontSize:"1.1rem", paddingLeft: 0, fontWeight:'bold'}} >New York Latino Film Fest</li>
-                  <li style={{color:"white", fontFamily: "Georgia", fontSize:"1.1rem", paddingLeft: 0, fontWeight:'bold'}} >Bushwick Film Fest</li>
-                  <li style={{color:"white", fontFamily: "Georgia", fontSize:"1.1rem", paddingLeft: 0, fontWeight:'bold'}} >Short Short Fest</li>
-                  <li style={{color:"white", fontFamily: "Georgia", fontSize:"1.1rem", paddingLeft: 0, fontWeight:'bold'}} >San Francisco Latino Film Fest</li>
-                  <li style={{color:"white", fontFamily: "Georgia", fontSize:"1.1rem", paddingLeft: 0, fontWeight:'bold'}} >Women In Animation NYC Film Festival</li>
-                  <li style={{color:"white", fontFamily: "Georgia", fontSize:"1.1rem", paddingLeft: 0, fontWeight:'bold'}} >International Puerto Rican Heritage Film Festival</li>
-
+                <h3 className="subheadCredits2">
+                  <b>Official Selections & Screenings</b>
+                </h3>
+                <ul style={{ paddingLeft: 0 }}>
+                  <li
+                    style={{
+                      color: "white",
+                      fontFamily: "Georgia",
+                      fontSize: "1.1rem",
+                      paddingLeft: 0,
+                      fontWeight: "bold",
+                    }}
+                  >
+                    New York Latino Film Fest
+                  </li>
+                  <li
+                    style={{
+                      color: "white",
+                      fontFamily: "Georgia",
+                      fontSize: "1.1rem",
+                      paddingLeft: 0,
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Bushwick Film Fest
+                  </li>
+                  <li
+                    style={{
+                      color: "white",
+                      fontFamily: "Georgia",
+                      fontSize: "1.1rem",
+                      paddingLeft: 0,
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Short Short Fest
+                  </li>
+                  <li
+                    style={{
+                      color: "white",
+                      fontFamily: "Georgia",
+                      fontSize: "1.1rem",
+                      paddingLeft: 0,
+                      fontWeight: "bold",
+                    }}
+                  >
+                    San Francisco Latino Film Fest
+                  </li>
+                  <li
+                    style={{
+                      color: "white",
+                      fontFamily: "Georgia",
+                      fontSize: "1.1rem",
+                      paddingLeft: 0,
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Women In Animation NYC Film Festival
+                  </li>
+                  <li
+                    style={{
+                      color: "white",
+                      fontFamily: "Georgia",
+                      fontSize: "1.1rem",
+                      paddingLeft: 0,
+                      fontWeight: "bold",
+                    }}
+                  >
+                    International Puerto Rican Heritage Film Festival
+                  </li>
                 </ul>
               </div>
               <div style={{ paddingTop: "3%" }}></div>

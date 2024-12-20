@@ -18,7 +18,8 @@ function BroadwayBlues() {
   const [youTubeMouseOver, setYouTubeMouseOver] = useState(false);
   const [soundcloudMouseOver, setSoundcloudMouseOver] = useState(false);
 
-  const track1 = "https://www.dl.dropboxusercontent.com/scl/fo/af00slpcm8a9zr4s9xr54/AAtYiqGdABR9v-0N_f4F0wI?e=2&preview=BWBL+T01v1+S01+Like+It%27s+A+Dream.wav&rlkey=nomu4ju8ukm4q824xvkkmyfez&dl=0"
+  const track1 =
+    "https://www.dl.dropboxusercontent.com/scl/fo/af00slpcm8a9zr4s9xr54/AAtYiqGdABR9v-0N_f4F0wI?e=2&preview=BWBL+T01v1+S01+Like+It%27s+A+Dream.wav&rlkey=nomu4ju8ukm4q824xvkkmyfez&dl=0";
 
   const trackInfo = [
     {
@@ -26,12 +27,10 @@ function BroadwayBlues() {
       track: track1,
       index: "1",
       length: "1:41",
-    }
+    },
   ];
 
-  const audioTracks = [
-    track1
-  ];
+  const audioTracks = [track1];
 
   const [selectedTrack, setSelectedTrack] = useState({
     title: trackInfo[0].title,
@@ -40,11 +39,14 @@ function BroadwayBlues() {
     length: trackInfo[0].length,
   });
 
-  const handleClick = useCallback((track) => {
-    if (track.title !== selectedTrack.title) {
-      setSelectedTrack(track);
-    }
-  }, [selectedTrack.title]);
+  const handleClick = useCallback(
+    (track) => {
+      if (track.title !== selectedTrack.title) {
+        setSelectedTrack(track);
+      }
+    },
+    [selectedTrack.title],
+  );
 
   const handleHoverEnter = useCallback((index) => {
     setHoveredItem(index);
@@ -131,7 +133,7 @@ function BroadwayBlues() {
                         target="_blank"
                         onMouseOver={() => setAppleMouseOver(true)}
                         onMouseOut={() => setAppleMouseOver(false)}
-                      // href="https://music.apple.com/us/album/beach-trip-original-soundtrack-single/1756664480"
+                        href="https://music.apple.com/us/album/like-its-a-dream-feat-hannah-crouse-darius-harper/1774353591?i=1774353597"
                       >
                         {!appleMouseOver ? (
                           <img style={{ width: "24px" }} src={applemusic} />
@@ -262,7 +264,7 @@ function BroadwayBlues() {
                         target="_blank"
                         onMouseOver={() => setSpotifyMouseOver(true)}
                         onMouseOut={() => setSpotifyMouseOver(false)}
-                      // href="https://open.spotify.com/album/3ykOoPeztpg9JEMnlyEkZy?si=LiU9SIuuR8GQ2GB2PceIwQ"
+                        href="https://open.spotify.com/track/78mAUcMx1Zq58FUXSjNEG9?si=61648656ca8f4d01"
                       >
                         {spotifyMouseOver ? (
                           <svg
@@ -305,12 +307,12 @@ function BroadwayBlues() {
                           <span style={{ color: "#B9BAB9" }}> Marc Yu</span>
                         </li>
                         <br />
-                        <li>
-                          "Like It's A Dream"
-                        </li>
+                        <li>"Like It's A Dream"</li>
                         <li>
                           Music by{" "}
-                          <span style={{ color: "#B9BAB9" }}>Marc Yu and Adam Blotner</span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            Marc Yu and Adam Blotner
+                          </span>
                         </li>
                         <li>
                           Lyrics by{" "}
@@ -319,18 +321,23 @@ function BroadwayBlues() {
                         <li>
                           Orchestrated by{" "}
                           <span style={{ color: "#B9BAB9" }}>Marc Yu</span>
-                        </li><li>
+                        </li>
+                        <li>
                           Orchestrated by{" "}
                           <span style={{ color: "#B9BAB9" }}>Marc Yu</span>
                         </li>
                         <br />
                         <li>
                           "Avery", voiced by{" "}
-                          <span style={{ color: "#B9BAB9" }}>Hannah Crouse</span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            Hannah Crouse
+                          </span>
                         </li>
                         <li>
                           "Cyrus", voiced by{" "}
-                          <span style={{ color: "#B9BAB9" }}>Darius Harper</span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            Darius Harper
+                          </span>
                         </li>
                         <br />
                         <li>
@@ -364,7 +371,9 @@ function BroadwayBlues() {
                         </li>
                         <li>
                           Engineer Assistant:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Shihhao Cheng</span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            Shihhao Cheng
+                          </span>
                         </li>
                         <li>
                           Engineer Assistant:{" "}
@@ -372,7 +381,9 @@ function BroadwayBlues() {
                         </li>
                         <li>
                           Engineer Assistant:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Jennifer Wang</span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            Jennifer Wang
+                          </span>
                         </li>
                         <li>
                           Engineer Assistant:{" "}
@@ -384,20 +395,28 @@ function BroadwayBlues() {
                         </li>
                         <li>
                           Score Mixing Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Austin Leshock</span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            Austin Leshock
+                          </span>
                         </li>
                         <li>
                           Mastering Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Austin Leshock</span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            Austin Leshock
+                          </span>
                         </li>
                         <li>
                           Audio Technical Assistant:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Angelica Ramos</span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            Angelica Ramos
+                          </span>
                         </li>
                         <br />
                         <li>
                           Flute:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Chris Freeman</span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            Chris Freeman
+                          </span>
                         </li>
                         <li>
                           Oboe:{" "}
@@ -405,15 +424,21 @@ function BroadwayBlues() {
                         </li>
                         <li>
                           Alto Sax:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Sultan Seilkhanov</span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            Sultan Seilkhanov
+                          </span>
                         </li>
                         <li>
                           Tenor Sax:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Andy Lin (Worpp)</span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            Andy Lin (Worpp)
+                          </span>
                         </li>
                         <li>
                           Trumpet I:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Carlos Rivera</span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            Carlos Rivera
+                          </span>
                         </li>
                         <li>
                           Trumpet II:{" "}
@@ -421,15 +446,21 @@ function BroadwayBlues() {
                         </li>
                         <li>
                           Violin I:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Luca Willoughby</span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            Luca Willoughby
+                          </span>
                         </li>
                         <li>
                           Violin I:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Beatriz Martinez </span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            Beatriz Martinez{" "}
+                          </span>
                         </li>
                         <li>
                           Violin II:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Frederick Oliveira-Chevres</span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            Frederick Oliveira-Chevres
+                          </span>
                         </li>
                         <li>
                           Viola:{" "}
@@ -441,7 +472,9 @@ function BroadwayBlues() {
                         </li>
                         <li>
                           Cello:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Hailey Brasser</span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            Hailey Brasser
+                          </span>
                         </li>
                         <li>
                           Piano:{" "}
@@ -474,7 +507,9 @@ function BroadwayBlues() {
                         </li>
                         <li>
                           Music Copyist:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Angelica Ramos</span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            Angelica Ramos
+                          </span>
                         </li>
                         <li>
                           Music Editor:{" "}
@@ -482,16 +517,20 @@ function BroadwayBlues() {
                         </li>
                         <li>
                           Session Videographer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Lang (Oscar) Qin</span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            Lang (Oscar) Qin
+                          </span>
                         </li>
                         <br />
                         <li>
                           Recorded at{" "}
-                          <span style={{ color: "#B9BAB9" }}>The Record Co.</span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            The Record Co.
+                          </span>
                         </li>
                         <br />
                         <li>
-                          Created by {" "}
+                          Created by{" "}
                           <span style={{ color: "#B9BAB9" }}>Elsa Miller</span>
                         </li>
                       </ul>
