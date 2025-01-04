@@ -16,6 +16,11 @@ import stalling from "../assets/Posters/Stalling.png";
 import interfac from "../assets/Posters/Through the Interface.jpg";
 import dreamFac from "../assets/The Dream Factory.png";
 import sprout from "../assets/Sprout.png";
+import spell from "../assets/spell.png";
+import tekha from "../assets/ATAS-TEKHA Album Cover.png";
+import claws from "../assets/clawsandorder.png";
+import cosmic from "../assets/cosmic.png";
+import rots from "../assets/ROTS Album Cover.png";
 
 function Credits() {
   return (
@@ -26,7 +31,31 @@ function Credits() {
       >
         <Container>
           <Row>
-            <Col style={{ maxWidth: "15%", paddingTop: "16rem" }}>
+            <Col style={{ maxWidth: "15%", paddingTop: "12rem" }}>
+              <img style={{ maxWidth: "100%" }} src={claws} />
+              <p
+                style={{
+                  color: "white",
+                  fontFamily: "Georgia",
+                  fontSize: "10pt",
+                }}
+              >
+                <u>
+                  <i>Claws and Order (2024)</i>
+                </u>
+              </p>
+              <img style={{ maxWidth: "100%" }} src={rots} />
+              <p
+                style={{
+                  color: "white",
+                  fontFamily: "Georgia",
+                  fontSize: "10pt",
+                }}
+              >
+                <u>
+                  <i>Resurgence of the Storm (2024)</i>
+                </u>
+              </p>
               <img style={{ maxWidth: "100%" }} src={moonstruck} />
               <p
                 style={{
@@ -577,7 +606,49 @@ function Credits() {
                 </div>
               </div>
             </Col>
-            <Col style={{ maxWidth: "15%", paddingTop: "16rem" }}>
+            <Col style={{ maxWidth: "15%", paddingTop: "12rem" }}>
+              <img style={{ maxWidth: "100%" }} src={spell} />
+              <p
+                style={{
+                  color: "white",
+                  fontFamily: "Georgia",
+                  lineHeight: "20px",
+                  paddingTop: "10px",
+                  fontSize: "10pt",
+                }}
+              >
+                <u>
+                  <i>A Spell to Break (2024)</i>
+                </u>
+              </p>
+              <img style={{ maxWidth: "100%" }} src={tekha} />
+              <p
+                style={{
+                  color: "white",
+                  fontFamily: "Georgia",
+                  lineHeight: "20px",
+                  paddingTop: "10px",
+                  fontSize: "10pt",
+                }}
+              >
+                <u>
+                  <i>Across the Astral Sea - Tekha (2024)</i>
+                </u>
+              </p>
+              <img style={{ maxWidth: "100%" }} src={cosmic} />
+              <p
+                style={{
+                  color: "white",
+                  fontFamily: "Georgia",
+                  lineHeight: "20px",
+                  paddingTop: "10px",
+                  fontSize: "10pt",
+                }}
+              >
+                <u>
+                  <i>Cosmic (2024)</i>
+                </u>
+              </p>
               <img style={{ maxWidth: "100%" }} src={paris} />
               <p
                 style={{

@@ -23,6 +23,7 @@ import Sprout from "./pages/Sprout";
 import Alistair from "./pages/Alistair";
 import Afterlife from "./pages/Afterlife";
 import BroadwayBlues from "./pages/BroadwayBlues";
+import ClawsAndOrder from "./pages/CAO";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const state = {
@@ -54,7 +55,8 @@ root.render(
         <Route path="/music/alistair" element={<Alistair />} />
         <Route path="/music/afterlife" element={<Afterlife />} />
         <Route path="/music/broadway-blues" element={<BroadwayBlues />} />
+        <Route path="/music/claws-and-order" element={<ClawsAndOrder />} />
       </Routes>
     </ScrollIntoView>
-  </BrowserRouter>
+  </BrowserRouter>,
 );

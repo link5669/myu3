@@ -16,14 +16,16 @@ import ptps from "../assets/PTPS/PTPS Album Cover.png";
 import MultilinePlayer from "../components/MultilinePlayer";
 import dreamFactoryCover from "../assets/DreamFactory/TDF Album Cover.png";
 import btrp from "../assets/BTRP.png";
-import spell from "../assets/spell.png"
-import tek from "../assets/ATAS-TEKHA Album Cover.png"
-import rots from "../assets/ROTS Album Cover.png"
-import sprout from "../assets/Sprout.png"
+import spell from "../assets/spell.png";
+import tek from "../assets/ATAS-TEKHA Album Cover.png";
+import rots from "../assets/ROTS Album Cover.png";
+import sprout from "../assets/Sprout.png";
 import afterlife from "../assets/AFTL Album Cover.jpg";
-import broadway from "../assets/BWBL Album Cover.png"
+import broadway from "../assets/BWBL Album Cover.png";
 
 function Music() {
+  const claws =
+    "https://dl.dropboxusercontent.com/scl/fi/ypiedv3d5hu47c9mc7r80/CLA-Album-Cover.jpg?rlkey=g0j3p1dri8c56t6ra7yle25s2&e=1&dl=0";
   return (
     <>
       <div style={{ width: "100vw", background: "black" }}>
@@ -72,7 +74,21 @@ function Music() {
             </h2>
 
             <Col style={{ padding: "3%", paddingLeft: "8%" }}>
-            <Album
+              <Album
+                id="cao"
+                img={claws}
+                file={[
+                  "https://dl.dropboxusercontent.com/scl/fi/llevzt3ift4z06dx1rlvq/CLA-Preview.m4a?rlkey=ae5xg5qs038rjtwhutcegqm9c&e=1&dl=0",
+                ]}
+                title="Claws and Order"
+                description="Short Film / Musical"
+                info={[
+                  {
+                    title: "Claws and Order",
+                  },
+                ]}
+              />
+              <Album
                 id="broadway"
                 img={broadway}
                 file={[
@@ -90,7 +106,7 @@ function Music() {
                 id="sprout"
                 img={sprout}
                 file={[
-                 "https://www.dl.dropboxusercontent.com/scl/fi/jr00sb0y6il6p9vi652l0/SPRT-Social-Media-Preview.m4a?rlkey=25cydip38sch9b50sbe6gyh59&dl=0",
+                  "https://www.dl.dropboxusercontent.com/scl/fi/jr00sb0y6il6p9vi652l0/SPRT-Social-Media-Preview.m4a?rlkey=25cydip38sch9b50sbe6gyh59&dl=0",
                 ]}
                 title="Sprout"
                 description="Short Film / Orchestral"
@@ -127,25 +143,22 @@ function Music() {
                 ]}
               />
               <Album
-              id="bxr"
-              file={["https://www.dl.dropboxusercontent.com/scl/fi/7nqm0puw0wjx25lsp4q0w/BXR-Preview.m4a?rlkey=e7q2o60nx4uvrpq8cc1y5bsol&e=1&dl=0"]}
-              info={[
-                {
-                  title: "Alistair",
-                },
-              ]}
+                id="bxr"
+                file={[
+                  "https://www.dl.dropboxusercontent.com/scl/fi/7nqm0puw0wjx25lsp4q0w/BXR-Preview.m4a?rlkey=e7q2o60nx4uvrpq8cc1y5bsol&e=1&dl=0",
+                ]}
+                info={[
+                  {
+                    title: "Alistair",
+                  },
+                ]}
                 img={alistair}
                 title="Alistair"
                 description="Video Game / Horror, Electronic"
               />
-              
-              
-
-
-
             </Col>
             <Col style={{ padding: "3%" }}>
-            <Album
+              <Album
                 id="afterlife"
                 img={afterlife}
                 file={[
@@ -204,10 +217,9 @@ function Music() {
                 title="A Bard’s Tale: The Plane of Elemental Chaos Vol. 1"
                 description="Library Music / Contemporary"
               />
-              
             </Col>
             <Col style={{ padding: "3%", paddingRight: "8%" }}>
-            <Album
+              <Album
                 id="rots"
                 img={rots}
                 file={[
@@ -221,12 +233,10 @@ function Music() {
                   },
                 ]}
               />
-            <Album
+              <Album
                 id="spell"
                 img={spell}
-                file={[
-                  require("../assets/ASTB Preview.mp3"),
-                ]}
+                file={[require("../assets/ASTB Preview.mp3")]}
                 title="A Spell To Break"
                 description="Short Film / Magical Fantasy"
                 info={[
