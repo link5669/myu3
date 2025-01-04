@@ -20,13 +20,13 @@ function ClawsAndOrder() {
     "https://dl.dropboxusercontent.com/scl/fi/ypiedv3d5hu47c9mc7r80/CLA-Album-Cover.jpg?rlkey=g0j3p1dri8c56t6ra7yle25s2&e=1&dl=0";
 
   const track1 =
-    "https://dl.dropboxusercontent.com/scl/fo/tzf6pn1ib0y6j4twn4btq/AEji_0OVOHAXQujULtFQ8x0?dl=0&e=1&preview=CLA+T01v1+M01-M02+Stealth+Checked.wav&rlkey=2ci6tyu6naqsi9psva2kdfnkq";
+    "https://www.dl.dropboxusercontent.com/scl/fo/tzf6pn1ib0y6j4twn4btq/AGX--xDMws3rV7QNZoTvdAs/CLA%20T01v1%20M01-M02%20Stealth%20Checked.wav?rlkey=2ci6tyu6naqsi9psva2kdfnkq&e=1&dl=0";
   const track2 =
-    "https://dl.dropboxusercontent.com/scl/fo/tzf6pn1ib0y6j4twn4btq/AEji_0OVOHAXQujULtFQ8x0?dl=0&e=1&preview=CLA+T02v1+M03-M04+A+Good+Day+To+Pie.wav&rlkey=2ci6tyu6naqsi9psva2kdfnkq";
+    "https://www.dl.dropboxusercontent.com/scl/fo/tzf6pn1ib0y6j4twn4btq/AEGjBYkfBqwZMMHYm3Hlwac/CLA%20T02v1%20M03-M04%20A%20Good%20Day%20To%20Pie.wav?rlkey=2ci6tyu6naqsi9psva2kdfnkq&e=1&dl=0";
   const track3 =
-    "https://dl.dropboxusercontent.com/scl/fo/tzf6pn1ib0y6j4twn4btq/AEji_0OVOHAXQujULtFQ8x0?dl=0&e=1&preview=CLA+T03v1+M05-M06+Ye+Olde+Adventure+Quest.wav&rlkey=2ci6tyu6naqsi9psva2kdfnkq";
+    "https://www.dl.dropboxusercontent.com/scl/fo/tzf6pn1ib0y6j4twn4btq/AMgL3-vLK_PpZ4vO_kua394/CLA%20T03v1%20M05-M06%20Ye%20Olde%20Adventure%20Quest.wav?rlkey=2ci6tyu6naqsi9psva2kdfnkq&e=1&dl=0";
   const track4 =
-    "https://dl.dropboxusercontent.com/scl/fo/tzf6pn1ib0y6j4twn4btq/AEji_0OVOHAXQujULtFQ8x0?dl=0&e=1&preview=CLA+T04v1+M06B+A+Cautionary+Tale+of+Claws+and+Order.wav&rlkey=2ci6tyu6naqsi9psva2kdfnkq";
+    "https://www.dl.dropboxusercontent.com/scl/fo/tzf6pn1ib0y6j4twn4btq/AEji_0OVOHAXQujULtFQ8x0?dl=0&e=1&preview=CLA+T04v1+M06B+A+Cautionary+Tale+of+Claws+and+Order.wav&rlkey=2ci6tyu6naqsi9psva2kdfnkq";
 
   const trackInfo = [
     {
@@ -93,7 +93,7 @@ function ClawsAndOrder() {
                   fontStyle: "]]]d",
                 }}
               >
-                Potion Pushas
+                Claws and Order
               </h2>
               <p
                 style={{

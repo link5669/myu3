@@ -302,6 +302,16 @@ const Album = ({ info, title, id, img, file, description }) => {
                 Learn more...
               </Link>
             </>
+          ) : info[0].title == "Claws and Order" ? (
+            <>
+              <br />
+              <Link
+                style={{ textDecoration: "none", color: "gray" }}
+                to="/music/claws-and-order"
+              >
+                Learn more...
+              </Link>
+            </>
           ) : (
             <>
               <br />
