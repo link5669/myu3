@@ -142,7 +142,7 @@ function ClawsAndOrder() {
                         target="_blank"
                         onMouseOver={() => setAppleMouseOver(true)}
                         onMouseOut={() => setAppleMouseOver(false)}
-                        // href="https://music.apple.com/us/album/potion-pushas-original-soundtrack-ep/1720639972"
+                        href="https://music.apple.com/us/album/claws-order-original-soundtrack-ep/1787869457"
                       >
                         {!appleMouseOver ? (
                           <img style={{ width: "24px" }} src={applemusic} />

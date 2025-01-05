@@ -23,6 +23,8 @@ import cosmic from "../assets/cosmic.png";
 import rots from "../assets/ROTS Album Cover.png";
 
 function Credits() {
+  const ARENA_CRUNCH =
+    "https://www.dl.dropboxusercontent.com/scl/fo/owudjlfggo1z5uoimrmes/AIYcSn7OtzUZtxEQVgyrQK0/ARNC%20Album%20Cover%20(No%20Text).jpg?rlkey=7zsyaa1jdmtirfp77g5tekz8l&e=1&dl=0";
   return (
     <>
       <MarcNavbar />
@@ -32,30 +34,6 @@ function Credits() {
         <Container>
           <Row>
             <Col style={{ maxWidth: "15%", paddingTop: "12rem" }}>
-              <img style={{ maxWidth: "100%" }} src={claws} />
-              <p
-                style={{
-                  color: "white",
-                  fontFamily: "Georgia",
-                  fontSize: "10pt",
-                }}
-              >
-                <u>
-                  <i>Claws and Order (2024)</i>
-                </u>
-              </p>
-              <img style={{ maxWidth: "100%" }} src={rots} />
-              <p
-                style={{
-                  color: "white",
-                  fontFamily: "Georgia",
-                  fontSize: "10pt",
-                }}
-              >
-                <u>
-                  <i>Resurgence of the Storm (2024)</i>
-                </u>
-              </p>
               <img style={{ maxWidth: "100%" }} src={moonstruck} />
               <p
                 style={{
@@ -137,6 +115,42 @@ function Credits() {
                   <i>
                     Avengers Campus at Disney California Adventure Park (2021)
                   </i>
+                </u>
+              </p>
+              <img style={{ maxWidth: "100%" }} src={claws} />
+              <p
+                style={{
+                  color: "white",
+                  fontFamily: "Georgia",
+                  fontSize: "10pt",
+                }}
+              >
+                <u>
+                  <i>Claws and Order (2024)</i>
+                </u>
+              </p>
+              <img style={{ maxWidth: "100%" }} src={rots} />
+              <p
+                style={{
+                  color: "white",
+                  fontFamily: "Georgia",
+                  fontSize: "10pt",
+                }}
+              >
+                <u>
+                  <i>Resurgence of the Storm (2024)</i>
+                </u>
+              </p>
+              <img style={{ maxWidth: "100%" }} src={ARENA_CRUNCH} />
+              <p
+                style={{
+                  color: "white",
+                  fontFamily: "Georgia",
+                  fontSize: "10pt",
+                }}
+              >
+                <u>
+                  <i>Arena Crunch (2024)</i>
                 </u>
               </p>
             </Col>
@@ -607,48 +621,6 @@ function Credits() {
               </div>
             </Col>
             <Col style={{ maxWidth: "15%", paddingTop: "12rem" }}>
-              <img style={{ maxWidth: "100%" }} src={spell} />
-              <p
-                style={{
-                  color: "white",
-                  fontFamily: "Georgia",
-                  lineHeight: "20px",
-                  paddingTop: "10px",
-                  fontSize: "10pt",
-                }}
-              >
-                <u>
-                  <i>A Spell to Break (2024)</i>
-                </u>
-              </p>
-              <img style={{ maxWidth: "100%" }} src={tekha} />
-              <p
-                style={{
-                  color: "white",
-                  fontFamily: "Georgia",
-                  lineHeight: "20px",
-                  paddingTop: "10px",
-                  fontSize: "10pt",
-                }}
-              >
-                <u>
-                  <i>Across the Astral Sea - Tekha (2024)</i>
-                </u>
-              </p>
-              <img style={{ maxWidth: "100%" }} src={cosmic} />
-              <p
-                style={{
-                  color: "white",
-                  fontFamily: "Georgia",
-                  lineHeight: "20px",
-                  paddingTop: "10px",
-                  fontSize: "10pt",
-                }}
-              >
-                <u>
-                  <i>Cosmic (2024)</i>
-                </u>
-              </p>
               <img style={{ maxWidth: "100%" }} src={paris} />
               <p
                 style={{
@@ -741,6 +713,48 @@ function Credits() {
               >
                 <u>
                   <i>Sprout (2022)</i>
+                </u>
+              </p>
+              <img style={{ maxWidth: "100%" }} src={spell} />
+              <p
+                style={{
+                  color: "white",
+                  fontFamily: "Georgia",
+                  lineHeight: "20px",
+                  paddingTop: "10px",
+                  fontSize: "10pt",
+                }}
+              >
+                <u>
+                  <i>A Spell to Break (2024)</i>
+                </u>
+              </p>
+              <img style={{ maxWidth: "100%" }} src={tekha} />
+              <p
+                style={{
+                  color: "white",
+                  fontFamily: "Georgia",
+                  lineHeight: "20px",
+                  paddingTop: "10px",
+                  fontSize: "10pt",
+                }}
+              >
+                <u>
+                  <i>Across the Astral Sea - Tekha (2024)</i>
+                </u>
+              </p>
+              <img style={{ maxWidth: "100%" }} src={cosmic} />
+              <p
+                style={{
+                  color: "white",
+                  fontFamily: "Georgia",
+                  lineHeight: "20px",
+                  paddingTop: "10px",
+                  fontSize: "10pt",
+                }}
+              >
+                <u>
+                  <i>Cosmic (2024)</i>
                 </u>
               </p>
             </Col>
