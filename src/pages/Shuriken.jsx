@@ -11,47 +11,39 @@ import applemusic from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_Blackand
 import applemusiccolor from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_blk_sm_073120.svg";
 import TrackList from "../components/TrackList";
 
-function ClawsAndOrder() {
+function Shuriken() {
   const [spotifyMouseOver, setSpotifyMouseOver] = useState(false);
   const [appleMouseOver, setAppleMouseOver] = useState(false);
   const [youTubeMouseOver, setYouTubeMouseOver] = useState(false);
   const [soundcloudMouseOver, setSoundcloudMouseOver] = useState(false);
   const cover =
-    "https://dl.dropboxusercontent.com/scl/fi/ypiedv3d5hu47c9mc7r80/CLA-Album-Cover.jpg?rlkey=g0j3p1dri8c56t6ra7yle25s2&e=1&dl=0";
+    "https://www.dl.dropboxusercontent.com/scl/fi/qpjmqh2v5hvxfu17rp958/SHSG-Album-Cover.png?rlkey=8ewufqr6awff2fg58m6gvf0oe&e=1&dl=0";
 
   const track1 =
-    "https://www.dl.dropboxusercontent.com/scl/fo/tzf6pn1ib0y6j4twn4btq/AGX--xDMws3rV7QNZoTvdAs/CLA%20T01v1%20M01-M02%20Stealth%20Checked.wav?rlkey=2ci6tyu6naqsi9psva2kdfnkq&e=1&dl=0";
+    "https://www.dl.dropboxusercontent.com/scl/fo/cb3cahojad53uod1020vc/ALiaZHyxoyujBWcdovbsEfs/SHSG%20T01v1%20Temple%20Battle.wav?rlkey=y0hkg293pknurc2xzyw0uywdz&e=1&dl=0";
   const track2 =
-    "https://www.dl.dropboxusercontent.com/scl/fo/tzf6pn1ib0y6j4twn4btq/AEGjBYkfBqwZMMHYm3Hlwac/CLA%20T02v1%20M03-M04%20A%20Good%20Day%20To%20Pie.wav?rlkey=2ci6tyu6naqsi9psva2kdfnkq&e=1&dl=0";
+    "https://www.dl.dropboxusercontent.com/scl/fo/cb3cahojad53uod1020vc/AHLGNmsGBfA9XMrOE_i-Iqs/SHSG%20T02v1%20Shadow%20Realm.wav?rlkey=y0hkg293pknurc2xzyw0uywdz&e=1&dl=0";
   const track3 =
-    "https://www.dl.dropboxusercontent.com/scl/fo/tzf6pn1ib0y6j4twn4btq/AMgL3-vLK_PpZ4vO_kua394/CLA%20T03v1%20M05-M06%20Ye%20Olde%20Adventure%20Quest.wav?rlkey=2ci6tyu6naqsi9psva2kdfnkq&e=1&dl=0";
-  const track4 =
-    "https://www.dl.dropboxusercontent.com/scl/fo/tzf6pn1ib0y6j4twn4btq/AEji_0OVOHAXQujULtFQ8x0?dl=0&e=1&preview=CLA+T04v1+M06B+A+Cautionary+Tale+of+Claws+and+Order.wav&rlkey=2ci6tyu6naqsi9psva2kdfnkq";
+    "https://www.dl.dropboxusercontent.com/scl/fo/cb3cahojad53uod1020vc/AIpwrQeiE5OlQzeCFEaCLjs/SHSG%20T03v1%20Overworld.wav?rlkey=y0hkg293pknurc2xzyw0uywdz&e=1&dl=0";
 
   const trackInfo = [
     {
-      title: "Stealth Checked",
+      title: "Temple Battle",
       track: track1,
       index: "1",
-      length: "1:19",
+      length: "4:01",
     },
     {
-      title: "A Good Day to Pie",
+      title: "Shadow Realm",
       track: track2,
       index: "2",
-      length: "1:26",
+      length: "2:14",
     },
     {
-      title: "Ye Olde Adventure Quest",
+      title: "Overworld",
       track: track3,
       index: "3",
-      length: "1:07",
-    },
-    {
-      title: "A Cautionary Tale",
-      track: track4,
-      index: "4",
-      length: "0:48",
+      length: "2:14",
     },
   ];
 
@@ -59,7 +51,7 @@ function ClawsAndOrder() {
     title: trackInfo[0].title,
     track: track1,
     index: "1",
-    length: "1:11",
+    length: trackInfo[0].length,
   });
 
   const handleClick = (track) => {
@@ -93,7 +85,7 @@ function ClawsAndOrder() {
                   fontStyle: "]]]d",
                 }}
               >
-                Claws and Order
+                Shuriken Saga
               </h2>
               <p
                 style={{
@@ -104,7 +96,7 @@ function ClawsAndOrder() {
                   paddingBottom: "1%",
                 }}
               >
-                <i>Short Film / Fantasy</i>
+                <i>Video Game / Japanese Adventure</i>
               </p>
               <Container>
                 <Row>
@@ -142,7 +134,7 @@ function ClawsAndOrder() {
                         target="_blank"
                         onMouseOver={() => setAppleMouseOver(true)}
                         onMouseOut={() => setAppleMouseOver(false)}
-                        href="https://music.apple.com/us/album/claws-order-original-soundtrack-ep/1787869457"
+                        href="https://music.apple.com/us/album/shuriken-saga-original-soundtrack-single/1794358320"
                       >
                         {!appleMouseOver ? (
                           <img style={{ width: "24px" }} src={applemusic} />
@@ -157,7 +149,7 @@ function ClawsAndOrder() {
                         target="_blank"
                         onMouseOver={() => setYouTubeMouseOver(true)}
                         onMouseOut={() => setYouTubeMouseOver(false)}
-                        href="https://www.youtube.com/watch?v=Cx2PGwcRw-o&list=PLWLXJaKFBj4LNsEt6b6Ax6XJpLKuxS8AR"
+                        href="https://www.youtube.com/watch?v=UX-huKSQJ8M&list=PLWLXJaKFBj4KivuAH0oLJjqUmkxBEaN4M&index=1"
                       >
                         {youTubeMouseOver ? (
                           <svg
@@ -186,7 +178,7 @@ function ClawsAndOrder() {
                         target="_blank"
                         onMouseOver={() => setSoundcloudMouseOver(true)}
                         onMouseOut={() => setSoundcloudMouseOver(false)}
-                        href="https://soundcloud.com/marcyumusic/sets/claws-order-original-soundtrack"
+                        href="https://soundcloud.com/marcyumusic/sets/shuriken-saga-original-soundtrack"
                       >
                         {soundcloudMouseOver ? (
                           <svg
@@ -273,7 +265,7 @@ function ClawsAndOrder() {
                         target="_blank"
                         onMouseOver={() => setSpotifyMouseOver(true)}
                         onMouseOut={() => setSpotifyMouseOver(false)}
-                        href="https://open.spotify.com/album/3i1xZaNFRuqOEDhaj9KYNF?si=x5uW5ozkRke-Bwd2ybhg0w"
+                        // href="https://open.spotify.com/album/3i1xZaNFRuqOEDhaj9KYNF?si=x5uW5ozkRke-Bwd2ybhg0w"
                       >
                         {spotifyMouseOver ? (
                           <svg
@@ -321,76 +313,24 @@ function ClawsAndOrder() {
                           <span style={{ color: "#B9BAB9" }}>Wavyrn</span>
                         </li>
                         <li>
-                          Music Editor:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Max Jaime</span>
-                        </li>
-                        <li>
-                          Score Mixing Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Max Jaime</span>
-                        </li>
-                        <li>
-                          Mastering Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Max Jaime</span>
-                        </li>
-                        <li>
-                          Guitar Recording Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Dong Yao Liu</span>
-                        </li>
-                        <li>
-                          Composer Assistant:{" "}
+                          Sound Designer:{" "}
                           <span style={{ color: "#B9BAB9" }}>
-                            Angelica Ramos
-                          </span>
-                        </li>
-                        <br />
-                        <li>
-                          Vocals:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Josh Trochet</span>
-                        </li>
-                        <li>
-                          Vocals:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Sam Leigh</span>
-                        </li>
-                        <li>
-                          Woodwinds:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Collin Vodicka
+                            Julian Cabrera
                           </span>
                         </li>
                         <li>
-                          Alto Saxophone:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Sultan Seilkhanov
-                          </span>
+                          Sound Designer:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Neil Small</span>
                         </li>
                         <li>
-                          French Horn:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Christian Cop
-                          </span>
-                        </li>
-                        <li>
-                          Acoustic Guitar:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Keith Du</span>
-                        </li>
-                        <li>
-                          Violin:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Miles Acquaviva
-                          </span>
+                          Studio Manager:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Ananta Arora</span>
                         </li>
                       </ul>
                       <div style={{ paddingBottom: "5%" }}></div>
-                      <h3>SYNOPSIS</h3>
                       <p style={{ fontSize: "1.1rem", color: "#B9BAB9" }}>
-                        A raccoon assassin is hired to kill the panda king! With
-                        a three day deadline, the raccoon starts sneaking,
-                        poisoning, and straight-up hand-to-hand fighting. Alas,
-                        the raccoon’s small tricks are no match for the king and
-                        his guards.
-                        <br />
-                        <br />
-                        Created by Tam Nguyen, Karen Chen, and Skylar Williams
+                        Created by Alyssa Williams, Lance Haugh, Boston-Blue
+                        Giovannini, and Massimo Bottari
                       </p>
                     </div>
                   </Col>
@@ -414,4 +354,4 @@ function ClawsAndOrder() {
   );
 }
 
-export default ClawsAndOrder;
+export default Shuriken;

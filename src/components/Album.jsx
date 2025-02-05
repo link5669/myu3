@@ -149,6 +149,17 @@ const Album = ({ info, title, id, img, file, description }) => {
               src={img}
             />
           </Link>
+        ) : info[0].title == "Shuriken Saga" ? (
+          <Link
+            style={{ textDecoration: "none", color: "gray" }}
+            to="/music/shuriken-saga"
+          >
+            <img
+              style={{ width: "100%", paddingBottom: "5%" }}
+              alt="album cover"
+              src={img}
+            />
+          </Link>
         ) : (
           <img
             style={{ width: "100%", paddingBottom: "5%" }}
@@ -308,6 +319,16 @@ const Album = ({ info, title, id, img, file, description }) => {
               <Link
                 style={{ textDecoration: "none", color: "gray" }}
                 to="/music/claws-and-order"
+              >
+                Learn more...
+              </Link>
+            </>
+          ) : info[0].title == "Shuriken Saga" ? (
+            <>
+              <br />
+              <Link
+                style={{ textDecoration: "none", color: "gray" }}
+                to="/music/shuriken-saga"
               >
                 Learn more...
               </Link>

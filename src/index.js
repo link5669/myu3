@@ -24,6 +24,7 @@ import Alistair from "./pages/Alistair";
 import Afterlife from "./pages/Afterlife";
 import BroadwayBlues from "./pages/BroadwayBlues";
 import ClawsAndOrder from "./pages/CAO";
+import Shuriken from "./pages/Shuriken";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const state = {
@@ -56,6 +57,7 @@ root.render(
         <Route path="/music/afterlife" element={<Afterlife />} />
         <Route path="/music/broadway-blues" element={<BroadwayBlues />} />
         <Route path="/music/claws-and-order" element={<ClawsAndOrder />} />
+        <Route path="/music/shuriken-saga" element={<Shuriken />} />
       </Routes>
     </ScrollIntoView>
   </BrowserRouter>,

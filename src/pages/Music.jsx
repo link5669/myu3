@@ -26,6 +26,8 @@ import broadway from "../assets/BWBL Album Cover.png";
 function Music() {
   const claws =
     "https://dl.dropboxusercontent.com/scl/fi/ypiedv3d5hu47c9mc7r80/CLA-Album-Cover.jpg?rlkey=g0j3p1dri8c56t6ra7yle25s2&e=1&dl=0";
+  const shuriken =
+    "https://www.dl.dropboxusercontent.com/scl/fi/qpjmqh2v5hvxfu17rp958/SHSG-Album-Cover.png?rlkey=8ewufqr6awff2fg58m6gvf0oe&dl=0";
   return (
     <>
       <div style={{ width: "100vw", background: "black" }}>
@@ -75,6 +77,93 @@ function Music() {
 
             <Col style={{ padding: "3%", paddingLeft: "8%" }}>
               <Album
+                id="shu"
+                img={shuriken}
+                file={[
+                  "https://www.dl.dropboxusercontent.com/scl/fi/ieh8cmgjeu7qkyjhtakqw/SHSG-Preview.m4a?rlkey=ks0hneigkoottx0y1jlg1ocr8&dl=0",
+                ]}
+                title="Shuriken Saga"
+                description="Video Game / Japanese Adventure"
+                info={[
+                  {
+                    title: "Shuriken Saga",
+                  },
+                ]}
+              />
+
+              <Album
+                id="rots"
+                img={rots}
+                file={[
+                  "https://www.dl.dropboxusercontent.com/scl/fi/uifjm1bauwvldiiuy76el/ROTS-DELTA-M01v2-Delta-Emblock-s-Theme.wav?rlkey=043vo2m4p7m7y3zu2vdnemhdw&e=1&dl=0",
+                ]}
+                title="Resurgence of the Storm"
+                description="MOBA / Sci-Fi Fantasy"
+                info={[
+                  {
+                    title: "Resurgence of the Storm",
+                  },
+                ]}
+              />
+
+              <Album
+                id="sprout"
+                img={sprout}
+                file={[
+                  "https://www.dl.dropboxusercontent.com/scl/fi/jr00sb0y6il6p9vi652l0/SPRT-Social-Media-Preview.m4a?rlkey=25cydip38sch9b50sbe6gyh59&dl=0",
+                ]}
+                title="Sprout"
+                description="Short Film / Orchestral"
+                info={[
+                  {
+                    title: "Sprout",
+                  },
+                ]}
+              />
+
+              <Album
+                id="ptps"
+                img={ptps}
+                file={[
+                  "https://www.dl.dropboxusercontent.com/scl/fo/cwxd6z2d4uef8vl24m2x5/h/_Final%20Tracks%20%28Audio%29/PTPS%20ST01v1%20M01v4%20Main%20Menu.wav?rlkey=1lk894vipypruh8cqhfknijqx&dl=0",
+                ]}
+                title="Potion Pushas"
+                description="Video Game / Fantasy, Noir, Electronic"
+                info={[
+                  {
+                    title: "Potion Pushas",
+                  },
+                ]}
+              />
+
+              <Album
+                id="stalling"
+                img={stalling}
+                file={[require("../assets/STL+DEMO+M10+At+Shit_s+End.mp3")]}
+                title="Stalling"
+                description="Short Film / Musical Comedy"
+                info={[
+                  {
+                    title: "Stalling",
+                  },
+                ]}
+              />
+
+              <Album
+                id="bard1"
+                img={bard1}
+                file={[require("../assets/NRS+DEMO+105+Pursuit.mp3")]}
+                title="A Bard’s Tale: Norse Vol. 1"
+                description="Library Music / Norse, Folk, Metal"
+                info={[
+                  {
+                    title: "A Bard’s Tale: Norse Vol. 1",
+                  },
+                ]}
+              />
+            </Col>
+            <Col style={{ padding: "3%" }}>
+              <Album
                 id="cao"
                 img={claws}
                 file={[
@@ -102,20 +191,22 @@ function Music() {
                   },
                 ]}
               />
+
               <Album
-                id="sprout"
-                img={sprout}
+                id="dreamFactory"
+                img={dreamFactoryCover}
                 file={[
-                  "https://www.dl.dropboxusercontent.com/scl/fi/jr00sb0y6il6p9vi652l0/SPRT-Social-Media-Preview.m4a?rlkey=25cydip38sch9b50sbe6gyh59&dl=0",
+                  "https://www.dl.dropboxusercontent.com/scl/fi/0lhty67m1z0iqkyhpkdif/TDF-Social-Media-Preview.mp3?rlkey=adqrmyod72roicfed57uxavqn&dl=0",
                 ]}
-                title="Sprout"
+                title="The Dream Factory"
                 description="Short Film / Orchestral"
                 info={[
                   {
-                    title: "Sprout",
+                    title: "The Dream Factory",
                   },
                 ]}
               />
+
               <Album
                 id="btrp"
                 img={btrp}
@@ -130,6 +221,7 @@ function Music() {
                   },
                 ]}
               />
+
               <Album
                 id="shp"
                 img={shp}
@@ -142,6 +234,7 @@ function Music() {
                   },
                 ]}
               />
+
               <Album
                 id="bxr"
                 file={[
@@ -157,7 +250,7 @@ function Music() {
                 description="Video Game / Horror, Electronic"
               />
             </Col>
-            <Col style={{ padding: "3%" }}>
+            <Col style={{ padding: "3%", paddingRight: "8%" }}>
               <Album
                 id="afterlife"
                 img={afterlife}
@@ -172,6 +265,7 @@ function Music() {
                   },
                 ]}
               />
+
               <Album
                 id="tekha"
                 img={tek}
@@ -186,53 +280,7 @@ function Music() {
                   },
                 ]}
               />
-              <Album
-                id="dreamFactory"
-                img={dreamFactoryCover}
-                file={[
-                  "https://www.dl.dropboxusercontent.com/scl/fi/0lhty67m1z0iqkyhpkdif/TDF-Social-Media-Preview.mp3?rlkey=adqrmyod72roicfed57uxavqn&dl=0",
-                ]}
-                title="The Dream Factory"
-                description="Short Film / Orchestral"
-                info={[
-                  {
-                    title: "The Dream Factory",
-                  },
-                ]}
-              />
-              <Album
-                id="bard1"
-                img={bard1}
-                file={[require("../assets/NRS+DEMO+105+Pursuit.mp3")]}
-                title="A Bard’s Tale: Norse Vol. 1"
-                description="Library Music / Norse, Folk, Metal"
-                info={[
-                  {
-                    title: "A Bard’s Tale: Norse Vol. 1",
-                  },
-                ]}
-              />
-              <Album
-                img={bard2}
-                title="A Bard’s Tale: The Plane of Elemental Chaos Vol. 1"
-                description="Library Music / Contemporary"
-              />
-            </Col>
-            <Col style={{ padding: "3%", paddingRight: "8%" }}>
-              <Album
-                id="rots"
-                img={rots}
-                file={[
-                  "https://www.dl.dropboxusercontent.com/scl/fi/uifjm1bauwvldiiuy76el/ROTS-DELTA-M01v2-Delta-Emblock-s-Theme.wav?rlkey=043vo2m4p7m7y3zu2vdnemhdw&e=1&dl=0",
-                ]}
-                title="Resurgence of the Storm"
-                description="MOBA / Sci-Fi Fantasy"
-                info={[
-                  {
-                    title: "Resurgence of the Storm",
-                  },
-                ]}
-              />
+
               <Album
                 id="spell"
                 img={spell}
@@ -245,31 +293,11 @@ function Music() {
                   },
                 ]}
               />
+
               <Album
-                id="stalling"
-                img={stalling}
-                file={[require("../assets/STL+DEMO+M10+At+Shit_s+End.mp3")]}
-                title="Stalling"
-                description="Short Film / Musical Comedy"
-                info={[
-                  {
-                    title: "Stalling",
-                  },
-                ]}
-              />
-              <Album
-                id="ptps"
-                img={ptps}
-                file={[
-                  "https://www.dl.dropboxusercontent.com/scl/fo/cwxd6z2d4uef8vl24m2x5/h/_Final%20Tracks%20%28Audio%29/PTPS%20ST01v1%20M01v4%20Main%20Menu.wav?rlkey=1lk894vipypruh8cqhfknijqx&dl=0",
-                ]}
-                title="Potion Pushas"
-                description="Video Game / Fantasy, Noir, Electronic"
-                info={[
-                  {
-                    title: "Potion Pushas",
-                  },
-                ]}
+                img={bard2}
+                title="A Bard’s Tale: The Plane of Elemental Chaos Vol. 1"
+                description="Library Music / Contemporary"
               />
               <Album
                 img={missingTwin}

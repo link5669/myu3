@@ -9,7 +9,7 @@ const MarcFooter = () => {
       }}
     >
       <p style={{ textAlign: "center", color: "white", fontFamily: "Georgia" }}>
-        Marc Yu - 2024
+        Marc Yu - 2025
       </p>
       <div
         style={{
