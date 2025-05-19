@@ -10,63 +10,79 @@ import NewAudioPlayer from "../components/AudioPlayer";
 import applemusic from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_wht_sm_073120.svg";
 import applemusiccolor from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_blk_sm_073120.svg";
 import TrackList from "../components/TrackList";
+import { useCallback } from "react";
 
-function Shuriken() {
+function MixedJams() {
   const [spotifyMouseOver, setSpotifyMouseOver] = useState(false);
   const [appleMouseOver, setAppleMouseOver] = useState(false);
   const [youTubeMouseOver, setYouTubeMouseOver] = useState(false);
   const [soundcloudMouseOver, setSoundcloudMouseOver] = useState(false);
-  const cover =
-    "https://www.dl.dropboxusercontent.com/scl/fi/qpjmqh2v5hvxfu17rp958/SHSG-Album-Cover.png?rlkey=8ewufqr6awff2fg58m6gvf0oe&e=1&dl=0";
 
   const track1 =
-    "https://www.dl.dropboxusercontent.com/scl/fo/cb3cahojad53uod1020vc/ALiaZHyxoyujBWcdovbsEfs/SHSG%20T01v1%20Temple%20Battle.wav?rlkey=y0hkg293pknurc2xzyw0uywdz&e=1&dl=0";
-  const track2 =
-    "https://www.dl.dropboxusercontent.com/scl/fo/cb3cahojad53uod1020vc/AHLGNmsGBfA9XMrOE_i-Iqs/SHSG%20T02v1%20Shadow%20Realm.wav?rlkey=y0hkg293pknurc2xzyw0uywdz&e=1&dl=0";
-  const track3 =
-    "https://www.dl.dropboxusercontent.com/scl/fo/cb3cahojad53uod1020vc/AIpwrQeiE5OlQzeCFEaCLjs/SHSG%20T03v1%20Overworld.wav?rlkey=y0hkg293pknurc2xzyw0uywdz&e=1&dl=0";
-
-  const trackInfo = [
+    "https://www.dl.dropboxusercontent.com/scl/fo/57atsrr19q40ism5qcp99/ADvvDjh1wDefON8KDnbfPk0/Track%20%231%20-%20%22Busy%20Hour%22.wav?rlkey=pwo78jp9rpkf2uyrd0uf5gdlw&e=1&dl=0";
+const track2 = "https://www.dl.dropboxusercontent.com/scl/fo/57atsrr19q40ism5qcp99/AEj6qkpqxI5dyNOmAREmB2M/Track%20%232%20-%20%22Indigo%20Nights%22.wav?rlkey=pwo78jp9rpkf2uyrd0uf5gdlw&e=1&dl=0"
+const track3 = "https://www.dl.dropboxusercontent.com/scl/fo/57atsrr19q40ism5qcp99/ALswNbLJ5UJuK1AEZBuIwHI/Track%20%233%20-%20%22Somehow%20Always%22.wav?rlkey=pwo78jp9rpkf2uyrd0uf5gdlw&e=1&dl=0"
+const track4 = "https://www.dl.dropboxusercontent.com/scl/fo/57atsrr19q40ism5qcp99/ALA2zzJxijyxz7dKOObi_6A?dl=0&e=1&preview=Track+%234+-+%22Fast+n%27+Easy%22.wav&rlkey=pwo78jp9rpkf2uyrd0uf5gdlw"
+const trackInfo = [
     {
-      title: "Temple Battle",
+      title: "Busy Hour",
       track: track1,
       index: "1",
-      length: "4:01",
+      length: "0:42",
     },
     {
-      title: "Shadow Realm",
+      title: "Indigo Nights",
       track: track2,
       index: "2",
-      length: "2:14",
+      length: "3:56",
     },
     {
-      title: "Overworld",
+      title: "Somehow Always",
       track: track3,
       index: "3",
-      length: "2:14",
+      length: "6:22",
+    },
+    {
+      title: "Fast n' Easy",
+      track: track4,
+      index: "4",
+      length: "4:03",
     },
   ];
 
+  const audioTracks = [track1];
+
   const [selectedTrack, setSelectedTrack] = useState({
     title: trackInfo[0].title,
-    track: track1,
+    track: trackInfo[0].track,
     index: "1",
     length: trackInfo[0].length,
   });
 
-  const handleClick = (track) => {
-    setSelectedTrack(track);
-  };
+  const handleClick = useCallback(
+    (track) => {
+      if (track.title !== selectedTrack.title) {
+        setSelectedTrack(track);
+      }
+    },
+    [selectedTrack.title],
+  );
 
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const handleHoverEnter = useCallback((index) => {
+    setHoveredItem(index);
+  }, []);
 
-  const handleHoverEnter = (item) => {
-    setHoveredIndex(item);
-  };
+  const handleHoverLeave = useCallback(() => {
+    setHoveredItem(null);
+  }, []);
 
-  const handleHoverLeave = () => {
-    setHoveredIndex(null);
-  };
+  const [hoveredItem, setHoveredItem] = useState(null);
+
+  const [playingTrackIndex, setPlayingTrackIndex] = useState(0);
+
+  useEffect(() => {
+    setSelectedTrack(trackInfo[playingTrackIndex]);
+  }, [playingTrackIndex]);
 
   return (
     <>
@@ -85,7 +101,7 @@ function Shuriken() {
                   fontStyle: "]]]d",
                 }}
               >
-                Shuriken Saga
+                Mixed Jams (from Beat Tender)
               </h2>
               <p
                 style={{
@@ -96,7 +112,7 @@ function Shuriken() {
                   paddingBottom: "1%",
                 }}
               >
-                <i>Video Game / Japanese Adventure</i>
+                <i>EP / Jazz Fusion</i>
               </p>
               <Container>
                 <Row>
@@ -104,20 +120,23 @@ function Shuriken() {
                     <img
                       style={{ width: "100%", borderRadius: "10px" }}
                       alt="album cover"
-                      src={cover}
+                      src="https://www.dl.dropboxusercontent.com/scl/fi/lyzidlbuqoxezr1m0kmjd/BTND-Album-Cover.jpeg?rlkey=80rbhc70jvvhru4oh8e1xhn39&dl=0"
                     />
                     <div style={{ paddingBottom: "5%" }}></div>
                     <NewAudioPlayer
-                      key={selectedTrack.title}
-                      songs={[selectedTrack.track]}
+                      key={selectedTrack.title} // Add key to force remount when track actually changes
                       trackName={selectedTrack.title}
+                      songs={[selectedTrack.track]}
+                      trackInfo={trackInfo}
+                      playingTrackIndex={playingTrackIndex}
+                      setPlayingTrackIndex={setPlayingTrackIndex}
                     />
                     <br />
                     <TrackList
                       trackInfo={trackInfo}
                       selectedTrack={selectedTrack}
                       onTrackClick={handleClick}
-                      hoveredItem={hoveredIndex}
+                      hoveredItem={hoveredItem}
                       onHoverEnter={handleHoverEnter}
                       onHoverLeave={handleHoverLeave}
                     />
@@ -134,7 +153,7 @@ function Shuriken() {
                         target="_blank"
                         onMouseOver={() => setAppleMouseOver(true)}
                         onMouseOut={() => setAppleMouseOver(false)}
-                        href="https://music.apple.com/us/album/shuriken-saga-original-soundtrack-single/1794358320"
+                        href="https://music.apple.com/us/album/mixed-jams-ep/1813788567"
                       >
                         {!appleMouseOver ? (
                           <img style={{ width: "24px" }} src={applemusic} />
@@ -149,7 +168,7 @@ function Shuriken() {
                         target="_blank"
                         onMouseOver={() => setYouTubeMouseOver(true)}
                         onMouseOut={() => setYouTubeMouseOver(false)}
-                        href="https://www.youtube.com/watch?v=UX-huKSQJ8M&list=PLWLXJaKFBj4KivuAH0oLJjqUmkxBEaN4M&index=1"
+                        href="https://www.youtube.com/watch?v=OTiwIuZGiGY&list=PLWLXJaKFBj4IO7Jv2Pg8NqR7Jbl9IZ5O_&index=1"
                       >
                         {youTubeMouseOver ? (
                           <svg
@@ -178,7 +197,7 @@ function Shuriken() {
                         target="_blank"
                         onMouseOver={() => setSoundcloudMouseOver(true)}
                         onMouseOut={() => setSoundcloudMouseOver(false)}
-                        href="https://soundcloud.com/marcyumusic/sets/shuriken-saga-original-soundtrack"
+                        href="https://soundcloud.com/marcyumusic/sets/mixed-jams"
                       >
                         {soundcloudMouseOver ? (
                           <svg
@@ -265,7 +284,7 @@ function Shuriken() {
                         target="_blank"
                         onMouseOver={() => setSpotifyMouseOver(true)}
                         onMouseOut={() => setSpotifyMouseOver(false)}
-                        href="https://open.spotify.com/album/2QTMb4P0nWPjCj7JSQP3oD?si=AFt5UlucQnGynrQUgORYhw"
+                        href="https://open.spotify.com/album/2aupMM9OBMPuO1lwTlvILm?si=omevKpDVQDi8tny0pGwS7Q"
                       >
                         {spotifyMouseOver ? (
                           <svg
@@ -304,34 +323,86 @@ function Shuriken() {
                         }}
                       >
                         <li>
-                          Original Soundtrack by:
+                          Original Music by:
                           <span style={{ color: "#B9BAB9" }}> Marc Yu</span>
                         </li>
                         <br />
                         <li>
-                          Music Production Services:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Wavyrn</span>
-                        </li>
-                        <li>
-                          Sound Designer:{" "}
+                         Music Production Services{" "}
                           <span style={{ color: "#B9BAB9" }}>
-                            Julian Cabrera
+                            Wavyrn
                           </span>
                         </li>
                         <li>
-                          Sound Designer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Neil Small</span>
+                          Recording Engineer{" "}
+                          <span style={{ color: "#B9BAB9" }}>Dong Yao Liu</span>
                         </li>
                         <li>
-                          Studio Manager:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Ananta Arora</span>
+                          Mixing and Mastering Engineer{" "}
+                          <span style={{ color: "#B9BAB9" }}>Austin Leshock</span>
+                        </li>
+                        <li>
+                          Audio Assistant{" "}
+                          <span style={{ color: "#B9BAB9" }}>Angelica Ramos</span>
+                        </li>
+                        <li>
+                          Recorded Live at  <span style={{ color: "#B9BAB9" }}>The Record Co.</span>
+                        </li>
+                        <br />
+                        <h4>Featuring</h4>
+                        <li>
+                          Sam Pomanti {" "}
+                          <span style={{ color: "#B9BAB9" }}>
+                            Keys
+                          </span>
+                        </li>
+                        <li>
+                          Hyein Jeong{" "}
+                          <span style={{ color: "#B9BAB9" }}>
+                            Keys
+                          </span>
+                        </li>
+                        <li>
+                          Marc Yu{" "}
+                          <span style={{ color: "#B9BAB9" }}>
+                            Keys
+                          </span>
+                        </li>
+                        <li>
+                          Eddie Tseng {" "}
+                          <span style={{ color: "#B9BAB9" }}>
+                            Guitar
+                          </span>
+                        </li>
+                        <li>
+                          Keith Du  {" "}
+                          <span style={{ color: "#B9BAB9" }}>
+                            Guitar
+                          </span>
+                        </li>
+                        <li>
+                          Alejandro Espinosa {" "}
+                          <span style={{ color: "#B9BAB9" }}>
+                            Guitar and Bass
+                          </span>
+                        </li>
+                        <li>
+                          Haohan Wu {" "}
+                          <span style={{ color: "#B9BAB9" }}>
+                            Bass
+                          </span>
+                        </li>
+                        <li>
+                          Mean Gyeongseo {" "}
+                          <span style={{ color: "#B9BAB9" }}>
+                            Drums
+                          </span>
+                        </li>
+                        <br />
+                        <li>
+                          "Beat Tender" Created by Charlie Madrigal
                         </li>
                       </ul>
-                      <div style={{ paddingBottom: "5%" }}></div>
-                      <p style={{ fontSize: "1.1rem", color: "#B9BAB9" }}>
-                        Created by Alyssa Williams, Lance Haugh, Boston-Blue
-                        Giovannini, and Massimo Bottari
-                      </p>
                     </div>
                   </Col>
                 </Row>
@@ -354,4 +425,4 @@ function Shuriken() {
   );
 }
 
-export default Shuriken;
+export default MixedJams;

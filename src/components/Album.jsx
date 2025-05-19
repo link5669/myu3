@@ -160,6 +160,17 @@ const Album = ({ info, title, id, img, file, description }) => {
               src={img}
             />
           </Link>
+        ) :info[0].title == "Mixed Jams (from Beat Tender)" ? (
+          <Link
+            style={{ textDecoration: "none", color: "gray" }}
+            to="/music/mixed-jams"
+          >
+            <img
+              style={{ width: "100%", paddingBottom: "5%" }}
+              alt="album cover"
+              src={img}
+            />
+          </Link>
         ) : (
           <img
             style={{ width: "100%", paddingBottom: "5%" }}
