@@ -135,6 +135,7 @@ function Credits() {
                   color: "white",
                   fontFamily: "Georgia",
                   fontSize: "10pt",
+                  lineHeight: "normal"
                 }}
               >
                 <u>
@@ -192,27 +193,33 @@ function Credits() {
                   <br />
                   <Credit
                     title="Annie's Asylum"
-                    from="Short Film | Audio Supervisor, Composer"
+                    from="Short Film | Sound Supervisor, Composer"
                   />
                   <Credit
                     title="Hoodwink"
-                    from="Short Film | Audio Supervisor, Composer"
+                    from="Short Film | Sound Supervisor, Composer"
                   />
                   <Credit
                     title="Puddle"
-                    from="Short Film | Audio Supervisor, Composer"
+                    from="Short Film | Sound Supervisor, Composer"
                   />
+                  <Credit
+                  title="Starting Line"
+                  from="Short Film | Sound Supervisor, Composer"/>
                   <Credit
                     title="The Dream Factory"
                     from="Short Film | Audio Director, Composer"
                   />
                   <Credit
+                  title="The Magical Unicorn Tales"
+                  from="Short Film | Sound Supervisor, Composer"/>
+                  <Credit
                     title="Upstream"
-                    from="Short Film | Audio Supervisor, Composer"
+                    from="Short Film | Sound Supervisor, Composer"
                   />
                   <Credit
                     title="Vermin"
-                    from="Short Film | Audio Supervisor, Composer"
+                    from="Short Film | Sound Supervisor, Composer"
                   />
                   <Credit
                     title="A Spell To Break"
@@ -270,6 +277,7 @@ function Credits() {
                     title="Temporal Vendetta"
                     from="Video Game | Audio Supervisor, Composer"
                   />
+                  <Credit title="Toggle" from="Video Game | Audio Director, Composer"/>
                   <Credit
                     title="Shuriken Saga"
                     from="Video Game | Audio Supervisor, Composer"
@@ -313,6 +321,7 @@ function Credits() {
                   />
                   <Credit title="Alistair" from="Video Game | Composer" />
                   <Credit title="Potion Pushas" from="Video Game | Composer" />
+                  <Credit title='Roger "Roger Williams" Williams' from="Video Game | Composer"
                   <Credit
                     title="Esception"
                     from="Video Game | Sound Designer"
@@ -321,6 +330,7 @@ function Credits() {
                     title="Mushroom Kid's Big Grass Sword"
                     from="Video Game | Music Coordinating Consultant"
                   />
+                  <Credit title="Soul Harbor" from="Video Game | Audio Director, Principle Composer"/>
                   <Credit
                     title="Resurgence of the Storm"
                     from="Video Game | Audio Director, Principal Composer"
@@ -461,7 +471,7 @@ function Credits() {
                 </h3>
                 <Credit
                   title="Best Student Animation (2024) | Sprout"
-                  from="Drawtastic Animation Festival"
+                  from=<><i>Winner of</i> Best Student Animation <i>at the DRAWTASTIC Animation Festival</i></>
                 />
                 <Credit
                   title="Best in Show, BFA 3D Animation and Visual Effects (2024) | The Dream Factory"
@@ -728,6 +738,7 @@ function Credits() {
                 <u>
                   <i>A Spell to Break (2024)</i>
                 </u>
+                <i>Official Selection at CineYouth 2025</i>
               </p>
               <img style={{ maxWidth: "100%" }} src={tekha} />
               <p
