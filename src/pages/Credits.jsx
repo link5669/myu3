@@ -321,7 +321,7 @@ function Credits() {
                   />
                   <Credit title="Alistair" from="Video Game | Composer" />
                   <Credit title="Potion Pushas" from="Video Game | Composer" />
-                  <Credit title='Roger "Roger Williams" Williams' from="Video Game | Composer"
+                  <Credit title='Roger "Roger Williams" Williams' from="Video Game | Composer" />
                   <Credit
                     title="Esception"
                     from="Video Game | Sound Designer"
@@ -471,7 +471,7 @@ function Credits() {
                 </h3>
                 <Credit
                   title="Best Student Animation (2024) | Sprout"
-                  from=<><i>Winner of</i> Best Student Animation <i>at the DRAWTASTIC Animation Festival</i></>
+                  from="DRAWTASTIC Animation Festival"
                 />
                 <Credit
                   title="Best in Show, BFA 3D Animation and Visual Effects (2024) | The Dream Factory"
@@ -724,6 +724,8 @@ function Credits() {
                 <u>
                   <i>Sprout (2022)</i>
                 </u>
+              <br/>
+                <i>Winner of</i> Best Student Animation <i>at the DRAWTASTIC Animation Festival</i>
               </p>
               <img style={{ maxWidth: "100%" }} src={spell} />
               <p

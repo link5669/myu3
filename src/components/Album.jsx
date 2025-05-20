@@ -344,6 +344,16 @@ const Album = ({ info, title, id, img, file, description }) => {
                 Learn more...
               </Link>
             </>
+          ) : info[0].title == "Mixed Jams (from Beat Tender)" ? (
+            <>
+              <br />
+              <Link
+                style={{ textDecoration: "none", color: "gray" }}
+                to="/music/mixed-jams"
+              >
+                Learn more...
+              </Link>
+            </>
           ) : (
             <>
               <br />

@@ -19,10 +19,10 @@ function MixedJams() {
   const [soundcloudMouseOver, setSoundcloudMouseOver] = useState(false);
 
   const track1 =
-    "https://www.dl.dropboxusercontent.com/scl/fo/57atsrr19q40ism5qcp99/ADvvDjh1wDefON8KDnbfPk0/Track%20%231%20-%20%22Busy%20Hour%22.wav?rlkey=pwo78jp9rpkf2uyrd0uf5gdlw&e=1&dl=0";
-const track2 = "https://www.dl.dropboxusercontent.com/scl/fo/57atsrr19q40ism5qcp99/AEj6qkpqxI5dyNOmAREmB2M/Track%20%232%20-%20%22Indigo%20Nights%22.wav?rlkey=pwo78jp9rpkf2uyrd0uf5gdlw&e=1&dl=0"
-const track3 = "https://www.dl.dropboxusercontent.com/scl/fo/57atsrr19q40ism5qcp99/ALswNbLJ5UJuK1AEZBuIwHI/Track%20%233%20-%20%22Somehow%20Always%22.wav?rlkey=pwo78jp9rpkf2uyrd0uf5gdlw&e=1&dl=0"
-const track4 = "https://www.dl.dropboxusercontent.com/scl/fo/57atsrr19q40ism5qcp99/ALA2zzJxijyxz7dKOObi_6A?dl=0&e=1&preview=Track+%234+-+%22Fast+n%27+Easy%22.wav&rlkey=pwo78jp9rpkf2uyrd0uf5gdlw"
+    "https://www.dl.dropboxusercontent.com/scl/fo/vr6dpzwpn6bipk2hals48/ANp9RV9DyjAoCRJlTm75aRI/Soundtrack%20(Audio)/Track%20%231%20-%20%22Busy%20Hour%22.wav?rlkey=gfxraq20oorf9szpvey5r3zgo&e=1&dl=0";
+const track2 = "https://www.dl.dropboxusercontent.com/scl/fo/vr6dpzwpn6bipk2hals48/AOSII1SkjS1mjwHvNtNqRE8/Soundtrack%20(Audio)/Track%20%232%20-%20%22Indigo%20Nights%22.wav?rlkey=gfxraq20oorf9szpvey5r3zgo&e=1&dl=0"
+const track3 = "https://www.dl.dropboxusercontent.com/scl/fo/vr6dpzwpn6bipk2hals48/APUAId4D0KMbWVo-skOaKoQ/Soundtrack%20(Audio)/Track%20%233%20-%20%22Somehow%20Always%22.wav?rlkey=gfxraq20oorf9szpvey5r3zgo&e=1&dl=0"
+const track4 = "https://www.dl.dropboxusercontent.com/scl/fo/vr6dpzwpn6bipk2hals48/AHrbP5NSNI0cBoPxjAb248U/Soundtrack%20(Audio)/Track%20%234%20-%20%22Fast%20n'%20Easy%22.wav?rlkey=gfxraq20oorf9szpvey5r3zgo&e=1&dl=0"
 const trackInfo = [
     {
       title: "Busy Hour",
