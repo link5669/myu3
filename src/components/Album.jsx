@@ -160,10 +160,21 @@ const Album = ({ info, title, id, img, file, description }) => {
               src={img}
             />
           </Link>
-        ) :info[0].title == "Mixed Jams (from Beat Tender)" ? (
+        ) : info[0].title == "Mixed Jams (from Beat Tender)" ? (
           <Link
             style={{ textDecoration: "none", color: "gray" }}
             to="/music/mixed-jams"
+          >
+            <img
+              style={{ width: "100%", paddingBottom: "5%" }}
+              alt="album cover"
+              src={img}
+            />
+          </Link>
+        ) : info[0].title == "Puddle)" ? (
+          <Link
+            style={{ textDecoration: "none", color: "gray" }}
+            to="/music/puddle"
           >
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
@@ -350,6 +361,16 @@ const Album = ({ info, title, id, img, file, description }) => {
               <Link
                 style={{ textDecoration: "none", color: "gray" }}
                 to="/music/mixed-jams"
+              >
+                Learn more...
+              </Link>
+            </>
+          ) : info[0].title == "Puddle" ? (
+            <>
+              <br />
+              <Link
+                style={{ textDecoration: "none", color: "gray" }}
+                to="/music/puddle"
               >
                 Learn more...
               </Link>

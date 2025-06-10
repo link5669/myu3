@@ -33,6 +33,13 @@ function Music() {
   // albums.js
   const albums = [
     // Row 1
+    {id: "puddle",
+      img: "https://www.dl.dropboxusercontent.com/scl/fi/9ngmv7bqgi2f2jrz8t6uj/PDDL-Album-Cover-Credit.jpg?rlkey=ane9wbyj46h1r2ai9rdpxzcpq&dl=0",
+      file: ["https://www.dl.dropboxusercontent.com/scl/fi/envddh2n73xa9b3ori35e/PDDL-Preview.wav?rlkey=ltzdqi4usbu36n1ocxye5au3n&dl=0"],
+      title: "Puddle",
+      description: "Short Film / Stop Motion Comedy",
+      info: [{title: "Puddle"}]
+    },
     {id: "mix",
       img: "https://www.dl.dropboxusercontent.com/scl/fi/lyzidlbuqoxezr1m0kmjd/BTND-Album-Cover.jpeg?rlkey=80rbhc70jvvhru4oh8e1xhn39&dl=0",
       file: ["https://www.dl.dropboxusercontent.com/scl/fi/k92b1nog2koik64w7qlpr/Day-1-Track-4-Fast-n-Easy.wav?rlkey=ax25y7qznhmt16jyse1uw4nw1&dl=0"],
