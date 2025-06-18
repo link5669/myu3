@@ -134,7 +134,7 @@ function Puddle() {
                         target="_blank"
                         onMouseOver={() => setAppleMouseOver(true)}
                         onMouseOut={() => setAppleMouseOver(false)}
-                        // href="https://music.apple.com/us/album/shuriken-saga-original-soundtrack-single/1794358320"
+                        href="https://music.apple.com/us/album/puddle-original-soundtrack-single/1819272417"
                       >
                         {!appleMouseOver ? (
                           <img style={{ width: "24px" }} src={applemusic} />
@@ -265,7 +265,7 @@ function Puddle() {
                         target="_blank"
                         onMouseOver={() => setSpotifyMouseOver(true)}
                         onMouseOut={() => setSpotifyMouseOver(false)}
-                        // href="https://open.spotify.com/album/2QTMb4P0nWPjCj7JSQP3oD?si=AFt5UlucQnGynrQUgORYhw"
+                        href="https://open.spotify.com/album/1lU08OkZD35WFZXi4zpwMy"
                       >
                         {spotifyMouseOver ? (
                           <svg
