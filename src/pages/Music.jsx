@@ -29,10 +29,14 @@ function Music() {
   const shuriken =
     "https://www.dl.dropboxusercontent.com/scl/fi/qpjmqh2v5hvxfu17rp958/SHSG-Album-Cover.png?rlkey=8ewufqr6awff2fg58m6gvf0oe&dl=0";
 
-  // albums.js
-  // albums.js
   const albums = [
-    // Row 1
+    {id: "survivors",
+      img: "https://www.dl.dropboxusercontent.com/scl/fi/gyt8a7yh4owt1v78lbd00/SRVR-Album-Credits.JPEG?rlkey=mhhcshhjm62yimmf7nl348w5u&dl=0",
+      file: ["https://www.dl.dropboxusercontent.com/scl/fi/kxfn6479hrnhe69m2kinu/SRVR-T01v1-M03-Don-t-Play-With-Knives.wav?rlkey=3kjarq8okyz8wq9tgmwogbl99&dl=0"],
+      title: "Survivors",
+      description: "Short Film / Animated Adventure",
+      info: [{title: "Survivors"}]
+    },
     {id: "puddle",
       img: "https://www.dl.dropboxusercontent.com/scl/fi/9ngmv7bqgi2f2jrz8t6uj/PDDL-Album-Cover-Credit.jpg?rlkey=ane9wbyj46h1r2ai9rdpxzcpq&dl=0",
       file: ["https://www.dl.dropboxusercontent.com/scl/fi/envddh2n73xa9b3ori35e/PDDL-Preview.wav?rlkey=ltzdqi4usbu36n1ocxye5au3n&dl=0"],

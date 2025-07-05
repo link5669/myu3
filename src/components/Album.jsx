@@ -171,10 +171,21 @@ const Album = ({ info, title, id, img, file, description }) => {
               src={img}
             />
           </Link>
-        ) : info[0].title == "Puddle)" ? (
+        ) : info[0].title == "Puddle" ? (
           <Link
             style={{ textDecoration: "none", color: "gray" }}
             to="/music/puddle"
+          >
+            <img
+              style={{ width: "100%", paddingBottom: "5%" }}
+              alt="album cover"
+              src={img}
+            />
+          </Link>
+        ) : info[0].title == "Survivors" ? (
+          <Link
+            style={{ textDecoration: "none", color: "gray" }}
+            to="/music/survivors"
           >
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
@@ -371,6 +382,16 @@ const Album = ({ info, title, id, img, file, description }) => {
               <Link
                 style={{ textDecoration: "none", color: "gray" }}
                 to="/music/puddle"
+              >
+                Learn more...
+              </Link>
+            </>
+          ) : info[0].title == "Survivors" ? (
+            <>
+              <br />
+              <Link
+                style={{ textDecoration: "none", color: "gray" }}
+                to="/music/survivors"
               >
                 Learn more...
               </Link>

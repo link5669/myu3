@@ -27,6 +27,7 @@ import ClawsAndOrder from "./pages/CAO";
 import Shuriken from "./pages/Shuriken";
 import MixedJams from "./pages/MixedJams";
 import Puddle from "./pages/Puddle";
+import Survivors from "./pages/Survivors";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const state = {
@@ -62,6 +63,7 @@ root.render(
         <Route path="/music/shuriken-saga" element={<Shuriken />} />
         <Route path="/music/mixed-jams" element={<MixedJams />} />
         <Route path="/music/puddle" element={<Puddle />} />
+        <Route path="/music/survivors" element={<Survivors />} />
 
       </Routes>
     </ScrollIntoView>

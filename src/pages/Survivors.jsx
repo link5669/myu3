@@ -12,41 +12,36 @@ import applemusiccolor from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_Bla
 import TrackList from "../components/TrackList";
 import { useCallback } from "react";
 
-function MixedJams() {
+function Survivors() {
   const [spotifyMouseOver, setSpotifyMouseOver] = useState(false);
   const [appleMouseOver, setAppleMouseOver] = useState(false);
   const [youTubeMouseOver, setYouTubeMouseOver] = useState(false);
   const [soundcloudMouseOver, setSoundcloudMouseOver] = useState(false);
 
   const track1 =
-    "https://www.dl.dropboxusercontent.com/scl/fo/vr6dpzwpn6bipk2hals48/ANp9RV9DyjAoCRJlTm75aRI/Soundtrack%20(Audio)/Track%20%231%20-%20%22Busy%20Hour%22.wav?rlkey=gfxraq20oorf9szpvey5r3zgo&e=1&dl=0";
-const track2 = "https://www.dl.dropboxusercontent.com/scl/fo/vr6dpzwpn6bipk2hals48/AOSII1SkjS1mjwHvNtNqRE8/Soundtrack%20(Audio)/Track%20%232%20-%20%22Indigo%20Nights%22.wav?rlkey=gfxraq20oorf9szpvey5r3zgo&e=1&dl=0"
-const track3 = "https://www.dl.dropboxusercontent.com/scl/fo/vr6dpzwpn6bipk2hals48/APUAId4D0KMbWVo-skOaKoQ/Soundtrack%20(Audio)/Track%20%233%20-%20%22Somehow%20Always%22.wav?rlkey=gfxraq20oorf9szpvey5r3zgo&e=1&dl=0"
-const track4 = "https://www.dl.dropboxusercontent.com/scl/fo/vr6dpzwpn6bipk2hals48/AHrbP5NSNI0cBoPxjAb248U/Soundtrack%20(Audio)/Track%20%234%20-%20%22Fast%20n'%20Easy%22.wav?rlkey=gfxraq20oorf9szpvey5r3zgo&e=1&dl=0"
-const trackInfo = [
+    "https://www.dl.dropboxusercontent.com/scl/fo/t2iefh4rxom1uewi3wdmi/AKVKV_H0rPNMgboX4ofGINY/SRVR%20T01v1-M03%20Don't%20Play%20With%20Knives!.wav?rlkey=pqe1n2hf9oor34e8zama4bdzh&e=1&dl=0";
+  const track2 =
+    "https://www.dl.dropboxusercontent.com/scl/fo/t2iefh4rxom1uewi3wdmi/AIRIcnXLjUZiMAVBAsyJ61o/SRVR%20T02v1-M01%20Spit!%20Blegh!.wav?rlkey=pqe1n2hf9oor34e8zama4bdzh&e=1&dl=0";
+  const track3 =
+    "https://www.dl.dropboxusercontent.com/scl/fo/t2iefh4rxom1uewi3wdmi/AD3Q970a29kyoyiqyzejOhE/SRVR%20T03v1-M02%20Puppyshark%2C%20Attack!!!.wav?rlkey=pqe1n2hf9oor34e8zama4bdzh&e=1&dl=0";
+  const trackInfo = [
     {
-      title: "Busy Hour",
+      title: "Don't Play With Knives",
       track: track1,
       index: "1",
-      length: "0:42",
+      length: "0:31",
     },
     {
-      title: "Indigo Nights",
+      title: "Spit! Blegh!",
       track: track2,
       index: "2",
-      length: "3:56",
+      length: "1:12",
     },
     {
-      title: "Somehow Always",
+      title: "Puppyshark, Attack!!!",
       track: track3,
       index: "3",
-      length: "6:22",
-    },
-    {
-      title: "Fast n' Easy",
-      track: track4,
-      index: "4",
-      length: "4:03",
+      length: "1:39",
     },
   ];
 
@@ -101,7 +96,7 @@ const trackInfo = [
                   fontStyle: "]]]d",
                 }}
               >
-                Mixed Jams (from Beat Tender)
+                Survivors
               </h2>
               <p
                 style={{
@@ -112,7 +107,7 @@ const trackInfo = [
                   paddingBottom: "1%",
                 }}
               >
-                <i>EP / Jazz Fusion</i>
+                <i>Short Film / Animated Adventure</i>
               </p>
               <Container>
                 <Row>
@@ -120,7 +115,7 @@ const trackInfo = [
                     <img
                       style={{ width: "100%", borderRadius: "10px" }}
                       alt="album cover"
-                      src="https://www.dl.dropboxusercontent.com/scl/fi/lyzidlbuqoxezr1m0kmjd/BTND-Album-Cover.jpeg?rlkey=80rbhc70jvvhru4oh8e1xhn39&dl=0"
+                      src="https://www.dl.dropboxusercontent.com/scl/fi/gyt8a7yh4owt1v78lbd00/SRVR-Album-Credits.JPEG?rlkey=mhhcshhjm62yimmf7nl348w5u&e=1&dl=0"
                     />
                     <div style={{ paddingBottom: "5%" }}></div>
                     <NewAudioPlayer
@@ -153,7 +148,7 @@ const trackInfo = [
                         target="_blank"
                         onMouseOver={() => setAppleMouseOver(true)}
                         onMouseOut={() => setAppleMouseOver(false)}
-                        href="https://music.apple.com/us/album/mixed-jams-ep/1813788567"
+                        // href="https://music.apple.com/us/album/mixed-jams-ep/1813788567"
                       >
                         {!appleMouseOver ? (
                           <img style={{ width: "24px" }} src={applemusic} />
@@ -168,7 +163,7 @@ const trackInfo = [
                         target="_blank"
                         onMouseOver={() => setYouTubeMouseOver(true)}
                         onMouseOut={() => setYouTubeMouseOver(false)}
-                        href="https://www.youtube.com/watch?v=OTiwIuZGiGY&list=PLWLXJaKFBj4IO7Jv2Pg8NqR7Jbl9IZ5O_&index=1"
+                        href="https://www.youtube.com/watch?v=yQcf23eFpcA&list=PLWLXJaKFBj4LcfUN6lHt3VQM6XRgz6Out&index=1"
                       >
                         {youTubeMouseOver ? (
                           <svg
@@ -197,7 +192,7 @@ const trackInfo = [
                         target="_blank"
                         onMouseOver={() => setSoundcloudMouseOver(true)}
                         onMouseOut={() => setSoundcloudMouseOver(false)}
-                        href="https://soundcloud.com/marcyumusic/sets/mixed-jams"
+                        href="https://soundcloud.com/marcyumusic/sets/survivors-original-soundtrack"
                       >
                         {soundcloudMouseOver ? (
                           <svg
@@ -284,7 +279,7 @@ const trackInfo = [
                         target="_blank"
                         onMouseOver={() => setSpotifyMouseOver(true)}
                         onMouseOut={() => setSpotifyMouseOver(false)}
-                        href="https://open.spotify.com/album/2aupMM9OBMPuO1lwTlvILm?si=omevKpDVQDi8tny0pGwS7Q"
+                        // href="https://open.spotify.com/album/2aupMM9OBMPuO1lwTlvILm?si=omevKpDVQDi8tny0pGwS7Q"
                       >
                         {spotifyMouseOver ? (
                           <svg
@@ -323,86 +318,31 @@ const trackInfo = [
                         }}
                       >
                         <li>
-                          Original Music by:
-                          <span style={{ color: "#B9BAB9" }}> Marc Yu</span>
-                        </li>
-                        <br />
-                        <li>
-                         Music Production Services:{" "}
+                          Original Soundtrack by:
                           <span style={{ color: "#B9BAB9" }}>
-                            Wavyrn
-                          </span>
-                        </li>
-                        <li>
-                          Recording Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Dong Yao Liu</span>
-                        </li>
-                        <li>
-                          Mixing and Mastering Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Austin Leshock</span>
-                        </li>
-                        <li>
-                          Audio Assistant:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Angelica Ramos</span>
-                        </li>
-                        <li>
-                          Recorded Live at  <span style={{ color: "#B9BAB9" }}>The Record Co.</span>
-                        </li>
-                        <br />
-                        <h4>Featuring</h4>
-                        <li>
-                          Sam Pomanti:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Keys
-                          </span>
-                        </li>
-                        <li>
-                          Hyein Jeong:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Keys
-                          </span>
-                        </li>
-                        <li>
-                          Marc Yu:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Keys
-                          </span>
-                        </li>
-                        <li>
-                          Eddie Tseng: {" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Guitar
-                          </span>
-                        </li>
-                        <li>
-                          Keith Du:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Guitar
-                          </span>
-                        </li>
-                        <li>
-                          Alejandro Espinosa:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Guitar and Bass
-                          </span>
-                        </li>
-                        <li>
-                          Haohan Wu:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Bass
-                          </span>
-                        </li>
-                        <li>
-                          Mean Gyeongseo:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Drums
+                            {" "}
+                            Marc Yu and Michelle Lai
                           </span>
                         </li>
                         <br />
                         <li>
-                          "Beat Tender" Created by Charlie Madrigal
+                          Audio Production Services:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Wavyrn</span>
+                        </li>
+                        <li>
+                          Studio Manager:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Ananta Arora</span>
                         </li>
                       </ul>
+                      <div style={{ paddingBottom: "5%" }}></div>
+                      <h3>SYNOPSIS</h3>
+                      <p style={{ fontSize: "1.1rem", color: "#B9BAB9" }}>
+                        In an apocalyptic wasteland, a girl is tasked with
+                        hunting monster hybrid animals...including a puppyshark?
+                        <br />
+                        <br />
+                        Created by Maru Pilla.
+                      </p>
                     </div>
                   </Col>
                 </Row>
@@ -425,4 +365,4 @@ const trackInfo = [
   );
 }
 
-export default MixedJams;
+export default Survivors;
