@@ -148,7 +148,7 @@ function Survivors() {
                         target="_blank"
                         onMouseOver={() => setAppleMouseOver(true)}
                         onMouseOut={() => setAppleMouseOver(false)}
-                        // href="https://music.apple.com/us/album/mixed-jams-ep/1813788567"
+                        href="https://music.apple.com/us/album/survivors-original-soundtrack-single/1824836152"
                       >
                         {!appleMouseOver ? (
                           <img style={{ width: "24px" }} src={applemusic} />
@@ -279,7 +279,7 @@ function Survivors() {
                         target="_blank"
                         onMouseOver={() => setSpotifyMouseOver(true)}
                         onMouseOut={() => setSpotifyMouseOver(false)}
-                        // href="https://open.spotify.com/album/2aupMM9OBMPuO1lwTlvILm?si=omevKpDVQDi8tny0pGwS7Q"
+                        href="https://open.spotify.com/album/68KSSZTtzcGdmQ27GoAdz4?utm_campaign=website&utm_medium=Email+&utm_source=SendGrid"
                       >
                         {spotifyMouseOver ? (
                           <svg
