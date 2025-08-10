@@ -30,6 +30,19 @@ function Music() {
     "https://www.dl.dropboxusercontent.com/scl/fi/qpjmqh2v5hvxfu17rp958/SHSG-Album-Cover.png?rlkey=8ewufqr6awff2fg58m6gvf0oe&dl=0";
 
   const albums = [
+    {id: "upstream",
+      img: "https://www.dl.dropboxusercontent.com/scl/fi/7bp9ydoz4e85jaiuuhuxu/UPST-Album-Cover-Credit.png?rlkey=u7lxo533vqr172e6iez6a4yt0&dl=0",
+      file: ["https://www.dl.dropboxusercontent.com/scl/fi/cdf736k51yaoadk9yn7di/UPST-Preview.wav?rlkey=t83j6d454djnai9g29xhvo6h8&dl=0"],
+      title: "Upstream",
+      description: "Short Film / Animated Film",
+      info: [{title: "Upstream"}]
+    },{id: "unicorn",
+      img: "https://www.dl.dropboxusercontent.com/scl/fi/ucwka67djqxy6g7hm1g5p/TMUT-Album-Cover-Credit.jpg?rlkey=0eacw2f9nuo7ubi30i00s0n39&dl=0",
+      file: ["https://www.dl.dropboxusercontent.com/scl/fi/5a15pm173u7goc5cf6fqq/TMUT-Preview.wav?rlkey=29zo8m34icsgffky8oqv621qu&dl=0"],
+      title: "The Magical Unicorn Tales",
+      description: "Short Film / Animated Comedy",
+      info: [{title: "The Magical Unicorn Tales"}]
+    },
     {id: "survivors",
       img: "https://www.dl.dropboxusercontent.com/scl/fi/gyt8a7yh4owt1v78lbd00/SRVR-Album-Credits.JPEG?rlkey=mhhcshhjm62yimmf7nl348w5u&dl=0",
       file: ["https://www.dl.dropboxusercontent.com/scl/fi/kxfn6479hrnhe69m2kinu/SRVR-T01v1-M03-Don-t-Play-With-Knives.wav?rlkey=3kjarq8okyz8wq9tgmwogbl99&dl=0"],

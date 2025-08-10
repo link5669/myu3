@@ -193,6 +193,28 @@ const Album = ({ info, title, id, img, file, description }) => {
               src={img}
             />
           </Link>
+        ) : info[0].title == "Upstream" ? (
+          <Link
+            style={{ textDecoration: "none", color: "gray" }}
+            to="/music/upstream"
+          >
+            <img
+              style={{ width: "100%", paddingBottom: "5%" }}
+              alt="album cover"
+              src={img}
+            />
+          </Link>
+        ) : info[0].title == "The Magical Unicorn Tales" ? (
+          <Link
+            style={{ textDecoration: "none", color: "gray" }}
+            to="/music/unicorn"
+          >
+            <img
+              style={{ width: "100%", paddingBottom: "5%" }}
+              alt="album cover"
+              src={img}
+            />
+          </Link>
         ) : (
           <img
             style={{ width: "100%", paddingBottom: "5%" }}
@@ -382,6 +404,26 @@ const Album = ({ info, title, id, img, file, description }) => {
               <Link
                 style={{ textDecoration: "none", color: "gray" }}
                 to="/music/puddle"
+              >
+                Learn more...
+              </Link>
+            </>
+          ) : info[0].title == "Upstream" ? (
+            <>
+              <br />
+              <Link
+                style={{ textDecoration: "none", color: "gray" }}
+                to="/music/upstream"
+              >
+                Learn more...
+              </Link>
+            </>
+          ) : info[0].title == "The Magical Unicorn Tales" ? (
+            <>
+              <br />
+              <Link
+                style={{ textDecoration: "none", color: "gray" }}
+                to="/music/unicorn"
               >
                 Learn more...
               </Link>
