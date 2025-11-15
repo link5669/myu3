@@ -204,6 +204,17 @@ const Album = ({ info, title, id, img, file, description }) => {
               src={img}
             />
           </Link>
+        ) : info[0].title == "Starting Line" ? (
+          <Link
+            style={{ textDecoration: "none", color: "gray" }}
+            to="/music/starting-line"
+          >
+            <img
+              style={{ width: "100%", paddingBottom: "5%" }}
+              alt="album cover"
+              src={img}
+            />
+          </Link>
         ) : info[0].title == "The Magical Unicorn Tales" ? (
           <Link
             style={{ textDecoration: "none", color: "gray" }}
@@ -414,6 +425,16 @@ const Album = ({ info, title, id, img, file, description }) => {
               <Link
                 style={{ textDecoration: "none", color: "gray" }}
                 to="/music/upstream"
+              >
+                Learn more...
+              </Link>
+            </>
+          ) : info[0].title == "Starting Line" ? (
+            <>
+              <br />
+              <Link
+                style={{ textDecoration: "none", color: "gray" }}
+                to="/music/starting-line"
               >
                 Learn more...
               </Link>

@@ -21,6 +21,7 @@ import tekha from "../assets/ATAS-TEKHA Album Cover.png";
 import claws from "../assets/clawsandorder.png";
 import cosmic from "../assets/cosmic.png";
 import rots from "../assets/ROTS Album Cover.png";
+import SingleCreditBullet from "../components/SingleCreditBullet";
 
 function Credits() {
   const ARENA_CRUNCH =
@@ -470,6 +471,22 @@ function Credits() {
                   <b>Project Recognitions</b>
                 </h3>
                 <Credit
+                  title="Film of Distinction (2025) | Puddle"
+                  from="SVA"
+                />
+                <Credit
+                  title="Film of Distinction (2025) | Starting Line"
+                  from="SVA"
+                />
+                <Credit
+                  title="Film of Distinction (2025) | The Magical Unicorn Tales"
+                  from="SVA"
+                />
+                <Credit
+                  title="Film of Distinction (2025) | Upstream"
+                  from="SVA"
+                />
+                <Credit
                   title="Best Student Animation (2024) | Sprout"
                   from="DRAWTASTIC Animation Festival"
                 />
@@ -479,78 +496,30 @@ function Credits() {
                 />
                 <Credit
                   title="Audience Award (2023) | Ceiba Y Sus Raíces Taínas"
-                  from=" Lusca Fantastic Film Fest"
+                  from="Lusca Fantastic Film Fest"
                 />
                 <h3 className="subheadCredits2">
                   <b>Official Selections & Screenings</b>
                 </h3>
                 <ul style={{ paddingLeft: 0 }}>
-                  <li
-                    style={{
-                      color: "white",
-                      fontFamily: "Georgia",
-                      fontSize: "1.1rem",
-                      paddingLeft: 0,
-                      fontWeight: "bold",
-                    }}
-                  >
-                    New York Latino Film Fest
-                  </li>
-                  <li
-                    style={{
-                      color: "white",
-                      fontFamily: "Georgia",
-                      fontSize: "1.1rem",
-                      paddingLeft: 0,
-                      fontWeight: "bold",
-                    }}
-                  >
-                    Bushwick Film Fest
-                  </li>
-                  <li
-                    style={{
-                      color: "white",
-                      fontFamily: "Georgia",
-                      fontSize: "1.1rem",
-                      paddingLeft: 0,
-                      fontWeight: "bold",
-                    }}
-                  >
-                    Short Short Fest
-                  </li>
-                  <li
-                    style={{
-                      color: "white",
-                      fontFamily: "Georgia",
-                      fontSize: "1.1rem",
-                      paddingLeft: 0,
-                      fontWeight: "bold",
-                    }}
-                  >
-                    San Francisco Latino Film Fest
-                  </li>
-                  <li
-                    style={{
-                      color: "white",
-                      fontFamily: "Georgia",
-                      fontSize: "1.1rem",
-                      paddingLeft: 0,
-                      fontWeight: "bold",
-                    }}
-                  >
-                    Women In Animation NYC Film Festival
-                  </li>
-                  <li
-                    style={{
-                      color: "white",
-                      fontFamily: "Georgia",
-                      fontSize: "1.1rem",
-                      paddingLeft: 0,
-                      fontWeight: "bold",
-                    }}
-                  >
-                    International Puerto Rican Heritage Film Festival
-                  </li>
+                  <SingleCreditBullet title={"ASIFA-East Animation Festival"}/>
+                  <SingleCreditBullet title={"Astoria Film Festival"}/>
+                  <SingleCreditBullet title={"Brooklyn SciFi Film Festival"}/>
+                  <SingleCreditBullet title={"Bushwick Film Festival"}/>
+                  <SingleCreditBullet title={"CineYouth Film Festival"}/>
+                  <SingleCreditBullet title={"DRAWTASTIC Animation Festival"}/>
+                  <SingleCreditBullet title={"DePaul's Premiere Film Showcase"}/>
+                  <SingleCreditBullet title={"Fist Up Film Festival"}/>
+                  <SingleCreditBullet title={"International Puerto Rican Heritage Film Festival"}/>
+                  <SingleCreditBullet title={"Los Angeles Animation Festival"}/>
+                  <SingleCreditBullet title={"Lusca Fantastic Film Fest"}/>
+                  <SingleCreditBullet title={"Mesa International Film Festival"}/>
+                  <SingleCreditBullet title={"New York Animation Film Awards"}/>
+                  <SingleCreditBullet title={"New York Animation Film Awards"}/>
+                  <SingleCreditBullet title={"New York Latino Film Festival"}/>
+                  <SingleCreditBullet title={"Seattle International Film Festival"}/>
+                  <SingleCreditBullet title={"Short Short Fest"}/>
+                  <SingleCreditBullet title={"Women In Animation NYC Film Festival"}/>
                 </ul>
               </div>
               <div style={{ paddingTop: "3%" }}></div>

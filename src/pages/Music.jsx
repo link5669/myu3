@@ -30,6 +30,13 @@ function Music() {
     "https://www.dl.dropboxusercontent.com/scl/fi/qpjmqh2v5hvxfu17rp958/SHSG-Album-Cover.png?rlkey=8ewufqr6awff2fg58m6gvf0oe&dl=0";
 
   const albums = [
+    {id: "start",
+      img: "https://www.dl.dropboxusercontent.com/scl/fi/5fur8uc6swdix113jzh78/START-Album-Cover-Credit.png?rlkey=c5evooli07t6cl6ie2zh4i1r7&e=1&dl=0",
+      file: ["https://www.dl.dropboxusercontent.com/scl/fi/vwx23go833kzaa5r50sr7/START-Preview.wav?rlkey=ipnmxyv6vili5cdr0syrkjfua&e=1&dl=0"],
+      title: "Start",
+      description: "Short Film / Animated Film",
+      info: [{title: "Starting Line"}],
+    },
     {id: "upstream",
       img: "https://www.dl.dropboxusercontent.com/scl/fi/7bp9ydoz4e85jaiuuhuxu/UPST-Album-Cover-Credit.png?rlkey=u7lxo533vqr172e6iez6a4yt0&dl=0",
       file: ["https://www.dl.dropboxusercontent.com/scl/fi/cdf736k51yaoadk9yn7di/UPST-Preview.wav?rlkey=t83j6d454djnai9g29xhvo6h8&dl=0"],

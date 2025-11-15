@@ -30,6 +30,7 @@ import Puddle from "./pages/Puddle";
 import Survivors from "./pages/Survivors";
 import Upstream from "./pages/Upstream";
 import Unicorn from "./pages/Unicorn";
+import StartingLine from "./pages/StartingLine";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const state = {
@@ -68,7 +69,7 @@ root.render(
         <Route path="/music/survivors" element={<Survivors />} />
         <Route path="/music/upstream" element={<Upstream />} />
         <Route path="/music/unicorn" element={<Unicorn />} />
-
+        <Route path="/music/starting-line" element={<StartingLine />} />
       </Routes>
     </ScrollIntoView>
   </BrowserRouter>,

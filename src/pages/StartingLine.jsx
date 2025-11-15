@@ -12,36 +12,28 @@ import applemusiccolor from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_Bla
 import TrackList from "../components/TrackList";
 import { useCallback } from "react";
 
-const Upstream = () => {
+function StartingLine() {
   const [spotifyMouseOver, setSpotifyMouseOver] = useState(false);
   const [appleMouseOver, setAppleMouseOver] = useState(false);
   const [youTubeMouseOver, setYouTubeMouseOver] = useState(false);
   const [soundcloudMouseOver, setSoundcloudMouseOver] = useState(false);
 
   const track1 =
-    "https://www.dl.dropboxusercontent.com/scl/fo/frznaseu8nutxt2vr47ik/AJNXJgJWOjgLylGIepXZixw/UPST%20T01v1-M01%20Swimming%20Upstream.wav?rlkey=4k1sg2rig9gxszjlhxxnbxvyy&e=1&dl=0";
+    "https://www.dl.dropboxusercontent.com/scl/fo/11q996bcho6lp95zd3m26/AGBh9vlR5FYalqBLhCMrNZc/START%20T01v1-M01%20Naina's%20Dream.wav?rlkey=zde0uiywptv10ci8zfh5hn6au&e=1&dl=0";
   const track2 =
-    "https://www.dl.dropboxusercontent.com/scl/fo/frznaseu8nutxt2vr47ik/AHNpGhCDhoEFiyUDv-Qej7c/UPST%20T02v1-M02%20The%20Nightmare%20Sequence.wav?rlkey=4k1sg2rig9gxszjlhxxnbxvyy&e=1&dl=0";
-  const track3 =
-    "https://www.dl.dropboxusercontent.com/scl/fo/frznaseu8nutxt2vr47ik/ABRIjTTxDch-k9ythmXZAkI/UPST%20T03v1-M03-4%20Fish%20Food%20(For%20Thought)%20%3A%20End%20Credits.wav?rlkey=4k1sg2rig9gxszjlhxxnbxvyy&e=1&dl=0";
+    "https://www.dl.dropboxusercontent.com/scl/fo/11q996bcho6lp95zd3m26/AGl4ianf14MirAmkLN3dop8/START%20T02v1-M02%20Finish%20Line.wav?rlkey=zde0uiywptv10ci8zfh5hn6au&e=1&dl=0";
   const trackInfo = [
     {
-      title: "Swimming Upstream",
+      title: "Naina's Dream",
       track: track1,
       index: "1",
-      length: "0:29",
+      length: "1:13",
     },
     {
-      title: "The Nightmare Sequence",
+      title: "Finish Line",
       track: track2,
       index: "2",
-      length: "1:21",
-    },
-    {
-      title: "Fish Food (For Thought)",
-      track: track3,
-      index: "3",
-      length: "1:25",
+      length: "1:20",
     },
   ];
 
@@ -96,7 +88,7 @@ const Upstream = () => {
                   fontStyle: "]]]d",
                 }}
               >
-                Upstream
+                Starting Line
               </h2>
               <p
                 style={{
@@ -115,11 +107,11 @@ const Upstream = () => {
                     <img
                       style={{ width: "100%", borderRadius: "10px" }}
                       alt="album cover"
-                      src="https://www.dl.dropboxusercontent.com/scl/fi/7bp9ydoz4e85jaiuuhuxu/UPST-Album-Cover-Credit.png?rlkey=u7lxo533vqr172e6iez6a4yt0&e=2&dl=0"
+                      src="https://www.dl.dropboxusercontent.com/scl/fi/5fur8uc6swdix113jzh78/START-Album-Cover-Credit.png?rlkey=c5evooli07t6cl6ie2zh4i1r7&e=1&dl=0"
                     />
                     <div style={{ paddingBottom: "5%" }}></div>
                     <NewAudioPlayer
-                      key={selectedTrack.title}
+                      key={selectedTrack.title} // Add key to force remount when track actually changes
                       trackName={selectedTrack.title}
                       songs={[selectedTrack.track]}
                       trackInfo={trackInfo}
@@ -148,7 +140,7 @@ const Upstream = () => {
                         target="_blank"
                         onMouseOver={() => setAppleMouseOver(true)}
                         onMouseOut={() => setAppleMouseOver(false)}
-                        href="https://music.apple.com/us/album/upstream-original-soundtrack-single/1832403300"
+                        // href="https://music.apple.com/us/album/survivors-original-soundtrack-single/1824836152"
                       >
                         {!appleMouseOver ? (
                           <img style={{ width: "24px" }} src={applemusic} />
@@ -163,7 +155,7 @@ const Upstream = () => {
                         target="_blank"
                         onMouseOver={() => setYouTubeMouseOver(true)}
                         onMouseOut={() => setYouTubeMouseOver(false)}
-                        href="https://www.youtube.com/watch?v=9JAAv8yPvZg&list=PLWLXJaKFBj4IM_0LqmRUtX7gJV0yNo091&index=1"
+                        href="https://www.youtube.com/watch?v=vs_t4cGXBNs&list=PLWLXJaKFBj4LnNeAztmjz8_bWt8kqGG95"
                       >
                         {youTubeMouseOver ? (
                           <svg
@@ -192,7 +184,7 @@ const Upstream = () => {
                         target="_blank"
                         onMouseOver={() => setSoundcloudMouseOver(true)}
                         onMouseOut={() => setSoundcloudMouseOver(false)}
-                        href="https://soundcloud.com/marcyumusic/sets/upstream-original-soundtrack"
+                        href="https://soundcloud.com/marcyumusic/sets/starting-line-original-soundtrack"
                       >
                         {soundcloudMouseOver ? (
                           <svg
@@ -279,7 +271,7 @@ const Upstream = () => {
                         target="_blank"
                         onMouseOver={() => setSpotifyMouseOver(true)}
                         onMouseOut={() => setSpotifyMouseOver(false)}
-                        href="https://open.spotify.com/album/38xe7m2q8eHvEIzqa8L9Um?si=ogfKHvhETOqEOy5NIbXe3g"
+                        href="https://open.spotify.com/album/3VjSVSB7SvlVsCAlK9Q2q6?si=35zoZBN3SUG9ATddbNIYJw"
                       >
                         {spotifyMouseOver ? (
                           <svg
@@ -319,11 +311,14 @@ const Upstream = () => {
                       >
                         <li>
                           Original Soundtrack by:
-                          <span style={{ color: "#B9BAB9" }}> Marc Yu</span>
+                          <span style={{ color: "#B9BAB9" }}>
+                            {" "}
+                            Marc Yu
+                          </span>
                         </li>
                         <br />
                         <li>
-                          Music Production Services:{" "}
+                          Audio Production Services:{" "}
                           <span style={{ color: "#B9BAB9" }}>Wavyrn</span>
                         </li>
                         <li>
@@ -331,68 +326,26 @@ const Upstream = () => {
                           <span style={{ color: "#B9BAB9" }}>Marc Yu</span>
                         </li>
                         <li>
-                          Music Editor:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Neil Small</span>
-                        </li>
-                        <li>
                           Sound Designer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Julian Cabrera
-                          </span>
+                          <span style={{ color: "#B9BAB9" }}>Julian Cabrera</span>
                         </li>
                         <li>
-                          VO Mixer & Editor:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Max Jaime</span>
-                        </li>
-                        <li>
-                          VO Recording Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Jennifer Wang
-                          </span>
-                        </li>
-                        <li>
-                          VO Assistant Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Ethan Tan</span>
+                          Re-Recording Mixer:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Julian Cabrera</span>
                         </li>
                         <li>
                           Studio Manager:{" "}
                           <span style={{ color: "#B9BAB9" }}>Ananta Arora</span>
                         </li>
-                        <li>
-                          Studio Assistant:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Angelica Ramos and Neil Small
-                          </span>
-                        </li>
-                        <br />
-                        <li>
-                          Erhu:{" "}
-                          <span style={{ color: "#B9BAB9" }}>William Xu</span>
-                        </li>
-                        <li>
-                          Hulusi / Xiao:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Collin Valentine
-                          </span>
-                        </li>
-                        <li>
-                          Bass:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Haohan Wu</span>
-                        </li>
-                        <li>
-                          Drums:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Brady Thomas</span>
-                        </li>
-                        <br />
-                        <h4>Synopsis</h4>
-                        <p style={{ fontSize: "1.1rem", color: "#B9BAB9" }}>
-                          "We've been at this job for so long, it's sometimes
-                          hard to just slow down and take it all in."
-                          <br />
-                          <br />
-                          Created by Kimmy Ma and Phoebe Lam.
-                        </p>
                       </ul>
+                      <div style={{ paddingBottom: "5%" }}></div>
+                      <h3>SYNOPSIS</h3>
+                      <p style={{ fontSize: "1.1rem", color: "#B9BAB9" }}>
+                        A girl dreams of being a racecar driver, though she encounters speed bumps along the way.
+                        <br />
+                        <br />
+                        Created by Nidhi Sharma.
+                      </p>
                     </div>
                   </Col>
                 </Row>
@@ -413,6 +366,6 @@ const Upstream = () => {
       </div>
     </>
   );
-};
+}
 
-export default Upstream;
+export default StartingLine;
