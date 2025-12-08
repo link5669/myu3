@@ -22,6 +22,7 @@ import rots from "../assets/ROTS Album Cover.png";
 import sprout from "../assets/Sprout.png";
 import afterlife from "../assets/AFTL Album Cover.jpg";
 import broadway from "../assets/BWBL Album Cover.png";
+import upstream from "../assets/upstream_69.png";
 
 function Music() {
   const claws =
@@ -38,7 +39,7 @@ function Music() {
       info: [{title: "Starting Line"}],
     },
     {id: "upstream",
-      img: "https://www.dl.dropboxusercontent.com/scl/fi/7bp9ydoz4e85jaiuuhuxu/UPST-Album-Cover-Credit.png?rlkey=u7lxo533vqr172e6iez6a4yt0&dl=0",
+      img: upstream,
       file: ["https://www.dl.dropboxusercontent.com/scl/fi/cdf736k51yaoadk9yn7di/UPST-Preview.wav?rlkey=t83j6d454djnai9g29xhvo6h8&dl=0"],
       title: "Upstream",
       description: "Short Film / Animated Film",
@@ -51,7 +52,7 @@ function Music() {
       info: [{title: "The Magical Unicorn Tales"}]
     },
     {id: "survivors",
-      img: "https://www.dl.dropboxusercontent.com/scl/fi/gyt8a7yh4owt1v78lbd00/SRVR-Album-Credits.JPEG?rlkey=mhhcshhjm62yimmf7nl348w5u&dl=0",
+      img: "https://www.dl.dropboxusercontent.com/scl/fi/czqvd74tf4x6ka80i2498/SRVR-Album-Credits.JPEG?rlkey=j0sk6fovp3ufkl2jpi61ak3fy&e=1&dl=0",
       file: ["https://www.dl.dropboxusercontent.com/scl/fi/kxfn6479hrnhe69m2kinu/SRVR-T01v1-M03-Don-t-Play-With-Knives.wav?rlkey=3kjarq8okyz8wq9tgmwogbl99&dl=0"],
       title: "Survivors",
       description: "Short Film / Animated Adventure",

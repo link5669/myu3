@@ -115,7 +115,7 @@ function Survivors() {
                     <img
                       style={{ width: "100%", borderRadius: "10px" }}
                       alt="album cover"
-                      src="https://www.dl.dropboxusercontent.com/scl/fi/gyt8a7yh4owt1v78lbd00/SRVR-Album-Credits.JPEG?rlkey=mhhcshhjm62yimmf7nl348w5u&e=1&dl=0"
+                      src="https://www.dl.dropboxusercontent.com/scl/fi/czqvd74tf4x6ka80i2498/SRVR-Album-Credits.JPEG?rlkey=j0sk6fovp3ufkl2jpi61ak3fy&e=1&dl=0"
                     />
                     <div style={{ paddingBottom: "5%" }}></div>
                     <NewAudioPlayer

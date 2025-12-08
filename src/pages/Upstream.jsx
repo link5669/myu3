@@ -11,6 +11,7 @@ import applemusic from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_Blackand
 import applemusiccolor from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_blk_sm_073120.svg";
 import TrackList from "../components/TrackList";
 import { useCallback } from "react";
+import upstream from "../assets/upstream_69.png";
 
 const Upstream = () => {
   const [spotifyMouseOver, setSpotifyMouseOver] = useState(false);
@@ -115,7 +116,7 @@ const Upstream = () => {
                     <img
                       style={{ width: "100%", borderRadius: "10px" }}
                       alt="album cover"
-                      src="https://www.dl.dropboxusercontent.com/scl/fi/7bp9ydoz4e85jaiuuhuxu/UPST-Album-Cover-Credit.png?rlkey=u7lxo533vqr172e6iez6a4yt0&e=2&dl=0"
+                      src={upstream}
                     />
                     <div style={{ paddingBottom: "5%" }}></div>
                     <NewAudioPlayer
