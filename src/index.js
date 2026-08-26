@@ -31,6 +31,7 @@ import Survivors from "./pages/Survivors";
 import Upstream from "./pages/Upstream";
 import Unicorn from "./pages/Unicorn";
 import StartingLine from "./pages/StartingLine";
+import Serein from "./pages/Serein";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const state = {
@@ -70,6 +71,7 @@ root.render(
         <Route path="/music/upstream" element={<Upstream />} />
         <Route path="/music/unicorn" element={<Unicorn />} />
         <Route path="/music/starting-line" element={<StartingLine />} />
+        <Route path="/music/serein" element={<Serein />} />
       </Routes>
     </ScrollIntoView>
   </BrowserRouter>,

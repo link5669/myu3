@@ -31,10 +31,17 @@ function Music() {
     "https://www.dl.dropboxusercontent.com/scl/fi/qpjmqh2v5hvxfu17rp958/SHSG-Album-Cover.png?rlkey=8ewufqr6awff2fg58m6gvf0oe&dl=0";
 
   const albums = [
+    {id: "serein",
+      img: "https://www.dl.dropboxusercontent.com/scl/fi/40vssax6ie848n50sk94y/SRN_OSTAlbum_Export.png?rlkey=4cwkdjb79s8gfb5mofn7au7po&e=1&dl=0",
+      file: ["https://www.dl.dropboxusercontent.com/scl/fi/5escunvcd97guznyiwjzh/SRIN-Preview.wav?rlkey=bd6wxjhhkv2trg7vgy7ol17p2&e=1&dl=0"],
+      title: "Serein",
+      description: "Short Film / Animated Film",
+      info: [{title: "Serein"}],
+    },
     {id: "start",
       img: "https://www.dl.dropboxusercontent.com/scl/fi/5fur8uc6swdix113jzh78/START-Album-Cover-Credit.png?rlkey=c5evooli07t6cl6ie2zh4i1r7&e=1&dl=0",
       file: ["https://www.dl.dropboxusercontent.com/scl/fi/vwx23go833kzaa5r50sr7/START-Preview.wav?rlkey=ipnmxyv6vili5cdr0syrkjfua&e=1&dl=0"],
-      title: "Start",
+      title: "Starting Line",
       description: "Short Film / Animated Film",
       info: [{title: "Starting Line"}],
     },

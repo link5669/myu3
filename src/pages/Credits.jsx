@@ -168,6 +168,10 @@ function Credits() {
                   />
                   <Credit title="Moonstruck" from="Feature Film | Arranger" />
                   <Credit
+                    title="The Greek Aisle"
+                    from="Hallmark Feature Film | Score Production Supervisor"
+                  />
+                  <Credit
                     title="A Paris Proposal "
                     from="Hallmark Feature Film | Composer Assistant"
                   />
@@ -193,11 +197,19 @@ function Credits() {
                   />
                   <br />
                   <Credit
+                    title="Stone Lions Don't Roar"
+                    from="Short Film | Sound Supervisor, Composer, Casting Director"
+                  />
+                  <Credit
                     title="Annie's Asylum"
                     from="Short Film | Sound Supervisor, Composer"
                   />
                   <Credit
                     title="Hoodwink"
+                    from="Short Film | Sound Supervisor, Composer"
+                  />
+                  <Credit
+                    title="Kreachur Kichin"
                     from="Short Film | Sound Supervisor, Composer"
                   />
                   <Credit
@@ -208,12 +220,20 @@ function Credits() {
                   title="Starting Line"
                   from="Short Film | Sound Supervisor, Composer"/>
                   <Credit
+                    title="The Dance of Falling Leaves"
+                    from="Short Film | Sound Supervisor, Composer"
+                  />
+                  <Credit
                     title="The Dream Factory"
-                    from="Short Film | Audio Director, Composer"
+                    from="Short Film | Sound Supervisor, Composer"
                   />
                   <Credit
                   title="The Magical Unicorn Tales"
                   from="Short Film | Sound Supervisor, Composer"/>
+                  <Credit
+                    title="The Moon Stole My Stripes"
+                    from="Short Film | Sound Supervisor, Composer"
+                  />
                   <Credit
                     title="Upstream"
                     from="Short Film | Sound Supervisor, Composer"
@@ -223,20 +243,37 @@ function Credits() {
                     from="Short Film | Sound Supervisor, Composer"
                   />
                   <Credit
+                    title="Swan Song"
+                    from="Short Film | Sound Supervisor"
+                  />
+                  <Credit
                     title="A Spell To Break"
                     from="Short Film | Composer"
                   />
                   <Credit title="Afterlife" from="Short Film | Composer" />
+                  <Credit
+                    title="Back Home"
+                    from="Short Film | Sound Supervisor, Composer"
+                  />
                   <Credit title="Beach Trip!" from="Short Film | Composer" />
                   <Credit title="Broadway Blues" from="Short Film | Composer" />
                   <Credit title="Chinatown Love" from="Short Film | Composer" />
                   <Credit title="Claws & Order" from="Short Film | Composer" />
+                  <Credit title="Feeling Batty" from="Short Film | Composer" />
+                  <Credit
+                    title="Reach"
+                    from="Short Film | Sound Supervisor, Composer"
+                  />
                   <Credit title="Scamper" from="Short Film | Composer" />
                   <Credit title="Serein" from="Short Film | Composer" />
 
                   <Credit title="Shpilkes" from="Short Film | Composer" />
                   <Credit title="Sprout" from="Short Film | Composer" />
                   <Credit title="Stalling" from="Short Film | Composer" />
+                  <Credit
+                    title="Pages"
+                    from="Short Film | Sound Supervisor, Composer"
+                  />
                   <Credit title="Paused" from="Short Film | Co-Composer" />
                   <Credit title="Survivors" from="Short Film | Co-Composer" />
 
@@ -247,6 +284,10 @@ function Credits() {
                   <Credit
                     title="Ceiba Y Sus Raíces Taínas"
                     from="Short Film | Music Supervisor"
+                  />
+                  <Credit
+                    title="Zomboban"
+                    from="Video Game | Music Supervisor"
                   />
                   <Credit
                     title="Sweet Hearts"
@@ -278,10 +319,18 @@ function Credits() {
                     title="Temporal Vendetta"
                     from="Video Game | Audio Supervisor, Composer"
                   />
+                  <Credit
+                    title="Toadled: Eating Frenzy"
+                    from="Video Game | Audio Director"
+                  />
                   <Credit title="Toggle" from="Video Game | Audio Director, Composer"/>
                   <Credit
                     title="Shuriken Saga"
                     from="Video Game | Audio Supervisor, Composer"
+                  />
+                  <Credit
+                    title="Sea of Remnants"
+                    from="Video Game | Additional Lyricist, Vocal Producer"
                   />
                   <Credit
                     title="Arena Crunch"
@@ -320,9 +369,17 @@ function Credits() {
                     title="The Burrow"
                     from="Video Game | Audio Supervisor"
                   />
+                  <Credit
+                    title="lily's world XD"
+                    from="Video Game | Music Supervisor, Composer"
+                  />
                   <Credit title="Alistair" from="Video Game | Composer" />
                   <Credit title="Potion Pushas" from="Video Game | Composer" />
                   <Credit title='Roger "Roger Williams" Williams' from="Video Game | Composer" />
+                  <Credit
+                    title="MonCurse"
+                    from="Video Game | Music Producer"
+                  />
                   <Credit
                     title="Esception"
                     from="Video Game | Sound Designer"
@@ -331,10 +388,13 @@ function Credits() {
                     title="Mushroom Kid's Big Grass Sword"
                     from="Video Game | Music Coordinating Consultant"
                   />
-                  <Credit title="Soul Harbor" from="Video Game | Audio Director, Principle Composer"/>
                   <Credit
-                    title="Resurgence of the Storm"
-                    from="Video Game | Audio Director, Principal Composer"
+                    title="HeartLinks: A Puzzle Called Love"
+                    from="Video Game | Voice-Over Producer"
+                  />
+                  <Credit
+                    title="Identity V"
+                    from="Video Game | Additional Lyricist"
                   />
                   <br />
                   <Credit
@@ -343,6 +403,10 @@ function Credits() {
                   />
                   <Credit
                     title="City of Zootopia: Artist Loft Storefront"
+                    from="Disneyland Parks | Arranger"
+                  />
+                  <Credit
+                    title="Disney Princess Cavalcade"
                     from="Disneyland Parks | Arranger"
                   />
                   <Credit
@@ -387,6 +451,14 @@ function Credits() {
                     from="Library Music | Composer Assistant"
                   />
                   <br />
+                  <Credit
+                    title="Fatebound: The Musical"
+                    from="Musical | Producer"
+                  />
+                  <Credit
+                    title="VOISTAR Project"
+                    from="Virtual Singer Library | Producer"
+                  />
                   <Credit
                     title="Gladwell"
                     from="Podcast | Audio Director | Composer"
@@ -471,6 +543,26 @@ function Credits() {
                   <b>Project Recognitions</b>
                 </h3>
                 <Credit
+                  title="Alumni Choice Award (2026) | The Dance of Falling Leaves"
+                  from="SVA"
+                />
+                <Credit
+                  title="Best 3D Animation (2026) | Swan Song"
+                  from="New York Short Animation Festival"
+                />
+                <Credit
+                  title="Best in Show, BFA 3D Animation and Visual Effects (2026) | Swan Song"
+                  from="SVA"
+                />
+                <Credit
+                  title="Film of Distinction (2026) | Reach"
+                  from="SVA"
+                />
+                <Credit
+                  title="Best Stop Motion Award (2025) | Puddle"
+                  from="New York Short Animation Festival"
+                />
+                <Credit
                   title="Film of Distinction (2025) | Puddle"
                   from="SVA"
                 />
@@ -485,6 +577,10 @@ function Credits() {
                 <Credit
                   title="Film of Distinction (2025) | Upstream"
                   from="SVA"
+                />
+                <Credit
+                  title="Silver Student Award (2025) | Sprout"
+                  from="Collision Awards"
                 />
                 <Credit
                   title="Best Student Animation (2024) | Sprout"
@@ -502,24 +598,36 @@ function Credits() {
                   <b>Official Selections & Screenings</b>
                 </h3>
                 <ul style={{ paddingLeft: 0 }}>
+                  <SingleCreditBullet title={"All Asian Independent Film Festival"}/>
                   <SingleCreditBullet title={"ASIFA-East Animation Festival"}/>
                   <SingleCreditBullet title={"Astoria Film Festival"}/>
                   <SingleCreditBullet title={"Brooklyn SciFi Film Festival"}/>
                   <SingleCreditBullet title={"Bushwick Film Festival"}/>
                   <SingleCreditBullet title={"CineYouth Film Festival"}/>
-                  <SingleCreditBullet title={"DRAWTASTIC Animation Festival"}/>
+                  <SingleCreditBullet title={"Crazy Talented Asians and Friends"}/>
                   <SingleCreditBullet title={"DePaul's Premiere Film Showcase"}/>
+                  <SingleCreditBullet title={"DRAWTASTIC Animation Festival"}/>
+                  <SingleCreditBullet title={"Dreamhack Indie Playground Exhibitor Dallas"}/>
                   <SingleCreditBullet title={"Fist Up Film Festival"}/>
+                  <SingleCreditBullet title={"Game Devs of Color Expo"}/>
                   <SingleCreditBullet title={"International Puerto Rican Heritage Film Festival"}/>
                   <SingleCreditBullet title={"Los Angeles Animation Festival"}/>
                   <SingleCreditBullet title={"Lusca Fantastic Film Fest"}/>
                   <SingleCreditBullet title={"Mesa International Film Festival"}/>
                   <SingleCreditBullet title={"New York Animation Film Awards"}/>
-                  <SingleCreditBullet title={"New York Animation Film Awards"}/>
+                  <SingleCreditBullet title={"New York Indie Shorts Awards"}/>
                   <SingleCreditBullet title={"New York Latino Film Festival"}/>
+                  <SingleCreditBullet title={"New York Short Animation Festival"}/>
+                  <SingleCreditBullet title={"Nonbinary Coded Games"}/>
+                  <SingleCreditBullet title={"OTK Network Winter Games Expo"}/>
+                  <SingleCreditBullet title={"PAX Rising"}/>
                   <SingleCreditBullet title={"Seattle International Film Festival"}/>
                   <SingleCreditBullet title={"Short Short Fest"}/>
+                  <SingleCreditBullet title={"Student Los Angeles Film Awards"}/>
+                  <SingleCreditBullet title={"Taiwan International Children's Film Festival"}/>
+                  <SingleCreditBullet title={"Wholesome Direct"}/>
                   <SingleCreditBullet title={"Women In Animation NYC Film Festival"}/>
+                  <SingleCreditBullet title={"Women-Led Games Summer Showcase"}/>
                 </ul>
               </div>
               <div style={{ paddingTop: "3%" }}></div>
