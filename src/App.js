@@ -57,6 +57,7 @@ function App() {
             paddingBottom: "20px",
             height: "5rem",
             fontWeight: 100,
+            display: isMobile ? "none" : "",
           }}
           className="subhead"
         >
@@ -128,7 +129,7 @@ function App() {
           />
           <div style={{ paddingTop: "5%" }}></div>
           <Row>
-            <Col>
+            <Col md>
               <Quote
                 quote={
                   "That [Lang Lang] has served as a role model was evident not just in Mr. Yu's camera-ready tousled hair and his bright red socks, which peeked out from under crisp black trousers, but also in the way his torso swayed and his hands fluttered through the air as he and Mr. Lang played a clean, slightly demure account of Schubert's Rondo in A."
@@ -151,7 +152,7 @@ function App() {
                 date={"May 2006"}
               />
             </Col>
-            <Col>
+            <Col md>
               {" "}
               <Quote
                 quote={

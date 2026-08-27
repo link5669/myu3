@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import MarcNavbar from "../components/Navbar";
 import MarcFooter from "../components/Footer";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Album from "../components/Album";
 import shp from "../assets/shp.jpeg";
 import bard1 from "../assets/DND+NRS+Album+Cover.png";
@@ -243,6 +244,20 @@ function Music() {
     },
   ];
 
+  // Below Bootstrap's lg breakpoint the three-across grid is unreadable, so the
+  // albums render as one continuous column instead.
+  const MOBILE_QUERY = "(max-width: 991.98px)";
+  const [isMobile, setIsMobile] = useState(
+    () => window.matchMedia(MOBILE_QUERY).matches,
+  );
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(MOBILE_QUERY);
+    const handleChange = (event) => setIsMobile(event.matches);
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
   const colStyles = [
       { padding: "3%", paddingLeft: "8%" },
       { padding: "3%" },
@@ -268,11 +283,13 @@ function Music() {
         <br />
         <br />
         <h2
+          className="hideOnMobile"
           style={{ color: "white", textAlign: "center", paddingBottom: "15px" }}
         >
           SELECT TRACKS
         </h2>
         <p
+          className="hideOnMobile"
           style={{
             textAlign: "center",
             color: "white",
@@ -290,13 +307,15 @@ function Music() {
         </p>
         <Container>
           <Row>
-            <MultilinePlayer style={{ paddingBottom: "100px" }} />
-            <hr
-              style={{
-                color: "white",
-                border: "2px solid white",
-              }}
-            />
+            <div className="hideOnMobile displayContents">
+              <MultilinePlayer style={{ paddingBottom: "100px" }} />
+              <hr
+                style={{
+                  color: "white",
+                  border: "2px solid white",
+                }}
+              />
+            </div>
             <h2
               style={{
                 color: "white",
@@ -308,21 +327,37 @@ function Music() {
               ALBUMS
             </h2>
 
-            {columns.map((colAlbums, colIdx) => (
-                   <Col key={colIdx} style={colStyles[colIdx]}>
-                     {colAlbums.map((a) => (
-                       <Album
-                         key={a.id ?? a.title}
-                         id={a.id}
-                         img={a.img}
-                         file={a.file}
-                         title={a.title}
-                         description={a.description}
-                         info={a.info}
-                       />
-                     ))}
-                   </Col>
-                 ))}
+            {isMobile ? (
+              <Col xs={12} style={{ padding: "3%" }}>
+                {albums.map((a) => (
+                  <Album
+                    key={a.id ?? a.title}
+                    id={a.id}
+                    img={a.img}
+                    file={a.file}
+                    title={a.title}
+                    description={a.description}
+                    info={a.info}
+                  />
+                ))}
+              </Col>
+            ) : (
+              columns.map((colAlbums, colIdx) => (
+                <Col key={colIdx} style={colStyles[colIdx]}>
+                  {colAlbums.map((a) => (
+                    <Album
+                      key={a.id ?? a.title}
+                      id={a.id}
+                      img={a.img}
+                      file={a.file}
+                      title={a.title}
+                      description={a.description}
+                      info={a.info}
+                    />
+                  ))}
+                </Col>
+              ))
+            )}
           </Row>
           <div style={{ paddingTop: "5%" }}></div>
           <div

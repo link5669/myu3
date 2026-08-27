@@ -17,6 +17,7 @@ function About() {
               <img
                 src={require("../back.jpg")}
                 align="right"
+                className="aboutPhoto"
                 style={{ width: "50vw", float: "right", padding: "30px", paddingTop: "0px" }}
               />
               <h2 className="subheadTwo">About Marc Yu</h2>

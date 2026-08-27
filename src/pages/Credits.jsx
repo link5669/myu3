@@ -34,7 +34,10 @@ function Credits() {
       >
         <Container>
           <Row>
-            <Col style={{ maxWidth: "15%", paddingTop: "12rem" }}>
+            <Col
+              className="hideOnMobile"
+              style={{ maxWidth: "15%", paddingTop: "12rem" }}
+            >
               <img style={{ maxWidth: "100%" }} src={moonstruck} />
               <p
                 style={{
@@ -707,7 +710,10 @@ function Credits() {
                 </div>
               </div>
             </Col>
-            <Col style={{ maxWidth: "15%", paddingTop: "12rem" }}>
+            <Col
+              className="hideOnMobile"
+              style={{ maxWidth: "15%", paddingTop: "12rem" }}
+            >
               <img style={{ maxWidth: "100%" }} src={paris} />
               <p
                 style={{

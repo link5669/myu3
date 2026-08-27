@@ -120,3 +120,49 @@ ul {
     transform: rotate(360deg);
   }
 }
+
+/* Wrapper that only exists so a group can be hidden on mobile: on desktop its
+   children stay direct flex items of the surrounding row, so nothing moves. */
+.displayContents {
+  display: contents;
+}
+
+/* Mobile (below Bootstrap's lg breakpoint): stack everything into one column
+   and drop the desktop-only sections. Desktop layout is unchanged. */
+@media (max-width: 991.98px) {
+  .hideOnMobile {
+    display: none !important;
+  }
+
+  /* The About portrait floats beside the text on desktop; on mobile it sits
+     full width above the copy instead of squeezing it into a sliver. */
+  .aboutPhoto {
+    float: none !important;
+    width: 100% !important;
+    padding: 0 0 20px 0 !important;
+    display: block;
+  }
+
+  .subheadCredits {
+    font-size: 2.6rem;
+    padding-top: 2rem;
+  }
+
+  .subheadCredits2 {
+    font-size: 1.8rem;
+    padding-top: 2rem;
+  }
+
+  .textboxCredits {
+    margin-left: 0;
+  }
+
+  /* "First Name (required)" wraps onto a second line at narrow widths while
+     "Last Name" stays on one. Bottom-aligning both columns keeps the two
+     inputs on the same line however the labels happen to wrap. */
+  .nameField {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}

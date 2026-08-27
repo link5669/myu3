@@ -50,7 +50,7 @@ function Contact() {
             <Container>
               <p style={{ fontFamily: "Georgia", paddingLeft: "0px" }}></p>
               <Row>
-                <Col style={{ padding: "0px" }}>
+                <Col className="nameField" style={{ padding: "0px" }}>
                   <label htmlFor="first-name" >
                     First Name <span style={{ color: "gray" }}>(required)</span>
                   </label>
@@ -65,7 +65,10 @@ function Contact() {
                     onChange={(e) => setFirstName(e.target.value)}
                   />
                 </Col>
-                <Col style={{ padding: "0px", paddingLeft: "15px" }}>
+                <Col
+                  className="nameField"
+                  style={{ padding: "0px", paddingLeft: "15px" }}
+                >
                   <label htmlFor="last-name">
                     Last Name
                   </label>
