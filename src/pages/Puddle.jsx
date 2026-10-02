@@ -10,14 +10,13 @@ import NewAudioPlayer from "../components/AudioPlayer";
 import applemusic from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_wht_sm_073120.svg";
 import applemusiccolor from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_blk_sm_073120.svg";
 import TrackList from "../components/TrackList";
+import cover from "../assets/covers/PDDL-Album-Cover-Credit.jpg";
 
 function Puddle() {
   const [spotifyMouseOver, setSpotifyMouseOver] = useState(false);
   const [appleMouseOver, setAppleMouseOver] = useState(false);
   const [youTubeMouseOver, setYouTubeMouseOver] = useState(false);
   const [soundcloudMouseOver, setSoundcloudMouseOver] = useState(false);
-  const cover =
-    "https://www.dl.dropboxusercontent.com/scl/fi/9ngmv7bqgi2f2jrz8t6uj/PDDL-Album-Cover-Credit.jpg?rlkey=ane9wbyj46h1r2ai9rdpxzcpq&dl=0";
 
   const track1 =
     "https://www.dl.dropboxusercontent.com/scl/fo/7ux9oi2h094kwwp8heg54/AE4DDfb8NatMupJD_jUodzM/PDDL%20T01v1-M01%20Meowning%20Routine.wav?rlkey=c6sh6gtchz60ucqyjimbgc4cs&e=1&dl=0";

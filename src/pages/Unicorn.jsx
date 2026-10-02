@@ -11,6 +11,7 @@ import applemusic from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_Blackand
 import applemusiccolor from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_blk_sm_073120.svg";
 import TrackList from "../components/TrackList";
 import { useCallback } from "react";
+import albumCover from "../assets/covers/TMUT-Album-Cover-Credit.jpg";
 
 const Unicorn = () => {
   const [spotifyMouseOver, setSpotifyMouseOver] = useState(false);
@@ -120,7 +121,7 @@ const trackInfo = [
                     <img
                       style={{ width: "100%", borderRadius: "10px" }}
                       alt="album cover"
-                      src="https://www.dl.dropboxusercontent.com/scl/fi/ucwka67djqxy6g7hm1g5p/TMUT-Album-Cover-Credit.jpg?rlkey=0eacw2f9nuo7ubi30i00s0n39&dl=0"
+                      src={albumCover}
                     />
                     <div style={{ paddingBottom: "5%" }}></div>
                     <NewAudioPlayer

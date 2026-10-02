@@ -10,14 +10,13 @@ import NewAudioPlayer from "../components/AudioPlayer";
 import applemusic from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_wht_sm_073120.svg";
 import applemusiccolor from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_blk_sm_073120.svg";
 import TrackList from "../components/TrackList";
+import cover from "../assets/covers/CLA-Album-Cover.jpg";
 
 function ClawsAndOrder() {
   const [spotifyMouseOver, setSpotifyMouseOver] = useState(false);
   const [appleMouseOver, setAppleMouseOver] = useState(false);
   const [youTubeMouseOver, setYouTubeMouseOver] = useState(false);
   const [soundcloudMouseOver, setSoundcloudMouseOver] = useState(false);
-  const cover =
-    "https://dl.dropboxusercontent.com/scl/fi/ypiedv3d5hu47c9mc7r80/CLA-Album-Cover.jpg?rlkey=g0j3p1dri8c56t6ra7yle25s2&e=1&dl=0";
 
   const track1 =
     "https://www.dl.dropboxusercontent.com/scl/fo/tzf6pn1ib0y6j4twn4btq/AGX--xDMws3rV7QNZoTvdAs/CLA%20T01v1%20M01-M02%20Stealth%20Checked.wav?rlkey=2ci6tyu6naqsi9psva2kdfnkq&e=1&dl=0";

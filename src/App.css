@@ -121,12 +121,6 @@ ul {
   }
 }
 
-/* Wrapper that only exists so a group can be hidden on mobile: on desktop its
-   children stay direct flex items of the surrounding row, so nothing moves. */
-.displayContents {
-  display: contents;
-}
-
 /* Mobile (below Bootstrap's lg breakpoint): stack everything into one column
    and drop the desktop-only sections. Desktop layout is unchanged. */
 @media (max-width: 991.98px) {

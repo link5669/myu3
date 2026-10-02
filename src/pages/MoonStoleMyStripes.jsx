@@ -11,23 +11,54 @@ import applemusic from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_Blackand
 import applemusiccolor from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_blk_sm_073120.svg";
 import TrackList from "../components/TrackList";
 import { useCallback } from "react";
-import albumCover from "../assets/covers/BWBL-Album-Cover.jpg";
+import albumCover from "../assets/covers/TMSMS-Album-FULL.jpg";
 
-function BroadwayBlues() {
+function MoonStoleMyStripes() {
   const [spotifyMouseOver, setSpotifyMouseOver] = useState(false);
   const [appleMouseOver, setAppleMouseOver] = useState(false);
   const [youTubeMouseOver, setYouTubeMouseOver] = useState(false);
   const [soundcloudMouseOver, setSoundcloudMouseOver] = useState(false);
 
   const track1 =
-    "https://www.dl.dropboxusercontent.com/scl/fo/af00slpcm8a9zr4s9xr54/AGgSOnGd2hMB3VgCCx8g398/BWBL%20T01v1%20S01%20Like%20It's%20A%20Dream.wav?rlkey=nomu4ju8ukm4q824xvkkmyfez&e=1&dl=0";
-
+    "https://www.dl.dropboxusercontent.com/scl/fo/z6ck5xfhdod5ke1sqogys/APdtQNl6zVWIV4hJr9fj6og/TMSMS%20T01v1%20M01%20Storybook%20Jungle.wav?rlkey=o0g3wdqkalv8f42h3zsr50z0k&e=1&dl=0";
+  const track2 =
+    "https://www.dl.dropboxusercontent.com/scl/fo/z6ck5xfhdod5ke1sqogys/AGFhdeA1KMquzdLfnqgW478/TMSMS%20T02v1%20M02%20The%20Leporidian%20Scheme.wav?rlkey=o0g3wdqkalv8f42h3zsr50z0k&e=1&dl=0";
+  const track3 =
+    "https://www.dl.dropboxusercontent.com/scl/fo/z6ck5xfhdod5ke1sqogys/AGJoPyuZ7T94d6Z1mgFAUKI/TMSMS%20T03v1%20M03%20Run%20Tiger%20Run%21.wav?rlkey=o0g3wdqkalv8f42h3zsr50z0k&e=1&dl=0";
+  const track4 =
+    "https://www.dl.dropboxusercontent.com/scl/fo/z6ck5xfhdod5ke1sqogys/AB2lUCqrB_oLQRZ-nm8t-FE/TMSMS%20T04v1%20M04%20Moon%20Palace%20%3A%20Rabbit%27s%20Lament.wav?rlkey=o0g3wdqkalv8f42h3zsr50z0k&e=1&dl=0";
+  const track5 =
+    "https://www.dl.dropboxusercontent.com/scl/fo/z6ck5xfhdod5ke1sqogys/AIytEufvi1BX1jp8U5Rx3jo/TMSMS%20T05v1%20M05%20A%20Storybook%20Reprise.wav?rlkey=o0g3wdqkalv8f42h3zsr50z0k&e=1&dl=0";
   const trackInfo = [
     {
-      title: "Like It's a Dream",
+      title: "Storybook Jungle",
       track: track1,
       index: "1",
-      length: "1:41",
+      length: "1:25",
+    },
+    {
+      title: "The Leporidian Scheme",
+      track: track2,
+      index: "2",
+      length: "0:53",
+    },
+    {
+      title: "Run Tiger Run!",
+      track: track3,
+      index: "3",
+      length: "0:52",
+    },
+    {
+      title: "Moon Palace : Rabbit's Lament",
+      track: track4,
+      index: "4",
+      length: "1:00",
+    },
+    {
+      title: "A Storybook Reprise",
+      track: track5,
+      index: "5",
+      length: "1:28",
     },
   ];
 
@@ -79,10 +110,9 @@ function BroadwayBlues() {
                   textAlign: "center",
                   paddingRight: "18%",
                   fontWeight: 100,
-                  fontStyle: "]]]d",
                 }}
               >
-                Broadway Blues
+                The Moon Stole My Stripes
               </h2>
               <p
                 style={{
@@ -93,7 +123,7 @@ function BroadwayBlues() {
                   paddingBottom: "1%",
                 }}
               >
-                <i>Short Film / Musical</i>
+                <i>Short Film / Animated Film</i>
               </p>
               <Container>
                 <Row>
@@ -134,7 +164,7 @@ function BroadwayBlues() {
                         target="_blank"
                         onMouseOver={() => setAppleMouseOver(true)}
                         onMouseOut={() => setAppleMouseOver(false)}
-                        href="https://music.apple.com/us/album/like-its-a-dream-feat-hannah-crouse-darius-harper/1774353591?i=1774353597"
+                        // Apple Music link TBD
                       >
                         {!appleMouseOver ? (
                           <img style={{ width: "24px" }} src={applemusic} />
@@ -149,7 +179,7 @@ function BroadwayBlues() {
                         target="_blank"
                         onMouseOver={() => setYouTubeMouseOver(true)}
                         onMouseOut={() => setYouTubeMouseOver(false)}
-                        href="https://www.youtube.com/playlist?list=PLWLXJaKFBj4LjtyTBlC3C0kZ1PlFPdEk5"
+                        href="https://www.youtube.com/watch?v=ZnIp8dHiUJs&list=PLVIw1O-3oSJs"
                       >
                         {youTubeMouseOver ? (
                           <svg
@@ -178,7 +208,7 @@ function BroadwayBlues() {
                         target="_blank"
                         onMouseOver={() => setSoundcloudMouseOver(true)}
                         onMouseOut={() => setSoundcloudMouseOver(false)}
-                        href="https://soundcloud.com/marcyumusic/like-its-a-dream-from-broadway-blues"
+                        href="https://soundcloud.com/marcyumusic/sets/the-moon-stole-my-stripes"
                       >
                         {soundcloudMouseOver ? (
                           <svg
@@ -265,7 +295,7 @@ function BroadwayBlues() {
                         target="_blank"
                         onMouseOver={() => setSpotifyMouseOver(true)}
                         onMouseOut={() => setSpotifyMouseOver(false)}
-                        href="https://open.spotify.com/track/78mAUcMx1Zq58FUXSjNEG9?si=61648656ca8f4d01"
+                        // Spotify link TBD
                       >
                         {spotifyMouseOver ? (
                           <svg
@@ -304,238 +334,80 @@ function BroadwayBlues() {
                         }}
                       >
                         <li>
-                          Original Soundtrack by:
-                          <span style={{ color: "#B9BAB9" }}> Marc Yu</span>
-                        </li>
-                        <br />
-                        <li>"Like It's A Dream"</li>
-                        <li>
-                          Music by{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Marc Yu and Adam Blotner
-                          </span>
-                        </li>
-                        <li>
-                          Lyrics by{" "}
-                          <span style={{ color: "#B9BAB9" }}>Adam Blotner</span>
-                        </li>
-                        <li>
-                          Orchestrated by{" "}
-                          <span style={{ color: "#B9BAB9" }}>Marc Yu</span>
-                        </li>
-                        <li>
-                          Orchestrated by{" "}
+                          Original Soundtrack by:{" "}
                           <span style={{ color: "#B9BAB9" }}>Marc Yu</span>
                         </li>
                         <br />
                         <li>
-                          "Avery", voiced by{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Hannah Crouse
-                          </span>
+                          Strings Performed by{" "}
+                          <span style={{ color: "#B9BAB9" }}>Budapest Scoring Orchestra</span>
                         </li>
                         <li>
-                          "Cyrus", voiced by{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Darius Harper
-                          </span>
+                          <span style={{ color: "#B9BAB9" }}>Rottenbiller Studio, Budapest, Hungary</span>
                         </li>
                         <br />
                         <li>
-                          Music Production Services:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Wavyrn</span>
+                          Orchestra Contracted by{" "}
+                          <span style={{ color: "#B9BAB9" }}>Bálint Sapszon</span>
                         </li>
                         <li>
-                          Score Mixing Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Max Jaime</span>
-                        </li>
-                        <br />
-                        <li>
-                          Musical Director:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Jack Richman</span>
+                          Conductor:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Péter Illényi</span>
                         </li>
                         <li>
-                          Lead Recording Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Dong Yao Liu</span>
+                          Orchestra Coordinator:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Bertalan Veér</span>
                         </li>
                         <li>
-                          Orchestral Recording Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Dong Yao Liu</span>
+                          Recording Engineer:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Viktor Szabó</span>
                         </li>
                         <li>
-                          Vocal Recording Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Dong Yao Liu</span>
+                          Assistant to Engineer:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Botond Buczkó</span>
                         </li>
                         <li>
-                          Engineer Assistant:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Lily Kelso</span>
-                        </li>
-                        <li>
-                          Engineer Assistant:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Shihhao Cheng
-                          </span>
-                        </li>
-                        <li>
-                          Engineer Assistant:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Matey Hei</span>
-                        </li>
-                        <li>
-                          Engineer Assistant:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Jennifer Wang
-                          </span>
-                        </li>
-                        <li>
-                          Engineer Assistant:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Keith Du</span>
-                        </li>
-                        <li>
-                          Score Mixing Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Max Jaime</span>
-                        </li>
-                        <li>
-                          Score Mixing Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Austin Leshock
-                          </span>
-                        </li>
-                        <li>
-                          Mastering Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Austin Leshock
-                          </span>
-                        </li>
-                        <li>
-                          Audio Technical Assistant:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Angelica Ramos
-                          </span>
+                          Librarian:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Ágnes Sapszon</span>
                         </li>
                         <br />
                         <li>
-                          Flute:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Chris Freeman
-                          </span>
-                        </li>
-                        <li>
-                          Oboe:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Jesse Myers</span>
-                        </li>
-                        <li>
-                          Alto Sax:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Sultan Seilkhanov
-                          </span>
-                        </li>
-                        <li>
-                          Tenor Sax:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Andy Lin (Worpp)
-                          </span>
-                        </li>
-                        <li>
-                          Trumpet I:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Carlos Rivera
-                          </span>
-                        </li>
-                        <li>
-                          Trumpet II:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Jared Kaye</span>
-                        </li>
-                        <li>
-                          Violin I:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Luca Willoughby
-                          </span>
-                        </li>
-                        <li>
-                          Violin I:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Beatriz Martinez{" "}
-                          </span>
-                        </li>
-                        <li>
-                          Violin II:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Frederick Oliveira-Chevres
-                          </span>
-                        </li>
-                        <li>
-                          Viola:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Peter Tao</span>
-                        </li>
-                        <li>
-                          Viola:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Anwen Borgo</span>
-                        </li>
-                        <li>
-                          Cello:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Hailey Brasser
-                          </span>
-                        </li>
-                        <li>
-                          Piano:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Kit Hung</span>
-                        </li>
-                        <li>
-                          Acoustic Guitar:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Keith Du</span>
-                        </li>
-                        <li>
-                          Upright Bass:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Cate Yoder</span>
-                        </li>
-                        <li>
-                          Drumset:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Fan Cong</span>
-                        </li>
-                        <li>
-                          Drumset:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Fan Cong</span>
+                          Featuring{" "}
+                          <span style={{ color: "#B9BAB9" }}>Kristin Naigus</span>{" "}
+                          on Woodwinds
                         </li>
                         <br />
                         <li>
-                          Music Coordinator:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Marc Yu</span>
+                          Score Preparation and String Arrangement by{" "}
+                          <span style={{ color: "#B9BAB9" }}>Austin Leshock</span>
                         </li>
                         <li>
-                          Session Conductor:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Jack Richman</span>
+                          Synth Programmer:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Miguel Meneses</span>
                         </li>
                         <li>
-                          Music Copyist:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Angelica Ramos
-                          </span>
-                        </li>
-                        <li>
-                          Music Editor:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Max Jaime</span>
-                        </li>
-                        <li>
-                          Session Videographer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Lang (Oscar) Qin
-                          </span>
+                          Scoring Assistant to Composer:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Sofia Stafford</span>
                         </li>
                         <br />
                         <li>
-                          Recorded at{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            The Record Co.
-                          </span>
+                          Music Production Manager:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Ananta Arora</span>
                         </li>
-                        <br />
                         <li>
-                          Created by{" "}
-                          <span style={{ color: "#B9BAB9" }}>Elsa Miller</span>
+                          Music Production Assistants:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Grace Pehrman, Neil Small, and Quinne Houck</span>
                         </li>
                       </ul>
-                      {/* <div style={{ paddingBottom: "5%" }}></div> */}
+                      <div style={{ paddingBottom: "5%" }}></div>
+                      <h3>SYNOPSIS</h3>
+                      <p style={{ fontSize: "1.1rem", color: "#B9BAB9" }}>
+                        When a tiger’s stripes are stolen by the moon rabbit, she
+                        must go up to the sky to get them back!
+                        <br />
+                        <br />
+                        Created by Sarah Buckley.
+                      </p>
                     </div>
                   </Col>
                 </Row>
@@ -558,4 +430,4 @@ function BroadwayBlues() {
   );
 }
 
-export default BroadwayBlues;
+export default MoonStoleMyStripes;

@@ -24,23 +24,51 @@ import sprout from "../assets/Sprout.png";
 import afterlife from "../assets/AFTL Album Cover.jpg";
 import broadway from "../assets/BWBL Album Cover.png";
 import upstream from "../assets/upstream_69.png";
+import tmsmsCover from "../assets/covers/TMSMS-Album-FULL.jpg";
+import rrwwCover from "../assets/covers/RRWW_Album.jpg";
+import reachCover from "../assets/covers/REACH-Cover-Credits.jpg";
+import sereinCover from "../assets/covers/SRN_OSTAlbum_Export.jpg";
+import startCover from "../assets/covers/START-Album-Cover-Credit.jpg";
+import unicornCover from "../assets/covers/TMUT-Album-Cover-Credit.jpg";
+import survivorsCover from "../assets/covers/SRVR-Album-Credits.jpg";
+import puddleCover from "../assets/covers/PDDL-Album-Cover-Credit.jpg";
+import mixedJamsCover from "../assets/covers/BTND-Album-Cover.jpg";
+import shuriken from "../assets/covers/SHSG-Album-Cover.jpg";
+import claws from "../assets/covers/CLA-Album-Cover.jpg";
 
 function Music() {
-  const claws =
-    "https://dl.dropboxusercontent.com/scl/fi/ypiedv3d5hu47c9mc7r80/CLA-Album-Cover.jpg?rlkey=g0j3p1dri8c56t6ra7yle25s2&e=1&dl=0";
-  const shuriken =
-    "https://www.dl.dropboxusercontent.com/scl/fi/qpjmqh2v5hvxfu17rp958/SHSG-Album-Cover.png?rlkey=8ewufqr6awff2fg58m6gvf0oe&dl=0";
 
   const albums = [
+    {id: "tmsms",
+      img: tmsmsCover,
+      file: ["https://www.dl.dropboxusercontent.com/scl/fi/s1a9bif7uo6uzqt69p58a/TMSMS-T03v1-M03-Run-Tiger-Run.wav?rlkey=p5qq6sor9218u32v068ojdpie&e=1&dl=0"],
+      title: "The Moon Stole My Stripes",
+      description: "Short Film / Animated Film",
+      info: [{title: "The Moon Stole My Stripes"}],
+    },
+    {id: "rrww",
+      img: rrwwCover,
+      file: ["https://www.dl.dropboxusercontent.com/scl/fi/13je6siky0vogdv8f2uzu/RRWW-Preview.wav?rlkey=7nxbyyv3722fymk6oj7j2aday&e=1&dl=0"],
+      title: "Roger Williams",
+      description: "Video Game",
+      info: [{title: "Roger Williams"}],
+    },
+    {id: "reach",
+      img: reachCover,
+      file: ["https://www.dl.dropboxusercontent.com/scl/fi/m39jnei4wrhzoae3im1k1/REACH-Preview.wav?rlkey=ctyeue4qg6c9iktjqafgt9z0h&e=1&dl=0"],
+      title: "Reach",
+      description: "Short Film / Animated Film",
+      info: [{title: "Reach"}],
+    },
     {id: "serein",
-      img: "https://www.dl.dropboxusercontent.com/scl/fi/40vssax6ie848n50sk94y/SRN_OSTAlbum_Export.png?rlkey=4cwkdjb79s8gfb5mofn7au7po&e=1&dl=0",
+      img: sereinCover,
       file: ["https://www.dl.dropboxusercontent.com/scl/fi/5escunvcd97guznyiwjzh/SRIN-Preview.wav?rlkey=bd6wxjhhkv2trg7vgy7ol17p2&e=1&dl=0"],
       title: "Serein",
       description: "Short Film / Animated Film",
       info: [{title: "Serein"}],
     },
     {id: "start",
-      img: "https://www.dl.dropboxusercontent.com/scl/fi/5fur8uc6swdix113jzh78/START-Album-Cover-Credit.png?rlkey=c5evooli07t6cl6ie2zh4i1r7&e=1&dl=0",
+      img: startCover,
       file: ["https://www.dl.dropboxusercontent.com/scl/fi/vwx23go833kzaa5r50sr7/START-Preview.wav?rlkey=ipnmxyv6vili5cdr0syrkjfua&e=1&dl=0"],
       title: "Starting Line",
       description: "Short Film / Animated Film",
@@ -53,28 +81,28 @@ function Music() {
       description: "Short Film / Animated Film",
       info: [{title: "Upstream"}]
     },{id: "unicorn",
-      img: "https://www.dl.dropboxusercontent.com/scl/fi/ucwka67djqxy6g7hm1g5p/TMUT-Album-Cover-Credit.jpg?rlkey=0eacw2f9nuo7ubi30i00s0n39&dl=0",
+      img: unicornCover,
       file: ["https://www.dl.dropboxusercontent.com/scl/fi/5a15pm173u7goc5cf6fqq/TMUT-Preview.wav?rlkey=29zo8m34icsgffky8oqv621qu&dl=0"],
       title: "The Magical Unicorn Tales",
       description: "Short Film / Animated Comedy",
       info: [{title: "The Magical Unicorn Tales"}]
     },
     {id: "survivors",
-      img: "https://www.dl.dropboxusercontent.com/scl/fi/czqvd74tf4x6ka80i2498/SRVR-Album-Credits.JPEG?rlkey=j0sk6fovp3ufkl2jpi61ak3fy&e=1&dl=0",
+      img: survivorsCover,
       file: ["https://www.dl.dropboxusercontent.com/scl/fi/kxfn6479hrnhe69m2kinu/SRVR-T01v1-M03-Don-t-Play-With-Knives.wav?rlkey=3kjarq8okyz8wq9tgmwogbl99&dl=0"],
       title: "Survivors",
       description: "Short Film / Animated Adventure",
       info: [{title: "Survivors"}]
     },
     {id: "puddle",
-      img: "https://www.dl.dropboxusercontent.com/scl/fi/9ngmv7bqgi2f2jrz8t6uj/PDDL-Album-Cover-Credit.jpg?rlkey=ane9wbyj46h1r2ai9rdpxzcpq&dl=0",
+      img: puddleCover,
       file: ["https://www.dl.dropboxusercontent.com/scl/fi/envddh2n73xa9b3ori35e/PDDL-Preview.wav?rlkey=ltzdqi4usbu36n1ocxye5au3n&dl=0"],
       title: "Puddle",
       description: "Short Film / Stop Motion Comedy",
       info: [{title: "Puddle"}]
     },
     {id: "mix",
-      img: "https://www.dl.dropboxusercontent.com/scl/fi/lyzidlbuqoxezr1m0kmjd/BTND-Album-Cover.jpeg?rlkey=80rbhc70jvvhru4oh8e1xhn39&dl=0",
+      img: mixedJamsCover,
       file: ["https://www.dl.dropboxusercontent.com/scl/fi/k92b1nog2koik64w7qlpr/Day-1-Track-4-Fast-n-Easy.wav?rlkey=ax25y7qznhmt16jyse1uw4nw1&dl=0"],
       title: "Mixed Jams (from Beat Tender)",
       description: "EP / Jazz Fusion",
@@ -307,7 +335,7 @@ function Music() {
         </p>
         <Container>
           <Row>
-            <div className="hideOnMobile displayContents">
+            <div className="hideOnMobile" style={{ width: "100%" }}>
               <MultilinePlayer style={{ paddingBottom: "100px" }} />
               <hr
                 style={{

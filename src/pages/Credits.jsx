@@ -22,10 +22,9 @@ import claws from "../assets/clawsandorder.png";
 import cosmic from "../assets/cosmic.png";
 import rots from "../assets/ROTS Album Cover.png";
 import SingleCreditBullet from "../components/SingleCreditBullet";
+import ARENA_CRUNCH from "../assets/covers/ARNC-Album-Cover.jpg";
 
 function Credits() {
-  const ARENA_CRUNCH =
-    "https://www.dl.dropboxusercontent.com/scl/fo/owudjlfggo1z5uoimrmes/AIYcSn7OtzUZtxEQVgyrQK0/ARNC%20Album%20Cover%20(No%20Text).jpg?rlkey=7zsyaa1jdmtirfp77g5tekz8l&e=1&dl=0";
   return (
     <>
       <MarcNavbar />

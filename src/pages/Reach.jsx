@@ -11,23 +11,38 @@ import applemusic from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_Blackand
 import applemusiccolor from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_blk_sm_073120.svg";
 import TrackList from "../components/TrackList";
 import { useCallback } from "react";
-import albumCover from "../assets/covers/BWBL-Album-Cover.jpg";
+import albumCover from "../assets/covers/REACH-Cover-Credits.jpg";
 
-function BroadwayBlues() {
+function Reach() {
   const [spotifyMouseOver, setSpotifyMouseOver] = useState(false);
   const [appleMouseOver, setAppleMouseOver] = useState(false);
   const [youTubeMouseOver, setYouTubeMouseOver] = useState(false);
   const [soundcloudMouseOver, setSoundcloudMouseOver] = useState(false);
 
   const track1 =
-    "https://www.dl.dropboxusercontent.com/scl/fo/af00slpcm8a9zr4s9xr54/AGgSOnGd2hMB3VgCCx8g398/BWBL%20T01v1%20S01%20Like%20It's%20A%20Dream.wav?rlkey=nomu4ju8ukm4q824xvkkmyfez&e=1&dl=0";
-
+    "https://www.dl.dropboxusercontent.com/scl/fo/t807kcz744ecd9dnqn17c/ADuPJjxq5qx7vFBVu_7LZEk/REACH%20T01v1-M01-02%20Big%20Purple%20Squishy%20Kaiju.wav?rlkey=2dohbo4r4bf3tq8v1z3m11cm8&e=1&dl=0";
+  const track2 =
+    "https://www.dl.dropboxusercontent.com/scl/fo/t807kcz744ecd9dnqn17c/ABWoKdZbMW1MDYz03TP4eGA/REACH%20T02v1-M03-04%20The%20Claws%20of%20Death%21.wav?rlkey=2dohbo4r4bf3tq8v1z3m11cm8&e=1&dl=0";
+  const track3 =
+    "https://www.dl.dropboxusercontent.com/scl/fo/t807kcz744ecd9dnqn17c/AIutMmkCarfduNr5LgUYRiQ/REACH%20T03v1-M05%20Play%20Again.wav?rlkey=2dohbo4r4bf3tq8v1z3m11cm8&e=1&dl=0";
   const trackInfo = [
     {
-      title: "Like It's a Dream",
+      title: "Big Purple Squishy Kaiju",
       track: track1,
       index: "1",
-      length: "1:41",
+      length: "0:54",
+    },
+    {
+      title: "The Claws of Death!",
+      track: track2,
+      index: "2",
+      length: "1:26",
+    },
+    {
+      title: "Play Again",
+      track: track3,
+      index: "3",
+      length: "0:29",
     },
   ];
 
@@ -79,10 +94,9 @@ function BroadwayBlues() {
                   textAlign: "center",
                   paddingRight: "18%",
                   fontWeight: 100,
-                  fontStyle: "]]]d",
                 }}
               >
-                Broadway Blues
+                Reach
               </h2>
               <p
                 style={{
@@ -93,7 +107,7 @@ function BroadwayBlues() {
                   paddingBottom: "1%",
                 }}
               >
-                <i>Short Film / Musical</i>
+                <i>Short Film / Animated Film</i>
               </p>
               <Container>
                 <Row>
@@ -134,7 +148,7 @@ function BroadwayBlues() {
                         target="_blank"
                         onMouseOver={() => setAppleMouseOver(true)}
                         onMouseOut={() => setAppleMouseOver(false)}
-                        href="https://music.apple.com/us/album/like-its-a-dream-feat-hannah-crouse-darius-harper/1774353591?i=1774353597"
+                        // Apple Music link TBD
                       >
                         {!appleMouseOver ? (
                           <img style={{ width: "24px" }} src={applemusic} />
@@ -149,7 +163,7 @@ function BroadwayBlues() {
                         target="_blank"
                         onMouseOver={() => setYouTubeMouseOver(true)}
                         onMouseOut={() => setYouTubeMouseOver(false)}
-                        href="https://www.youtube.com/playlist?list=PLWLXJaKFBj4LjtyTBlC3C0kZ1PlFPdEk5"
+                        // YouTube link TBD
                       >
                         {youTubeMouseOver ? (
                           <svg
@@ -178,7 +192,7 @@ function BroadwayBlues() {
                         target="_blank"
                         onMouseOver={() => setSoundcloudMouseOver(true)}
                         onMouseOut={() => setSoundcloudMouseOver(false)}
-                        href="https://soundcloud.com/marcyumusic/like-its-a-dream-from-broadway-blues"
+                        href="https://soundcloud.com/marcyumusic/sets/reach-original-soundtrack"
                       >
                         {soundcloudMouseOver ? (
                           <svg
@@ -265,7 +279,7 @@ function BroadwayBlues() {
                         target="_blank"
                         onMouseOver={() => setSpotifyMouseOver(true)}
                         onMouseOut={() => setSpotifyMouseOver(false)}
-                        href="https://open.spotify.com/track/78mAUcMx1Zq58FUXSjNEG9?si=61648656ca8f4d01"
+                        // Spotify link TBD
                       >
                         {spotifyMouseOver ? (
                           <svg
@@ -304,238 +318,28 @@ function BroadwayBlues() {
                         }}
                       >
                         <li>
-                          Original Soundtrack by:
-                          <span style={{ color: "#B9BAB9" }}> Marc Yu</span>
-                        </li>
-                        <br />
-                        <li>"Like It's A Dream"</li>
-                        <li>
-                          Music by{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Marc Yu and Adam Blotner
-                          </span>
-                        </li>
-                        <li>
-                          Lyrics by{" "}
-                          <span style={{ color: "#B9BAB9" }}>Adam Blotner</span>
-                        </li>
-                        <li>
-                          Orchestrated by{" "}
-                          <span style={{ color: "#B9BAB9" }}>Marc Yu</span>
-                        </li>
-                        <li>
-                          Orchestrated by{" "}
-                          <span style={{ color: "#B9BAB9" }}>Marc Yu</span>
+                          Original Soundtrack by:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Marc Yu and Julian Cabrera</span>
                         </li>
                         <br />
                         <li>
-                          "Avery", voiced by{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Hannah Crouse
-                          </span>
-                        </li>
-                        <li>
-                          "Cyrus", voiced by{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Darius Harper
-                          </span>
-                        </li>
-                        <br />
-                        <li>
-                          Music Production Services:{" "}
+                          Audio Production Services:{" "}
                           <span style={{ color: "#B9BAB9" }}>Wavyrn</span>
                         </li>
                         <li>
-                          Score Mixing Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Max Jaime</span>
-                        </li>
-                        <br />
-                        <li>
-                          Musical Director:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Jack Richman</span>
-                        </li>
-                        <li>
-                          Lead Recording Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Dong Yao Liu</span>
-                        </li>
-                        <li>
-                          Orchestral Recording Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Dong Yao Liu</span>
-                        </li>
-                        <li>
-                          Vocal Recording Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Dong Yao Liu</span>
-                        </li>
-                        <li>
-                          Engineer Assistant:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Lily Kelso</span>
-                        </li>
-                        <li>
-                          Engineer Assistant:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Shihhao Cheng
-                          </span>
-                        </li>
-                        <li>
-                          Engineer Assistant:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Matey Hei</span>
-                        </li>
-                        <li>
-                          Engineer Assistant:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Jennifer Wang
-                          </span>
-                        </li>
-                        <li>
-                          Engineer Assistant:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Keith Du</span>
-                        </li>
-                        <li>
-                          Score Mixing Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Max Jaime</span>
-                        </li>
-                        <li>
-                          Score Mixing Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Austin Leshock
-                          </span>
-                        </li>
-                        <li>
-                          Mastering Engineer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Austin Leshock
-                          </span>
-                        </li>
-                        <li>
-                          Audio Technical Assistant:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Angelica Ramos
-                          </span>
-                        </li>
-                        <br />
-                        <li>
-                          Flute:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Chris Freeman
-                          </span>
-                        </li>
-                        <li>
-                          Oboe:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Jesse Myers</span>
-                        </li>
-                        <li>
-                          Alto Sax:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Sultan Seilkhanov
-                          </span>
-                        </li>
-                        <li>
-                          Tenor Sax:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Andy Lin (Worpp)
-                          </span>
-                        </li>
-                        <li>
-                          Trumpet I:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Carlos Rivera
-                          </span>
-                        </li>
-                        <li>
-                          Trumpet II:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Jared Kaye</span>
-                        </li>
-                        <li>
-                          Violin I:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Luca Willoughby
-                          </span>
-                        </li>
-                        <li>
-                          Violin I:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Beatriz Martinez{" "}
-                          </span>
-                        </li>
-                        <li>
-                          Violin II:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Frederick Oliveira-Chevres
-                          </span>
-                        </li>
-                        <li>
-                          Viola:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Peter Tao</span>
-                        </li>
-                        <li>
-                          Viola:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Anwen Borgo</span>
-                        </li>
-                        <li>
-                          Cello:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Hailey Brasser
-                          </span>
-                        </li>
-                        <li>
-                          Piano:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Kit Hung</span>
-                        </li>
-                        <li>
-                          Acoustic Guitar:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Keith Du</span>
-                        </li>
-                        <li>
-                          Upright Bass:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Cate Yoder</span>
-                        </li>
-                        <li>
-                          Drumset:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Fan Cong</span>
-                        </li>
-                        <li>
-                          Drumset:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Fan Cong</span>
-                        </li>
-                        <br />
-                        <li>
-                          Music Coordinator:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Marc Yu</span>
-                        </li>
-                        <li>
-                          Session Conductor:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Jack Richman</span>
-                        </li>
-                        <li>
-                          Music Copyist:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Angelica Ramos
-                          </span>
-                        </li>
-                        <li>
-                          Music Editor:{" "}
-                          <span style={{ color: "#B9BAB9" }}>Max Jaime</span>
-                        </li>
-                        <li>
-                          Session Videographer:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Lang (Oscar) Qin
-                          </span>
-                        </li>
-                        <br />
-                        <li>
-                          Recorded at{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            The Record Co.
-                          </span>
-                        </li>
-                        <br />
-                        <li>
-                          Created by{" "}
-                          <span style={{ color: "#B9BAB9" }}>Elsa Miller</span>
+                          Studio Manager:{" "}
+                          <span style={{ color: "#B9BAB9" }}>Ananta Arora</span>
                         </li>
                       </ul>
-                      {/* <div style={{ paddingBottom: "5%" }}></div> */}
+                      <div style={{ paddingBottom: "5%" }}></div>
+                      <h3>SYNOPSIS</h3>
+                      <p style={{ fontSize: "1.1rem", color: "#B9BAB9" }}>
+                        Two sisters embark on a dangerous escape from the grasp of a
+                        tentacle monster!
+                        <br />
+                        <br />
+                        Created by Zhenqi "Betty" Liu and Hyekyung "Hannah" Kim.
+                      </p>
                     </div>
                   </Col>
                 </Row>
@@ -558,4 +362,4 @@ function BroadwayBlues() {
   );
 }
 
-export default BroadwayBlues;
+export default Reach;

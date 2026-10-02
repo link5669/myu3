@@ -11,6 +11,7 @@ import applemusic from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_Blackand
 import applemusiccolor from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_blk_sm_073120.svg";
 import TrackList from "../components/TrackList";
 import { useCallback } from "react";
+import albumCover from "../assets/covers/SRN_OSTAlbum_Export.jpg";
 
 function Serein() {
   const [spotifyMouseOver, setSpotifyMouseOver] = useState(false);
@@ -106,7 +107,7 @@ function Serein() {
                     <img
                       style={{ width: "100%", borderRadius: "10px" }}
                       alt="album cover"
-                      src="https://www.dl.dropboxusercontent.com/scl/fi/40vssax6ie848n50sk94y/SRN_OSTAlbum_Export.png?rlkey=4cwkdjb79s8gfb5mofn7au7po&e=1&dl=0"
+                      src={albumCover}
                     />
                     <div style={{ paddingBottom: "5%" }}></div>
                     <NewAudioPlayer

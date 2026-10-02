@@ -11,6 +11,7 @@ import applemusic from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_Blackand
 import applemusiccolor from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_blk_sm_073120.svg";
 import TrackList from "../components/TrackList";
 import { useCallback } from "react";
+import albumCover from "../assets/covers/SRVR-Album-Credits.jpg";
 
 function Survivors() {
   const [spotifyMouseOver, setSpotifyMouseOver] = useState(false);
@@ -115,7 +116,7 @@ function Survivors() {
                     <img
                       style={{ width: "100%", borderRadius: "10px" }}
                       alt="album cover"
-                      src="https://www.dl.dropboxusercontent.com/scl/fi/czqvd74tf4x6ka80i2498/SRVR-Album-Credits.JPEG?rlkey=j0sk6fovp3ufkl2jpi61ak3fy&e=1&dl=0"
+                      src={albumCover}
                     />
                     <div style={{ paddingBottom: "5%" }}></div>
                     <NewAudioPlayer

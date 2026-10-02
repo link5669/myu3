@@ -14,6 +14,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -25,6 +27,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -36,6 +40,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -47,6 +53,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -58,6 +66,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -69,6 +79,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -80,6 +92,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -91,6 +105,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -102,6 +118,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -113,6 +131,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -124,6 +144,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -135,6 +157,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -146,6 +170,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -157,6 +183,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -168,6 +196,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -179,6 +209,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -190,6 +222,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -201,6 +235,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -212,6 +248,47 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
+              src={img}
+            />
+          </Link>
+        ) : info[0].title == "The Moon Stole My Stripes" ? (
+          <Link
+            style={{ textDecoration: "none", color: "gray" }}
+            to="/music/the-moon-stole-my-stripes"
+          >
+            <img
+              style={{ width: "100%", paddingBottom: "5%" }}
+              alt="album cover"
+              loading="lazy"
+              decoding="async"
+              src={img}
+            />
+          </Link>
+        ) : info[0].title == "Roger Williams" ? (
+          <Link
+            style={{ textDecoration: "none", color: "gray" }}
+            to="/music/roger-williams"
+          >
+            <img
+              style={{ width: "100%", paddingBottom: "5%" }}
+              alt="album cover"
+              loading="lazy"
+              decoding="async"
+              src={img}
+            />
+          </Link>
+        ) : info[0].title == "Reach" ? (
+          <Link
+            style={{ textDecoration: "none", color: "gray" }}
+            to="/music/reach"
+          >
+            <img
+              style={{ width: "100%", paddingBottom: "5%" }}
+              alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -223,6 +300,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -234,6 +313,8 @@ const Album = ({ info, title, id, img, file, description }) => {
             <img
               style={{ width: "100%", paddingBottom: "5%" }}
               alt="album cover"
+              loading="lazy"
+              decoding="async"
               src={img}
             />
           </Link>
@@ -241,6 +322,8 @@ const Album = ({ info, title, id, img, file, description }) => {
           <img
             style={{ width: "100%", paddingBottom: "5%" }}
             alt="album cover"
+            loading="lazy"
+            decoding="async"
             src={img}
           />
         )
@@ -248,6 +331,8 @@ const Album = ({ info, title, id, img, file, description }) => {
         <img
           style={{ width: "100%", paddingBottom: "5%" }}
           alt="album cover"
+          loading="lazy"
+          decoding="async"
           src={img}
         />
       )}
@@ -446,6 +531,36 @@ const Album = ({ info, title, id, img, file, description }) => {
               <Link
                 style={{ textDecoration: "none", color: "gray" }}
                 to="/music/starting-line"
+              >
+                Learn more...
+              </Link>
+            </>
+          ) : info[0].title == "The Moon Stole My Stripes" ? (
+            <>
+              <br />
+              <Link
+                style={{ textDecoration: "none", color: "gray" }}
+                to="/music/the-moon-stole-my-stripes"
+              >
+                Learn more...
+              </Link>
+            </>
+          ) : info[0].title == "Roger Williams" ? (
+            <>
+              <br />
+              <Link
+                style={{ textDecoration: "none", color: "gray" }}
+                to="/music/roger-williams"
+              >
+                Learn more...
+              </Link>
+            </>
+          ) : info[0].title == "Reach" ? (
+            <>
+              <br />
+              <Link
+                style={{ textDecoration: "none", color: "gray" }}
+                to="/music/reach"
               >
                 Learn more...
               </Link>

@@ -11,6 +11,7 @@ import applemusic from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_Blackand
 import applemusiccolor from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_blk_sm_073120.svg";
 import TrackList from "../components/TrackList";
 import { useCallback } from "react";
+import albumCover from "../assets/covers/START-Album-Cover-Credit.jpg";
 
 function StartingLine() {
   const [spotifyMouseOver, setSpotifyMouseOver] = useState(false);
@@ -107,7 +108,7 @@ function StartingLine() {
                     <img
                       style={{ width: "100%", borderRadius: "10px" }}
                       alt="album cover"
-                      src="https://www.dl.dropboxusercontent.com/scl/fi/5fur8uc6swdix113jzh78/START-Album-Cover-Credit.png?rlkey=c5evooli07t6cl6ie2zh4i1r7&e=1&dl=0"
+                      src={albumCover}
                     />
                     <div style={{ paddingBottom: "5%" }}></div>
                     <NewAudioPlayer

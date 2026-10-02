@@ -10,14 +10,13 @@ import NewAudioPlayer from "../components/AudioPlayer";
 import applemusic from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_wht_sm_073120.svg";
 import applemusiccolor from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_blk_sm_073120.svg";
 import TrackList from "../components/TrackList";
+import cover from "../assets/covers/SHSG-Album-Cover.jpg";
 
 function Shuriken() {
   const [spotifyMouseOver, setSpotifyMouseOver] = useState(false);
   const [appleMouseOver, setAppleMouseOver] = useState(false);
   const [youTubeMouseOver, setYouTubeMouseOver] = useState(false);
   const [soundcloudMouseOver, setSoundcloudMouseOver] = useState(false);
-  const cover =
-    "https://www.dl.dropboxusercontent.com/scl/fi/qpjmqh2v5hvxfu17rp958/SHSG-Album-Cover.png?rlkey=8ewufqr6awff2fg58m6gvf0oe&e=1&dl=0";
 
   const track1 =
     "https://www.dl.dropboxusercontent.com/scl/fo/cb3cahojad53uod1020vc/ALiaZHyxoyujBWcdovbsEfs/SHSG%20T01v1%20Temple%20Battle.wav?rlkey=y0hkg293pknurc2xzyw0uywdz&e=1&dl=0";
