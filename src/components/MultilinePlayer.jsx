@@ -21,14 +21,14 @@ const MultilinePlayer = () => {
     {
       title: "Gladwell",
       track: "https://www.dl.dropboxusercontent.com/scl/fo/1a8so68u69mvax8ybokob/AEMW28Dq8xuKHp-BDG6xRbg/3%20Gladwell%20%28JRPG%20Orchestral%20Rock%29.wav?rlkey=n4l7mc7hira1fsyb0dn47r9ba&dl=0",
-      info: "JRPG / Orchestral Rock",
+      info: "JRPG Orchestral Rock",
       index: "3",
       length: "2:06",
     },
     {
       title: "Across the Astral Sea",
       track: "https://www.dl.dropboxusercontent.com/scl/fo/1a8so68u69mvax8ybokob/APf-O2hLAhPLFAsaUQ5KTVY/4%20Across%20the%20Astral%20Sea%20%28TTRPG%20Pop-Punk%29.wav?rlkey=n4l7mc7hira1fsyb0dn47r9ba&dl=0",
-      info: "TTRPG / Pop-Punk",
+      info: "TTRPG Pop-Punk",
       index: "4",
       length: "2:49",
     },
@@ -97,6 +97,8 @@ const MultilinePlayer = () => {
           key={selectedTrack.title}
           songs={[selectedTrack.track]}
           trackName={selectedTrack.title}
+          trackInfo={trackInfo}
+          onSelectTrack={setSelectedTrack}
         />
       </div>
       <Container>

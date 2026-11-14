@@ -3,17 +3,30 @@ import React, { useEffect, useState, memo, useCallback } from "react";
 import PlayPause from "./PlayPause";
 import { Howl } from "howler";
 
+// Used only by players given onSelectTrack (the music page's selected tracks).
+// When such a player is swapped for another track (a track ended, or the
+// listener picked a different track mid-playback), the next player that
+// mounts for the same track list starts playing right away.
+let pendingAutoplay = null; // { listKey, time }
+const AUTOPLAY_WINDOW_MS = 2000;
+
 const NewAudioPlayer = memo(({
   trackName,
   songs,
   trackInfo,
   playingTrackIndex,
   setPlayingTrackIndex,
+  onSelectTrack,
 }) => {
   const [sound, setSound] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
+
+  const listKey =
+    onSelectTrack && Array.isArray(trackInfo)
+      ? trackInfo.map((t) => t.title).join("|")
+      : null;
 
   // Create new Howl instance when track changes
   useEffect(() => {
@@ -32,6 +45,15 @@ const NewAudioPlayer = memo(({
       onend: () => {
         setIsPlaying(false);
         setProgress(0);
+        if (listKey) {
+          const currentIndex = trackInfo.findIndex((t) => t.title === trackName);
+          const next = currentIndex >= 0 ? trackInfo[currentIndex + 1] : null;
+          if (next) {
+            pendingAutoplay = { listKey, time: Date.now() };
+            onSelectTrack(next);
+          }
+          return;
+        }
         if (setPlayingTrackIndex && playingTrackIndex < songs.length - 1) {
           setPlayingTrackIndex(playingTrackIndex + 1);
         }
@@ -50,7 +72,21 @@ const NewAudioPlayer = memo(({
 
     setSound(newSound);
 
+    if (
+      listKey &&
+      pendingAutoplay &&
+      pendingAutoplay.listKey === listKey &&
+      Date.now() - pendingAutoplay.time < AUTOPLAY_WINDOW_MS
+    ) {
+      pendingAutoplay = null;
+      newSound.play();
+    }
+
     return () => {
+      // Switching tracks while one is playing: keep playing on the new track.
+      if (listKey && newSound.playing()) {
+        pendingAutoplay = { listKey, time: Date.now() };
+      }
       newSound.unload();
     };
   }, [trackName]); // Change dependency to trackName instead of songs array
